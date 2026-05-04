@@ -1,0 +1,21 @@
+{
+  "book": "Psalm",
+  "bookPt": "Salmos",
+  "chapter": 2,
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "ARC (Domínio Público)",
+  "verses": [
+    { "verse": 1, "en": "Why do the heathen rage, and the people imagine a vain thing?", "pt": "Por que se amotinam os gentios, e os povos imaginam coisas vãs?" },
+    { "verse": 2, "en": "The kings of the earth set themselves, and the rulers take counsel together, against the LORD, and against his anointed, saying,", "pt": "Os reis da terra se levantam, e os príncipes tomam conselho juntos contra o Senhor e contra o seu ungido, dizendo:" },
+    { "verse": 3, "en": "Let us break their bands asunder, and cast away their cords from us.", "pt": "Rompamos os seus laços e sacudamos de nós as suas cordas." },
+    { "verse": 4, "en": "He that sitteth in the heavens shall laugh: the LORD shall have them in derision.", "pt": "Aquele que habita nos céus se rirá; o Senhor os terá em escárnio." },
+    { "verse": 5, "en": "Then shall he speak unto them in his wrath, and vex them in his sore displeasure.", "pt": "Então lhes falará na sua ira e os turbará no seu furor." },
+    { "verse": 6, "en": "Yet have I set my king upon my holy hill of Zion.", "pt": "Mas eu ungi o meu rei sobre o meu santo monte de Sião." },
+    { "verse": 7, "en": "I will declare the decree: the LORD hath said unto me, Thou art my Son; this day have I begotten thee.", "pt": "Proclamarei o decreto: o Senhor me disse: Tu és meu filho; eu te gerei hoje." },
+    { "verse": 8, "en": "Ask of me, and I shall give thee the heathen for thine inheritance, and the uttermost parts of the earth for thy possession.", "pt": "Pede-me, e eu te darei os gentios por herança e os confins da terra por tua possessão." },
+    { "verse": 9, "en": "Thou shalt break them with a rod of iron; thou shalt dash them in pieces like a potter's vessel.", "pt": "Tu os regerás com vara de ferro; tu os despedaçarás como a um vaso de oleiro." },
+    { "verse": 10, "en": "Be wise now therefore, O ye kings: be instructed, ye judges of the earth.", "pt": "Agora, pois, ó reis, sede sábios; recebei instrução, ó juízes da terra." },
+    { "verse": 11, "en": "Serve the LORD with fear, and rejoice with trembling.", "pt": "Servi ao Senhor com temor e alegrai-vos com tremor." },
+    { "verse": 12, "en": "Kiss the Son, lest he be angry, and ye perish from the way, when his wrath is kindled but a little. Blessed are all they that put their trust in him.", "pt": "Beijai o Filho, para que se não ire e pereçais no caminho, quando em breve se acender a sua ira. Bem-aventurados todos os que nele se refugiam." }
+  ]
+}

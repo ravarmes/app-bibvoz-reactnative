@@ -1,0 +1,64 @@
+# Project-wide Gradle settings.
+
+# IDE (e.g. Android Studio) users:
+# Gradle settings configured through the IDE *will override*
+# any settings specified in this file.
+
+# For more details on how to configure your build environment visit
+# http://www.gradle.org/docs/current/userguide/build_environment.html
+
+# Specifies the JVM arguments used for the daemon process.
+# The setting is particularly useful for tweaking memory settings.
+org.gradle.jvmargs=-Xmx4g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8 -XX:+UseParallelGC
+
+# When configured, Gradle will run in incubating parallel mode.
+# This option should only be used with decoupled projects. More details, visit
+# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
+org.gradle.parallel=true
+
+# AndroidX package structure to make it clearer which packages are bundled with the
+# Android operating system, and which are packaged with your app's APK
+# https://developer.android.com/topic/libraries/support-library/androidx-rn
+android.useAndroidX=true
+# Automatically convert third-party libraries to use AndroidX
+android.enableJetifier=true
+
+# Use this property to specify which architecture you want to build.
+# You can also override it from the CLI using
+# ./gradlew <task> -PreactNativeArchitectures=x86_64
+reactNativeArchitectures=armeabi-v7a,arm64-v8a,x86,x86_64
+
+# Use this property to enable support to the new architecture.
+# This will allow you to use TurboModules and the Fabric render in
+# your application. You should enable this flag either if you want
+# to write custom TurboModules/Fabric components OR use libraries that
+# are providing them.
+newArchEnabled=false
+
+# Use this property to enable or disable the Hermes JS engine.
+# If set to false, you will be using JSC instead.
+hermesEnabled=true
+
+# Configurações para reduzir tamanho
+android.enableR8.fullMode=true
+android.useFullClasspathForDexingTransform=true
+android.bundle.stripDebugSymbols=true
+
+# Configurações para melhorar a performance do build
+org.gradle.daemon=true
+org.gradle.configureondemand=true
+org.gradle.caching=true
+
+# ================================
+# CONFIGURAÇÕES DE ASSINATURA
+# ================================
+# IMPORTANTE: Estas configurações contêm informações sensíveis
+# Copie este arquivo como 'gradle.properties' e configure com seus valores reais
+# O arquivo gradle.properties será ignorado pelo Git por segurança
+
+# Signing key configuration for app release
+# Replace these with actual values when generating the signed APK
+MYAPP_UPLOAD_STORE_FILE=frase-me-key.keystore
+MYAPP_UPLOAD_KEY_ALIAS=frase-me-alias
+MYAPP_UPLOAD_STORE_PASSWORD=SUA_SENHA_AQUI
+MYAPP_UPLOAD_KEY_PASSWORD=SUA_SENHA_AQUI 

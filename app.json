@@ -1,0 +1,8 @@
+{
+  "name": "BibVoz",
+  "displayName": "BibVoz",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-8703883002838699~9024854022",
+    "ios_app_id": "ca-app-pub-3940256099942544~1458002511"
+  }
+}

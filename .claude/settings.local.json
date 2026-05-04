@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir src *)",
+      "Bash(findstr /V node_modules)",
+      "Bash(npm install *)",
+      "Bash(npx react-native *)",
+      "PowerShell(adb shell am start -n \"com.frase.me/.MainActivity\" 2>&1)",
+      "PowerShell(cd \"c:\\\\GitHub\\\\app-bibvoz-reactnative\\\\android\"; .\\\\gradlew.bat app:installDebug -PreactNativeDevServerPort=8082 2>&1 | Select-String -Pattern \"BUILD|error:|FAILURE|Installing\" | ForEach-Object { $_.Line })",
+      "PowerShell(adb shell am start -n \"com.frase.me/.MainActivity\")",
+      "Bash(.\\\\gradlew.bat app:installDebug)",
+      "PowerShell(Set-Location \"c:\\\\GitHub\\\\app-bibvoz-reactnative\"; Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"cd 'c:\\\\GitHub\\\\app-bibvoz-reactnative'; npx react-native start\" -WindowStyle Normal)",
+      "PowerShell(netstat -ano)",
+      "PowerShell(Start-Job -ScriptBlock { Set-Location \"c:\\\\GitHub\\\\app-bibvoz-reactnative\"; npx react-native start --port 8081 2>&1 } | Out-Null; Start-Sleep -Seconds 20; netstat -ano | Select-String \"LISTEN\" | Select-String \":8081\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\GitHub\\\\app-bibvoz-reactnative\\\\android\\\\app\\\\src\\\\main\\\\java\\\\br\\\\com\\\\vargascode\\\\bibvoz\")",
+      "PowerShell(adb uninstall com.frase.me 2>&1)",
+      "PowerShell(Set-Location \"c:\\\\GitHub\\\\app-bibvoz-reactnative\\\\android\"; .\\\\gradlew.bat app:installDebug 2>&1 | Select-String -Pattern \"BUILD|error:|FAILURE|EXCEPTION|Installing|Task :app\" | ForEach-Object { $_.Line })",
+      "PowerShell(adb shell am start -n \"br.com.vargascode.bibvoz/.MainActivity\" 2>&1)"
+    ]
+  }
+}
