@@ -2,6 +2,8 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { AudioService, Lang } from './AudioService';
 import { Verse } from './BibleService';
 
+export type EnVoice = 'en-US' | 'en-GB';
+export type PlaybackMode = 'pt-en' | 'en-pt' | 'en-only';
 export type Phase = 'en' | 'pt' | 'idle';
 
 export interface PlayerState {
@@ -16,13 +18,23 @@ export interface PlayerController extends PlayerState {
   jumpTo: (index: number) => void;
 }
 
-export function usePlayerController(verses: Verse[]): PlayerController {
+interface PlayerOptions {
+  playbackMode: PlaybackMode;
+  enVoice: EnVoice;
+  initialIndex?: number;
+  onVerseChange?: (index: number) => void;
+}
+
+export function usePlayerController(verses: Verse[], options: PlayerOptions): PlayerController {
+  const { initialIndex = 0 } = options;
+
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [phase, setPhase] = useState<Phase>('idle');
 
-  // Token incremental: qualquer chamada nova invalida loops anteriores em curso.
   const runTokenRef = useRef(0);
+  const optionsRef = useRef(options);
+  optionsRef.current = options;
 
   useEffect(() => {
     AudioService.prepare();
@@ -31,6 +43,10 @@ export function usePlayerController(verses: Verse[]): PlayerController {
       AudioService.stop();
     };
   }, []);
+
+  useEffect(() => {
+    optionsRef.current.onVerseChange?.(currentIndex);
+  }, [currentIndex]);
 
   const runFrom = useCallback(
     async (startIndex: number) => {
@@ -42,10 +58,29 @@ export function usePlayerController(verses: Verse[]): PlayerController {
         const verse = verses[i];
         setCurrentIndex(i);
 
-        for (const step of [
-          { lang: 'en-US' as Lang, text: verse.en, phase: 'en' as Phase },
-          { lang: 'pt-BR' as Lang, text: verse.pt, phase: 'pt' as Phase },
-        ]) {
+        const { playbackMode, enVoice } = optionsRef.current;
+        const enLang = enVoice as Lang;
+
+        type Step = { lang: Lang; text: string; phase: Phase };
+        let steps: Step[];
+        switch (playbackMode) {
+          case 'en-only':
+            steps = [{ lang: enLang, text: verse.en, phase: 'en' }];
+            break;
+          case 'pt-en':
+            steps = [
+              { lang: 'pt-BR', text: verse.pt, phase: 'pt' },
+              { lang: enLang, text: verse.en, phase: 'en' },
+            ];
+            break;
+          default: // 'en-pt'
+            steps = [
+              { lang: enLang, text: verse.en, phase: 'en' },
+              { lang: 'pt-BR', text: verse.pt, phase: 'pt' },
+            ];
+        }
+
+        for (const step of steps) {
           if (runTokenRef.current !== myToken) return;
           setPhase(step.phase);
           await AudioService.speak(step.text, step.lang);
@@ -59,7 +94,7 @@ export function usePlayerController(verses: Verse[]): PlayerController {
         setPhase('idle');
       }
     },
-    [verses]
+    [verses],
   );
 
   const play = useCallback(
@@ -67,7 +102,7 @@ export function usePlayerController(verses: Verse[]): PlayerController {
       const idx = typeof startIndex === 'number' ? startIndex : currentIndex;
       runFrom(idx);
     },
-    [currentIndex, runFrom]
+    [currentIndex, runFrom],
   );
 
   const pause = useCallback(() => {
@@ -90,7 +125,7 @@ export function usePlayerController(verses: Verse[]): PlayerController {
         setIsPlaying(false);
       }
     },
-    [isPlaying, runFrom]
+    [isPlaying, runFrom],
   );
 
   return { isPlaying, currentIndex, phase, play, pause, jumpTo };

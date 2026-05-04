@@ -1,6 +1,6 @@
 import Tts from 'react-native-tts';
 
-export type Lang = 'en-US' | 'pt-BR';
+export type Lang = 'en-US' | 'en-GB' | 'pt-BR';
 
 type FinishHandler = () => void;
 
@@ -53,12 +53,12 @@ export const AudioService = {
   },
 
   setRate(lang: Lang, rate: number): void {
-    if (lang === 'en-US') enRate = rate;
+    if (lang !== 'pt-BR') enRate = rate;
     else ptRate = rate;
   },
 
   getRate(lang: Lang): number {
-    return lang === 'en-US' ? enRate : ptRate;
+    return lang !== 'pt-BR' ? enRate : ptRate;
   },
 
   /**
@@ -69,7 +69,7 @@ export const AudioService = {
     await ensureInit();
 
     await Tts.setDefaultLanguage(lang);
-    await Tts.setDefaultRate(lang === 'en-US' ? enRate : ptRate, true);
+    await Tts.setDefaultRate(lang !== 'pt-BR' ? enRate : ptRate, true);
 
     return new Promise<void>(resolve => {
       const utteranceId = `${Date.now()}-${Math.random()}`;

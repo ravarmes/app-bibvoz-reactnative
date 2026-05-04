@@ -18,6 +18,7 @@ import { Provider as PaperProvider } from 'react-native-paper';
 
 import adConfig from './src/utils/adConfig';
 import { IapProvider, useIap } from './src/context/IapContext';
+import { SettingsProvider } from './src/context/SettingsContext';
 import BibleReaderScreen from './src/screens/BibleReaderScreen';
 
 const BottomBanner = () => {
@@ -51,12 +52,14 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#6366f1" />
-      <IapProvider>
-        <PaperProvider>
-          <BibleReaderScreen />
-        </PaperProvider>
-        <BottomBanner />
-      </IapProvider>
+      <SettingsProvider>
+        <IapProvider>
+          <PaperProvider>
+            <BibleReaderScreen />
+          </PaperProvider>
+          <BottomBanner />
+        </IapProvider>
+      </SettingsProvider>
     </SafeAreaView>
   );
 }
