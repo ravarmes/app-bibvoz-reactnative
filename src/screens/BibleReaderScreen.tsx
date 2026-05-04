@@ -15,10 +15,21 @@ import { AudioService } from '../services/AudioService';
 import { useIap } from '../context/IapContext';
 import { useSettings } from '../context/SettingsContext';
 
-const VERSE_ROW_HEIGHT_ESTIMATE = 160;
 const SPEED_STEP = 0.25;
 const SPEED_MIN = 0.25;
 const SPEED_MAX = 1.50;
+
+const INDIGO = '#6366f1';
+const INDIGO_DARK = '#4338ca';
+const INDIGO_LIGHT = '#818cf8';
+const INDIGO_PALE = '#eef2ff';
+const INDIGO_HEADER = '#5254CC';
+
+const MODE_LABELS: Record<PlaybackMode, string> = {
+  'pt-en': 'PT → EN',
+  'en-pt': 'EN → PT',
+  'en-only': 'Só EN',
+};
 
 export default function BibleReaderScreen() {
   const books = useMemo(() => BibleService.listBooks(), []);
@@ -55,7 +66,6 @@ export default function BibleReaderScreen() {
   useEffect(() => {
     AudioService.setRate('en-US', enSpeed);
     AudioService.setRate('pt-BR', ptSpeed);
-    // Runs once on mount to seed AudioService with persisted rates
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -88,7 +98,12 @@ export default function BibleReaderScreen() {
 
   return (
     <View style={styles.container}>
-      <Surface style={styles.header} elevation={4}>
+      {/* ── Header ─────────────────────────────────────── */}
+      <View style={styles.header}>
+        {/* Decorative circles for depth */}
+        <View style={styles.headerCircle1} pointerEvents="none" />
+        <View style={styles.headerCircle2} pointerEvents="none" />
+
         <View style={styles.headerTop}>
           <View style={styles.headerTopSpacer} />
           <View style={styles.headerTitles}>
@@ -100,7 +115,7 @@ export default function BibleReaderScreen() {
             onPress={() => setSettingsVisible(true)}
             activeOpacity={0.7}
           >
-            <MaterialCommunityIcons name="cog-outline" size={22} color="rgba(255,255,255,0.9)" />
+            <MaterialCommunityIcons name="cog-outline" size={20} color="#fff" />
           </TouchableOpacity>
         </View>
 
@@ -110,7 +125,7 @@ export default function BibleReaderScreen() {
               key={book.id}
               style={[styles.bookTab, selectedBookIdx === idx && styles.bookTabActive]}
               onPress={() => handleBookChange(idx)}
-              activeOpacity={0.7}
+              activeOpacity={0.75}
             >
               <Text style={[styles.bookTabText, selectedBookIdx === idx && styles.bookTabTextActive]}>
                 {book.namePt}
@@ -130,7 +145,7 @@ export default function BibleReaderScreen() {
               key={ch}
               style={[styles.chapterChip, selectedChapter === ch && styles.chapterChipActive]}
               onPress={() => handleChapterChange(ch)}
-              activeOpacity={0.7}
+              activeOpacity={0.75}
             >
               <Text style={[styles.chapterChipText, selectedChapter === ch && styles.chapterChipTextActive]}>
                 {ch}
@@ -138,8 +153,9 @@ export default function BibleReaderScreen() {
             </TouchableOpacity>
           ))}
         </ScrollView>
-      </Surface>
+      </View>
 
+      {/* ── Chapter content ─────────────────────────────── */}
       <ChapterPlayer
         key={`${currentBook.id}-${selectedChapter}`}
         chapter={chapter}
@@ -153,6 +169,7 @@ export default function BibleReaderScreen() {
         onVerseChange={handleVerseChange}
       />
 
+      {/* ── Settings modal ───────────────────────────────── */}
       <Modal
         visible={settingsVisible}
         transparent
@@ -161,11 +178,13 @@ export default function BibleReaderScreen() {
       >
         <Pressable style={styles.modalOverlay} onPress={() => setSettingsVisible(false)} />
         <View style={styles.modalSheet}>
+          <View style={styles.modalHandle} />
           <Text style={styles.modalTitle}>Configurações</Text>
 
           <Text style={styles.modalSection}>Voz em Inglês</Text>
           <View style={styles.modalVoiceRow}>
             <ModeOption
+              icon="flag"
               label="Americana"
               sublabel="EN-US"
               selected={enVoice === 'en-US'}
@@ -173,6 +192,7 @@ export default function BibleReaderScreen() {
               style={styles.modalOptionHalf}
             />
             <ModeOption
+              icon="flag-outline"
               label="Britânica"
               sublabel="EN-GB"
               selected={enVoice === 'en-GB'}
@@ -183,25 +203,28 @@ export default function BibleReaderScreen() {
 
           <Text style={styles.modalSection}>Modo de Reprodução</Text>
           <ModeOption
+            icon="swap-horizontal"
             label="PT → EN"
             sublabel="Primeiro português, depois inglês (padrão)"
             selected={playbackMode === 'pt-en'}
             onPress={() => setPlaybackMode('pt-en')}
           />
           <ModeOption
+            icon="swap-horizontal"
             label="EN → PT"
             sublabel="Primeiro inglês, depois português"
             selected={playbackMode === 'en-pt'}
             onPress={() => setPlaybackMode('en-pt')}
           />
           <ModeOption
+            icon="volume-high"
             label="Somente Inglês"
             sublabel="Ideal para alunos avançados"
             selected={playbackMode === 'en-only'}
             onPress={() => setPlaybackMode('en-only')}
           />
 
-          <TouchableOpacity style={styles.modalClose} onPress={() => setSettingsVisible(false)}>
+          <TouchableOpacity style={styles.modalClose} onPress={() => setSettingsVisible(false)} activeOpacity={0.85}>
             <Text style={styles.modalCloseText}>Fechar</Text>
           </TouchableOpacity>
         </View>
@@ -210,7 +233,10 @@ export default function BibleReaderScreen() {
   );
 }
 
+// ── ModeOption ────────────────────────────────────────────────
+
 interface ModeOptionProps {
+  icon: string;
   label: string;
   sublabel?: string;
   selected: boolean;
@@ -218,12 +244,15 @@ interface ModeOptionProps {
   style?: object;
 }
 
-const ModeOption = ({ label, sublabel, selected, onPress, style }: ModeOptionProps) => (
+const ModeOption = ({ icon, label, sublabel, selected, onPress, style }: ModeOptionProps) => (
   <TouchableOpacity
     onPress={onPress}
     style={[styles.modalOption, selected && styles.modalOptionSelected, style]}
     activeOpacity={0.7}
   >
+    <View style={[styles.modalOptionIcon, selected && styles.modalOptionIconSelected]}>
+      <MaterialCommunityIcons name={icon} size={16} color={selected ? '#fff' : INDIGO} />
+    </View>
     <View style={styles.modalOptionContent}>
       <Text style={[styles.modalOptionText, selected && styles.modalOptionTextSelected]}>
         {label}
@@ -235,10 +264,14 @@ const ModeOption = ({ label, sublabel, selected, onPress, style }: ModeOptionPro
       ) : null}
     </View>
     {selected ? (
-      <MaterialCommunityIcons name="check-circle" size={18} color="#6366f1" />
-    ) : null}
+      <MaterialCommunityIcons name="check-circle" size={20} color={INDIGO} />
+    ) : (
+      <View style={styles.modalOptionCheck} />
+    )}
   </TouchableOpacity>
 );
+
+// ── ChapterPlayer ─────────────────────────────────────────────
 
 interface ChapterPlayerProps {
   chapter: Chapter;
@@ -265,14 +298,16 @@ function ChapterPlayer({
   });
   const { isAdFree, purchaseRemoveAds, isLoading: iapLoading } = useIap();
   const scrollRef = useRef<ScrollView | null>(null);
+  const verseYPositions = useRef<number[]>([]);
   const enLabel = enVoice === 'en-GB' ? 'EN-GB' : 'EN-US';
+  const progressPct = Math.round(((player.currentIndex + 1) / verses.length) * 100);
 
   useEffect(() => {
     if (!scrollRef.current) return;
-    scrollRef.current.scrollTo({
-      y: Math.max(0, (player.currentIndex - 1) * VERSE_ROW_HEIGHT_ESTIMATE),
-      animated: true,
-    });
+    const y = verseYPositions.current[player.currentIndex];
+    if (y !== undefined) {
+      scrollRef.current.scrollTo({ y: Math.max(0, y - 16), animated: true });
+    }
   }, [player.currentIndex]);
 
   return (
@@ -290,6 +325,7 @@ function ChapterPlayer({
             phase={idx === player.currentIndex ? player.phase : 'idle'}
             onPress={() => player.jumpTo(idx)}
             enLabel={enLabel}
+            onLayout={(y: number) => { verseYPositions.current[idx] = y; }}
           />
         ))}
 
@@ -298,68 +334,95 @@ function ChapterPlayer({
             style={[styles.removeAdsCard, iapLoading && styles.removeAdsDisabled]}
             disabled={iapLoading}
             onPress={purchaseRemoveAds}
+            activeOpacity={0.8}
           >
-            <MaterialCommunityIcons
-              name="star-four-points-outline"
-              size={28}
-              color="#f59e0b"
-            />
+            <View style={styles.removeAdsIconWrap}>
+              <MaterialCommunityIcons name="star-four-points" size={22} color="#f59e0b" />
+            </View>
             <View style={styles.removeAdsTextWrap}>
               <Text style={styles.removeAdsTitle}>Remover anúncios</Text>
               <Text style={styles.removeAdsDesc}>
-                {iapLoading
-                  ? 'Conectando à loja...'
-                  : 'Pagamento único para uma leitura sem propagandas.'}
+                {iapLoading ? 'Conectando à loja...' : 'Pagamento único · sem propagandas'}
               </Text>
             </View>
+            <MaterialCommunityIcons name="chevron-right" size={20} color="#d97706" />
           </TouchableOpacity>
         )}
 
-        <View style={{ height: 96 }} />
+        <View style={{ height: 120 }} />
       </ScrollView>
 
-      <Surface style={styles.controls} elevation={5}>
-        <Text style={styles.controlsStatus}>
-          Versículo {verses[player.currentIndex]?.verse ?? 1} / {verses.length}
-          {player.isPlaying && (player.phase === 'en' ? `  •  ${enLabel}` : '  •  PT-BR')}
-        </Text>
-        <View style={styles.controlsButtons}>
-          <ControlButton
-            icon="skip-previous"
-            onPress={() => player.jumpTo(Math.max(0, player.currentIndex - 1))}
-          />
-          {player.isPlaying ? (
-            <ControlButton icon="pause" main onPress={player.pause} />
-          ) : (
-            <ControlButton icon="play" main onPress={() => player.play()} />
-          )}
-          <ControlButton
-            icon="skip-next"
-            onPress={() =>
-              player.jumpTo(Math.min(verses.length - 1, player.currentIndex + 1))
-            }
-          />
+      {/* ── Controls panel ── */}
+      <View style={styles.controls}>
+        {/* Progress bar */}
+        <View style={styles.progressTrack}>
+          <View style={[styles.progressFill, { width: `${progressPct}%` }]} />
         </View>
-        <View style={styles.speedControls}>
-          <SpeedRow
-            label="EN"
-            speed={enSpeed}
-            onDecrease={() => setEnSpeed(enSpeed - SPEED_STEP)}
-            onIncrease={() => setEnSpeed(enSpeed + SPEED_STEP)}
-          />
-          {playbackMode !== 'en-only' && (
-            <SpeedRow
-              label="PT"
-              speed={ptSpeed}
-              onDecrease={() => setPtSpeed(ptSpeed - SPEED_STEP)}
-              onIncrease={() => setPtSpeed(ptSpeed + SPEED_STEP)}
+
+        <View style={styles.controlsBody}>
+          {/* Status row */}
+          <View style={styles.statusRow}>
+            <Text style={styles.controlsStatus}>
+              {verses[player.currentIndex]?.verse ?? 1} / {verses.length}
+            </Text>
+            {player.isPlaying && (
+              <View style={styles.langBadge}>
+                <MaterialCommunityIcons
+                  name={player.phase === 'pt' ? 'translate' : 'volume-high'}
+                  size={11}
+                  color={INDIGO}
+                />
+                <Text style={styles.langBadgeText}>
+                  {player.phase === 'pt' ? 'PT-BR' : enLabel}
+                </Text>
+              </View>
+            )}
+            <View style={styles.modeBadge}>
+              <Text style={styles.modeBadgeText}>{MODE_LABELS[playbackMode]}</Text>
+            </View>
+          </View>
+
+          {/* Play controls */}
+          <View style={styles.controlsButtons}>
+            <ControlButton
+              icon="skip-previous"
+              onPress={() => player.jumpTo(Math.max(0, player.currentIndex - 1))}
             />
-          )}
+            {player.isPlaying ? (
+              <ControlButton icon="pause" main onPress={player.pause} />
+            ) : (
+              <ControlButton icon="play" main onPress={() => player.play()} />
+            )}
+            <ControlButton
+              icon="skip-next"
+              onPress={() => player.jumpTo(Math.min(verses.length - 1, player.currentIndex + 1))}
+            />
+          </View>
+
+          {/* Speed controls */}
+          <View style={styles.speedControls}>
+            <SpeedRow
+              label="EN"
+              speed={enSpeed}
+              onDecrease={() => setEnSpeed(enSpeed - SPEED_STEP)}
+              onIncrease={() => setEnSpeed(enSpeed + SPEED_STEP)}
+            />
+            {playbackMode !== 'en-only' && (
+              <SpeedRow
+                label="PT"
+                speed={ptSpeed}
+                onDecrease={() => setPtSpeed(ptSpeed - SPEED_STEP)}
+                onIncrease={() => setPtSpeed(ptSpeed + SPEED_STEP)}
+              />
+            )}
+          </View>
         </View>
-      </Surface>
+      </View>
     </>
   );
 }
+
+// ── SpeedRow ──────────────────────────────────────────────────
 
 interface SpeedRowProps {
   label: string;
@@ -371,35 +434,31 @@ interface SpeedRowProps {
 const SpeedRow = ({ label, speed, onDecrease, onIncrease }: SpeedRowProps) => (
   <View style={styles.speedRow}>
     <Text style={styles.speedLabel}>{label}</Text>
-    <TouchableOpacity
-      onPress={onDecrease}
-      style={[styles.speedButton, speed <= SPEED_MIN && styles.speedButtonDisabled]}
-      disabled={speed <= SPEED_MIN}
-      activeOpacity={0.7}
-    >
-      <MaterialCommunityIcons
-        name="minus"
-        size={16}
-        color={speed <= SPEED_MIN ? '#d1d5db' : '#6366f1'}
-      />
-    </TouchableOpacity>
-    <View style={styles.speedValueBox}>
+    <View style={styles.speedControl}>
+      <TouchableOpacity
+        onPress={onDecrease}
+        style={[styles.speedBtn, speed <= SPEED_MIN && styles.speedBtnDisabled]}
+        disabled={speed <= SPEED_MIN}
+        activeOpacity={0.7}
+        hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}
+      >
+        <MaterialCommunityIcons name="minus" size={14} color={speed <= SPEED_MIN ? '#d1d5db' : INDIGO} />
+      </TouchableOpacity>
       <Text style={styles.speedValue}>{speed.toFixed(2)}×</Text>
+      <TouchableOpacity
+        onPress={onIncrease}
+        style={[styles.speedBtn, speed >= SPEED_MAX && styles.speedBtnDisabled]}
+        disabled={speed >= SPEED_MAX}
+        activeOpacity={0.7}
+        hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}
+      >
+        <MaterialCommunityIcons name="plus" size={14} color={speed >= SPEED_MAX ? '#d1d5db' : INDIGO} />
+      </TouchableOpacity>
     </View>
-    <TouchableOpacity
-      onPress={onIncrease}
-      style={[styles.speedButton, speed >= SPEED_MAX && styles.speedButtonDisabled]}
-      disabled={speed >= SPEED_MAX}
-      activeOpacity={0.7}
-    >
-      <MaterialCommunityIcons
-        name="plus"
-        size={16}
-        color={speed >= SPEED_MAX ? '#d1d5db' : '#6366f1'}
-      />
-    </TouchableOpacity>
   </View>
 );
+
+// ── VerseCard ─────────────────────────────────────────────────
 
 interface VerseCardProps {
   verse: Verse;
@@ -407,50 +466,46 @@ interface VerseCardProps {
   phase: Phase;
   onPress: () => void;
   enLabel: string;
+  onLayout: (y: number) => void;
 }
 
-const VerseCard = ({ verse, active, phase, onPress, enLabel }: VerseCardProps) => (
-  <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
-    <Surface
-      style={[styles.verseCard, active && styles.verseCardActive]}
-      elevation={active ? 4 : 1}
-    >
+const VerseCard = ({ verse, active, phase, onPress, enLabel, onLayout }: VerseCardProps) => (
+  <TouchableOpacity onPress={onPress} activeOpacity={0.85} onLayout={e => onLayout(e.nativeEvent.layout.y)}>
+    <View style={[styles.verseCard, active && styles.verseCardActive]}>
       <View style={styles.verseHeader}>
-        <Text style={[styles.verseNumber, active && styles.verseNumberActive]}>
-          {verse.verse}
-        </Text>
+        <View style={[styles.verseBadge, active && styles.verseBadgeActive]}>
+          <Text style={[styles.verseBadgeText, active && styles.verseBadgeTextActive]}>
+            {verse.verse}
+          </Text>
+        </View>
         {active && (
-          <View style={styles.phaseBadge}>
+          <View style={styles.phasePill}>
             <MaterialCommunityIcons
               name={phase === 'pt' ? 'translate' : 'volume-high'}
-              size={14}
-              color="#fff"
+              size={12}
+              color={INDIGO}
             />
-            <Text style={styles.phaseBadgeText}>
+            <Text style={styles.phasePillText}>
               {phase === 'pt' ? 'PT-BR' : enLabel}
             </Text>
           </View>
         )}
       </View>
-      <Text
-        style={[
-          styles.verseEn,
-          active && phase === 'en' && styles.verseHighlight,
-        ]}
-      >
+
+      <Text style={[styles.verseEn, active && phase === 'en' && styles.verseEnActive]}>
         {verse.en}
       </Text>
-      <Text
-        style={[
-          styles.versePt,
-          active && phase === 'pt' && styles.verseHighlight,
-        ]}
-      >
+
+      <View style={styles.verseDivider} />
+
+      <Text style={[styles.versePt, active && phase === 'pt' && styles.versePtActive]}>
         {verse.pt}
       </Text>
-    </Surface>
+    </View>
   </TouchableOpacity>
 );
+
+// ── ControlButton ─────────────────────────────────────────────
 
 interface ControlButtonProps {
   icon: string;
@@ -461,35 +516,63 @@ interface ControlButtonProps {
 const ControlButton = ({ icon, onPress, main }: ControlButtonProps) => (
   <TouchableOpacity
     onPress={onPress}
-    style={[styles.controlButton, main && styles.controlButtonMain]}
-    activeOpacity={0.7}
+    style={[styles.controlBtn, main && styles.controlBtnMain]}
+    activeOpacity={0.8}
   >
     <MaterialCommunityIcons
       name={icon}
-      size={main ? 36 : 28}
-      color={main ? '#fff' : '#6366f1'}
+      size={main ? 34 : 26}
+      color={main ? '#fff' : INDIGO}
     />
   </TouchableOpacity>
 );
 
+// ── Styles ────────────────────────────────────────────────────
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f7fa',
+    backgroundColor: '#ECEEF8',
   },
+
+  // Header
   header: {
-    paddingTop: 32,
+    paddingTop: 28,
     paddingBottom: 16,
     paddingHorizontal: 20,
-    backgroundColor: '#6366f1',
-    borderBottomLeftRadius: 24,
-    borderBottomRightRadius: 24,
+    backgroundColor: INDIGO_HEADER,
+    borderBottomLeftRadius: 28,
+    borderBottomRightRadius: 28,
+    elevation: 8,
+    shadowColor: INDIGO_HEADER,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 12,
+    overflow: 'hidden',
+  },
+  headerCircle1: {
+    position: 'absolute',
+    top: -50,
+    right: -30,
+    width: 160,
+    height: 160,
+    borderRadius: 80,
+    backgroundColor: 'rgba(255,255,255,0.07)',
+  },
+  headerCircle2: {
+    position: 'absolute',
+    bottom: -30,
+    left: -20,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: 'rgba(255,255,255,0.05)',
   },
   headerTop: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 4,
+    marginBottom: 6,
   },
   headerTopSpacer: {
     width: 36,
@@ -499,44 +582,44 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerTitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#fff',
-    textAlign: 'center',
+    letterSpacing: 0.5,
   },
   headerSubtitle: {
-    fontSize: 13,
-    color: 'rgba(255,255,255,0.85)',
-    textAlign: 'center',
-    marginTop: 2,
+    fontSize: 12,
+    color: 'rgba(255,255,255,0.75)',
+    marginTop: 1,
+    letterSpacing: 0.3,
   },
   settingsButton: {
     width: 36,
     height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(255,255,255,0.15)',
     alignItems: 'center',
     justifyContent: 'center',
   },
   bookTabs: {
     flexDirection: 'row',
-    marginTop: 12,
+    marginTop: 14,
     gap: 8,
   },
   bookTab: {
     flex: 1,
-    paddingVertical: 7,
-    borderRadius: 10,
+    paddingVertical: 8,
+    borderRadius: 12,
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.3)',
+    backgroundColor: 'rgba(255,255,255,0.1)',
   },
   bookTabActive: {
-    backgroundColor: 'rgba(255,255,255,0.25)',
-    borderColor: 'rgba(255,255,255,0.7)',
+    backgroundColor: 'rgba(255,255,255,0.22)',
   },
   bookTabText: {
     fontSize: 14,
     fontWeight: '600',
-    color: 'rgba(255,255,255,0.65)',
+    color: 'rgba(255,255,255,0.55)',
   },
   bookTabTextActive: {
     color: '#fff',
@@ -546,219 +629,328 @@ const styles = StyleSheet.create({
   },
   chapterScrollContent: {
     paddingHorizontal: 2,
-    gap: 8,
+    gap: 6,
   },
   chapterChip: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
+    width: 34,
+    height: 34,
+    borderRadius: 17,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255,255,255,0.15)',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.25)',
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
   chapterChipActive: {
-    backgroundColor: 'rgba(255,255,255,0.9)',
-    borderColor: '#fff',
+    backgroundColor: '#fff',
   },
   chapterChipText: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '700',
-    color: 'rgba(255,255,255,0.8)',
+    color: 'rgba(255,255,255,0.7)',
   },
   chapterChipTextActive: {
-    color: '#6366f1',
+    color: INDIGO_HEADER,
   },
+
+  // Verse list
   scroll: {
     flex: 1,
   },
   scrollContent: {
     padding: 16,
+    paddingTop: 18,
     paddingBottom: 0,
   },
+
+  // Verse card
   verseCard: {
     backgroundColor: '#fff',
-    borderRadius: 12,
+    borderRadius: 16,
     padding: 16,
-    marginBottom: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: 'transparent',
+    marginBottom: 10,
+    elevation: 1,
+    shadowColor: '#6366f1',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.06,
+    shadowRadius: 4,
   },
   verseCardActive: {
-    borderLeftColor: '#6366f1',
-    backgroundColor: '#eef2ff',
+    backgroundColor: INDIGO_PALE,
+    elevation: 3,
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+    borderLeftWidth: 3,
+    borderLeftColor: INDIGO,
   },
   verseHeader: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 8,
+    marginBottom: 10,
   },
-  verseNumber: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    color: '#6366f1',
+  verseBadge: {
+    minWidth: 28,
+    height: 26,
+    borderRadius: 13,
+    paddingHorizontal: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#EEF2FF',
   },
-  verseNumberActive: {
-    color: '#4338ca',
+  verseBadgeActive: {
+    backgroundColor: INDIGO,
   },
-  phaseBadge: {
+  verseBadgeText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: INDIGO,
+  },
+  verseBadgeTextActive: {
+    color: '#fff',
+  },
+  phasePill: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#6366f1',
-    borderRadius: 12,
+    backgroundColor: '#E0E7FF',
+    borderRadius: 10,
     paddingHorizontal: 8,
     paddingVertical: 3,
+    gap: 4,
   },
-  phaseBadgeText: {
-    color: '#fff',
+  phasePillText: {
     fontSize: 11,
-    fontWeight: 'bold',
-    marginLeft: 4,
+    fontWeight: '700',
+    color: INDIGO,
   },
   verseEn: {
-    fontSize: 17,
+    fontSize: 16,
     color: '#1f2937',
     fontWeight: '600',
     lineHeight: 24,
   },
+  verseEnActive: {
+    color: INDIGO_DARK,
+  },
+  verseDivider: {
+    height: 1,
+    backgroundColor: '#F3F4F6',
+    marginVertical: 10,
+  },
   versePt: {
-    fontSize: 14,
-    color: '#4b5563',
-    marginTop: 6,
+    fontSize: 13,
+    color: '#6b7280',
     fontStyle: 'italic',
     lineHeight: 20,
   },
-  verseHighlight: {
-    color: '#4338ca',
-    fontWeight: '700',
+  versePtActive: {
+    color: '#4f46e5',
+    fontWeight: '500',
   },
+
+  // Remove ads
   removeAdsCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff7ed',
-    borderRadius: 12,
+    backgroundColor: '#fffbeb',
+    borderRadius: 16,
     padding: 14,
-    marginTop: 8,
-    borderLeftWidth: 4,
-    borderLeftColor: '#f59e0b',
+    marginTop: 6,
+    borderWidth: 1,
+    borderColor: '#fde68a',
   },
   removeAdsDisabled: {
     opacity: 0.6,
   },
+  removeAdsIconWrap: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: '#fef3c7',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
+  },
   removeAdsTextWrap: {
     flex: 1,
-    marginLeft: 12,
   },
   removeAdsTitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 14,
+    fontWeight: '700',
     color: '#92400e',
   },
   removeAdsDesc: {
-    fontSize: 13,
-    color: '#78350f',
+    fontSize: 12,
+    color: '#b45309',
     marginTop: 2,
   },
+
+  // Controls panel
   controls: {
     backgroundColor: '#fff',
-    paddingTop: 10,
-    paddingBottom: 14,
-    paddingHorizontal: 16,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    elevation: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: -3 },
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    overflow: 'hidden',
+  },
+  progressTrack: {
+    height: 3,
+    backgroundColor: '#E0E7FF',
+  },
+  progressFill: {
+    height: 3,
+    backgroundColor: INDIGO,
+    borderRadius: 2,
+  },
+  controlsBody: {
+    paddingHorizontal: 20,
+    paddingTop: 12,
+    paddingBottom: 16,
+  },
+  statusRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    marginBottom: 10,
   },
   controlsStatus: {
-    textAlign: 'center',
     fontSize: 13,
     color: '#6b7280',
-    marginBottom: 8,
+    fontWeight: '500',
+  },
+  langBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    backgroundColor: INDIGO_PALE,
+    borderRadius: 8,
+    paddingHorizontal: 7,
+    paddingVertical: 3,
+  },
+  langBadgeText: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: INDIGO,
+  },
+  modeBadge: {
+    backgroundColor: '#F3F4F6',
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+  },
+  modeBadgeText: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#6b7280',
   },
   controlsButtons: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 16,
+    marginBottom: 12,
   },
-  controlButton: {
+  controlBtn: {
     width: 52,
     height: 52,
     borderRadius: 26,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#eef2ff',
-    marginHorizontal: 12,
+    backgroundColor: INDIGO_PALE,
   },
-  controlButtonMain: {
-    width: 68,
-    height: 68,
-    borderRadius: 34,
-    backgroundColor: '#6366f1',
+  controlBtnMain: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    backgroundColor: INDIGO,
+    elevation: 4,
+    shadowColor: INDIGO,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 8,
   },
   speedControls: {
-    marginTop: 8,
-    paddingTop: 8,
     borderTopWidth: 1,
     borderTopColor: '#f3f4f6',
+    paddingTop: 10,
+    gap: 4,
   },
   speedRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 2,
   },
   speedLabel: {
     width: 28,
-    fontSize: 12,
-    fontWeight: '700',
+    fontSize: 11,
+    fontWeight: '800',
     color: '#374151',
+    letterSpacing: 0.5,
   },
-  speedButton: {
+  speedControl: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F9FAFB',
+    borderRadius: 10,
+    paddingHorizontal: 4,
+    paddingVertical: 2,
+  },
+  speedBtn: {
     width: 28,
     height: 28,
     borderRadius: 14,
-    backgroundColor: '#eef2ff',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  speedButtonDisabled: {
-    backgroundColor: '#f9fafb',
-  },
-  speedValueBox: {
-    width: 52,
-    alignItems: 'center',
+  speedBtnDisabled: {
+    opacity: 0.4,
   },
   speedValue: {
+    flex: 1,
+    textAlign: 'center',
     fontSize: 13,
-    fontWeight: '600',
-    color: '#6366f1',
+    fontWeight: '700',
+    color: INDIGO,
   },
-  // Modal styles
+
+  // Modal
   modalOverlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.45)',
+    backgroundColor: 'rgba(0,0,0,0.4)',
   },
   modalSheet: {
     backgroundColor: '#fff',
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
+    borderTopLeftRadius: 28,
+    borderTopRightRadius: 28,
     paddingHorizontal: 24,
-    paddingTop: 24,
+    paddingTop: 16,
     paddingBottom: 36,
+  },
+  modalHandle: {
+    width: 36,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: '#E5E7EB',
+    alignSelf: 'center',
+    marginBottom: 16,
   },
   modalTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#1f2937',
-    marginBottom: 20,
+    fontWeight: '800',
+    color: '#111827',
+    marginBottom: 4,
   },
   modalSection: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '700',
-    color: '#6b7280',
+    color: '#9CA3AF',
     textTransform: 'uppercase',
-    letterSpacing: 0.8,
-    marginBottom: 8,
-    marginTop: 16,
+    letterSpacing: 1,
+    marginTop: 20,
+    marginBottom: 10,
   },
   modalVoiceRow: {
     flexDirection: 'row',
@@ -768,19 +960,31 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: 12,
-    paddingHorizontal: 14,
-    borderRadius: 12,
+    paddingHorizontal: 12,
+    borderRadius: 14,
     borderWidth: 1.5,
-    borderColor: '#e5e7eb',
-    backgroundColor: '#f9fafb',
+    borderColor: '#E5E7EB',
+    backgroundColor: '#F9FAFB',
     marginBottom: 8,
+    gap: 10,
   },
   modalOptionSelected: {
-    borderColor: '#6366f1',
-    backgroundColor: '#eef2ff',
+    borderColor: INDIGO_LIGHT,
+    backgroundColor: INDIGO_PALE,
   },
   modalOptionHalf: {
     flex: 1,
+  },
+  modalOptionIcon: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: INDIGO_PALE,
+  },
+  modalOptionIconSelected: {
+    backgroundColor: INDIGO,
   },
   modalOptionContent: {
     flex: 1,
@@ -791,26 +995,39 @@ const styles = StyleSheet.create({
     color: '#374151',
   },
   modalOptionTextSelected: {
-    color: '#4338ca',
+    color: INDIGO_DARK,
   },
   modalOptionSublabel: {
-    fontSize: 12,
-    color: '#9ca3af',
+    fontSize: 11,
+    color: '#9CA3AF',
     marginTop: 2,
   },
   modalOptionSublabelSelected: {
-    color: '#818cf8',
+    color: INDIGO_LIGHT,
+  },
+  modalOptionCheck: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    borderWidth: 1.5,
+    borderColor: '#D1D5DB',
   },
   modalClose: {
-    marginTop: 20,
-    paddingVertical: 14,
-    borderRadius: 12,
-    backgroundColor: '#6366f1',
+    marginTop: 24,
+    paddingVertical: 15,
+    borderRadius: 14,
+    backgroundColor: INDIGO,
     alignItems: 'center',
+    elevation: 2,
+    shadowColor: INDIGO,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
   },
   modalCloseText: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: '700',
     color: '#fff',
+    letterSpacing: 0.3,
   },
 });
