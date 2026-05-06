@@ -1,0 +1,109 @@
+# BibVoz - Texto de Explicação do App
+
+## Visão geral
+
+O **BibVoz** é um aplicativo mobile desenvolvido em React Native para ajudar o usuário a aprender inglês por meio de versículos bíblicos. A proposta do app é usar passagens do texto sagrado como veículo de aprendizado de idioma, combinando leitura bilíngue com narração em áudio por síntese de voz. Assim, o conteúdo já familiar e significativo da Bíblia se transforma em um recurso natural e motivador para o desenvolvimento do inglês.
+
+Mais do que um simples leitor bíblico, o BibVoz oferece controles avançados de áudio, personalização do modo de reprodução e recursos pensados para diferentes perfis de aprendizado, do iniciante ao estudante avançado.
+
+## Descrição do aplicativo
+
+O BibVoz funciona como um leitor bilíngue da Bíblia com reprodução automática de áudio. O aplicativo exibe os versículos lado a lado em inglês e português, com narração sequencial nas duas línguas por meio de síntese de voz nativa do dispositivo. O usuário pode ouvir primeiro em português e depois em inglês, inverter a ordem ou optar por apenas o inglês, conforme seu nível e objetivo de estudo.
+
+Na tela principal, o app apresenta o livro selecionado com todos os versículos do capítulo em cards bilíngues, destacando o versículo atual em reprodução. Os controles de áudio ficam fixos na parte inferior, com botões de play, pause e navegação entre versículos, além de ajustes independentes de velocidade para cada idioma.
+
+## Objetivo principal
+
+O principal objetivo do BibVoz é oferecer ao usuário um método prático e significativo para **aprender inglês por meio da leitura e escuta da Bíblia**. O app foi pensado para pessoas de língua portuguesa que desejam desenvolver a compreensão oral e a leitura em inglês utilizando um conteúdo que já conhecem e valorizam.
+
+Ao usar versículos bíblicos como base, o aprendizado ganha contexto, sentido e motivação. O usuário não apenas exercita o inglês, mas mantém contato com textos que têm relevância espiritual, cultural e histórica para a sua vida.
+
+## Problema que o app resolve
+
+Aprender inglês exige exposição constante ao idioma, mas nem sempre é fácil encontrar conteúdo de qualidade que seja ao mesmo tempo acessível, motivador e adequado ao nível do aprendiz. Materiais genéricos muitas vezes carecem de conexão emocional ou cultural com o usuário.
+
+O BibVoz resolve esse problema ao unir fé e aprendizado, oferecendo:
+
+- versículos bíblicos em inglês e português em um único lugar;
+- narração em áudio sequencial nas duas línguas;
+- controle de velocidade adaptável ao nível do aprendiz;
+- modos de reprodução para diferentes estágios de aprendizado;
+- acesso offline ao conteúdo, sem necessidade de internet.
+
+## Principais funcionalidades
+
+### 1. Leitura bilíngue de versículos
+
+O app exibe os versículos em cards bilíngues com o texto em inglês e a tradução em português. A leitura visual acompanha a narração em áudio, facilitando a associação entre as duas línguas. O versículo em reprodução fica destacado na lista para que o usuário acompanhe o progresso.
+
+### 2. Narração automática em duas línguas
+
+O BibVoz utiliza a síntese de voz nativa do dispositivo para narrar os versículos automaticamente. A reprodução avança de versículo em versículo de forma contínua, permitindo que o usuário ouça o conteúdo sem precisar interagir com o app a cada momento.
+
+### 3. Modos de reprodução
+
+O usuário pode personalizar a sequência de narração conforme seu nível de inglês:
+
+- **Português → Inglês**: indicado para iniciantes, que ouvem primeiro o significado em português antes de ouvir a versão em inglês;
+- **Inglês → Português**: indicado para aprendizes em nível intermediário;
+- **Somente inglês**: modo de imersão para estudantes avançados que desejam praticar a escuta sem suporte no idioma nativo.
+
+### 4. Controle independente de velocidade
+
+O app oferece controles de velocidade separados para o inglês e para o português. O usuário pode reduzir o ritmo da narração em inglês para facilitar a compreensão sem alterar a velocidade da parte em português, ou ajustar ambos conforme sua preferência.
+
+### 5. Seleção de sotaque e voz
+
+O BibVoz permite escolher o sotaque do inglês entre americano e britânico, além de selecionar entre vozes masculina e feminina para cada idioma. O usuário pode testar as vozes antes de confirmar a escolha, garantindo uma experiência de escuta mais confortável e personalizada.
+
+### 6. Repetição de versículos
+
+Cada versículo pode ser repetido automaticamente de uma a quatro vezes antes de avançar para o próximo. Esse recurso é especialmente útil para reforçar a memorização de frases e padrões do inglês por meio da escuta repetida.
+
+### 7. Retomada automática da leitura
+
+O app salva automaticamente a posição de leitura do usuário, incluindo livro, capítulo e versículo. Na próxima vez que o app for aberto, o conteúdo é retomado do ponto onde parou, sem necessidade de navegar manualmente até a última posição.
+
+### 8. Navegação por livros e capítulos
+
+O BibVoz organiza o conteúdo por livros bíblicos e capítulos, com abas de navegação e seletor de capítulos em chips horizontais. O usuário pode navegar facilmente entre os capítulos disponíveis e retomar a leitura em qualquer ponto.
+
+### 9. Versão sem anúncios
+
+O aplicativo possui um modelo de monetização com anúncios e também oferece uma opção de **compra única** para remover propagandas e desbloquear o acesso a todos os livros disponíveis. Assim, o usuário pode escolher entre a versão gratuita ou uma experiência completa e sem interrupções.
+
+## Diferenciais do BibVoz
+
+Entre os principais diferenciais do app, destacam-se:
+
+- uso da Bíblia como conteúdo de aprendizado, unindo fé e estudo do idioma;
+- narração bilíngue automática com síntese de voz de alta qualidade;
+- modos de reprodução adaptados a diferentes níveis de inglês;
+- controles independentes de velocidade para inglês e português;
+- funcionamento offline, sem necessidade de conexão com a internet;
+- retomada automática da posição de leitura;
+- interface limpa, clara e fácil de usar.
+
+## Público-alvo
+
+O BibVoz pode ser utilizado por diferentes perfis de pessoas, especialmente:
+
+- falantes de português que desejam aprender ou praticar o inglês;
+- cristãos e leitores da Bíblia que querem combinar fé e aprendizado;
+- iniciantes no inglês que buscam conteúdo contextualizado e significativo;
+- estudantes e autodidatas que preferem aprender por meio da escuta;
+- qualquer pessoa que queira desenvolver o inglês de forma prática e motivadora.
+
+## Tom e proposta de valor
+
+O app transmite uma proposta simples e direta: **aprender inglês por meio da Palavra**. Sua proposta de valor está em oferecer um método de estudo que une conteúdo de profundo significado espiritual e cultural com recursos modernos de aprendizado de idiomas.
+
+O BibVoz transforma a leitura da Bíblia em uma experiência de imersão bilíngue, acessível, prática e adaptável. Ele oferece ao usuário a possibilidade de estudar inglês todos os dias com um conteúdo que já faz parte da sua rotina, sua fé e sua vida.
+
+## Texto-base resumido para materiais de divulgação
+
+O BibVoz é um aplicativo mobile criado para quem deseja aprender inglês por meio da leitura e escuta da Bíblia. Com ele, o usuário acompanha versículos bilíngues em inglês e português com narração automática em áudio, podendo ajustar a velocidade, o sotaque, a voz e o modo de reprodução conforme seu nível de inglês. O app funciona offline, salva a posição de leitura automaticamente e oferece modos de reprodução para iniciantes, intermediários e avançados. Com interface simples e conteúdo significativo, o BibVoz une fé e aprendizado em uma experiência prática, acessível e motivadora.
+
+## Texto-base mais envolvente para vídeo, infográfico ou podcast
+
+Aprender inglês exige constância, mas também exige motivação. E quando o conteúdo tem significado, o aprendizado acontece de forma mais natural. O BibVoz foi criado justamente com essa ideia: unir a leitura da Bíblia com o estudo do inglês em um único aplicativo simples e poderoso. Com ele, o usuário ouve os versículos narrados em inglês e português, no ritmo que preferir, com o sotaque que escolher. Iniciantes podem começar ouvindo primeiro em português para entender o sentido antes de escutar em inglês. Estudantes avançados podem ativar o modo de imersão e ouvir somente em inglês. Em todos os casos, o conteúdo é a Bíblia, um texto conhecido, familiar e cheio de significado. O BibVoz transforma o momento de leitura bíblica em uma prática diária de inglês, sem abrir mão da fé e sem complicar a rotina.

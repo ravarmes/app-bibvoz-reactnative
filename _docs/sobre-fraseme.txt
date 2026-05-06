@@ -1,0 +1,136 @@
+# Frase.me - Texto de Explicação do App
+
+## Visão geral
+
+O **Frase.me** é um aplicativo mobile desenvolvido em React Native para ajudar o usuário a criar e organizar o seu próprio acervo de frases motivacionais e inspiradoras. A proposta do app é transformar frases soltas, anotações rápidas e citações marcantes em uma coleção pessoal, acessível e fácil de consultar no dia a dia.
+
+Mais do que apenas armazenar textos, o aplicativo oferece recursos para classificar, avaliar e destacar os conteúdos mais importantes para cada pessoa. Assim, o usuário consegue manter por perto ideias, mensagens e reflexões que fazem sentido para a sua rotina, seus objetivos e sua forma de pensar.
+
+## Descrição do aplicativo
+
+O Frase.me funciona como uma biblioteca pessoal de frases. Dentro do app, o usuário pode cadastrar novas frases, informar o autor, associar categorias e atribuir uma avaliação para cada item salvo. Isso cria uma experiência de uso simples e ao mesmo tempo organizada, permitindo que cada frase tenha contexto e relevância dentro da coleção.
+
+Na tela inicial, o aplicativo apresenta um resumo visual da coleção, com destaque para uma frase aleatória, quantidade total de frases cadastradas, total de favoritas e média de avaliação. Essa apresentação torna a navegação mais envolvente e reforça o propósito do app: manter a inspiração sempre visível e acessível.
+
+## Objetivo principal
+
+O principal objetivo do Frase.me é oferecer ao usuário um espaço pessoal para **guardar, organizar, revisitar e valorizar frases inspiradoras**. O app foi pensado para pessoas que gostam de registrar mensagens motivacionais, citações de autores, pensamentos marcantes ou frases que geram aprendizado e reflexão.
+
+Em vez de deixar esse conteúdo perdido em blocos de notas, conversas ou imagens espalhadas, o Frase.me centraliza tudo em um ambiente prático, intuitivo e agradável. Dessa forma, o aplicativo ajuda o usuário a construir um repertório pessoal de inspiração, com consulta rápida e recursos de organização.
+
+## Problema que o app resolve
+
+Muitas pessoas salvam frases importantes em vários lugares diferentes, como aplicativos de mensagem, anotações avulsas, redes sociais ou capturas de tela. Com o tempo, esse conteúdo fica disperso e difícil de encontrar.
+
+O Frase.me resolve esse problema ao reunir tudo em um único aplicativo, permitindo:
+
+- armazenar frases em um só lugar;
+- identificar autores e categorias;
+- destacar as frases favoritas;
+- avaliar quais frases têm mais valor para o usuário;
+- consultar relatórios e padrões da própria coleção.
+
+## Principais funcionalidades
+
+### 1. Cadastro de frases
+
+O usuário pode adicionar novas frases inspiradoras de forma simples, preenchendo:
+
+- texto da frase;
+- nome do autor;
+- categorias ou tags;
+- avaliação em estrelas.
+
+Esse fluxo torna o cadastro rápido e ao mesmo tempo estruturado.
+
+### 2. Edição e exclusão
+
+As frases salvas podem ser editadas sempre que necessário. Isso permite corrigir textos, atualizar autores, revisar categorias ou ajustar avaliações. O app também oferece exclusão com confirmação, trazendo mais controle sobre a coleção.
+
+### 3. Organização por categorias
+
+Cada frase pode receber uma ou mais categorias, como motivação, fé, vida, foco, disciplina ou superação. Esse recurso facilita a organização temática da coleção e melhora a busca por conteúdos específicos.
+
+### 4. Sistema de favoritos
+
+O usuário pode marcar frases favoritas para destacar os conteúdos mais significativos. Com isso, o app não serve apenas como arquivo, mas também como uma curadoria pessoal de mensagens mais importantes.
+
+### 5. Avaliação por estrelas
+
+Cada frase pode receber uma nota em estrelas. Isso permite que o usuário identifique quais frases considera mais impactantes, úteis ou inspiradoras. A avaliação também contribui para os relatórios e para a visualização das frases mais bem classificadas.
+
+### 6. Busca e filtros
+
+O Frase.me oferece mecanismos de busca e filtragem para localizar frases com facilidade. O usuário pode pesquisar por:
+
+- texto da frase;
+- nome do autor;
+- categoria.
+
+Além disso, o app permite filtrar a visualização por frases favoritas e por categorias específicas.
+
+### 7. Visualização da coleção
+
+As frases ficam disponíveis em uma lista organizada, com interface visual moderna e navegação simples. O usuário consegue abrir, explorar e interagir com a sua coleção de maneira prática, sem complexidade.
+
+### 8. Relatórios e estatísticas
+
+Um dos diferenciais do app é a área de relatórios, que apresenta informações sobre a coleção cadastrada, como:
+
+- total de frases;
+- quantidade de favoritas;
+- média geral de avaliação;
+- frases mais bem avaliadas;
+- autores mais frequentes;
+- categorias mais populares;
+- distribuição das avaliações.
+
+Esses dados ajudam o usuário a enxergar padrões e valorizar ainda mais o conteúdo que acumulou ao longo do tempo.
+
+### 9. Destaque de frase na tela inicial
+
+Na tela principal, o app pode exibir uma frase aleatória da coleção, criando uma experiência mais dinâmica e inspiradora logo na abertura. Esse detalhe reforça o propósito emocional do produto e aproxima o usuário do conteúdo salvo.
+
+### 10. Versão sem anúncios
+
+O aplicativo possui um modelo de monetização com anúncios e também oferece uma opção de **compra única** para remover propagandas. Assim, o usuário pode escolher entre utilizar a versão com anúncios ou desbloquear uma experiência mais limpa e sem interrupções.
+
+## Diferenciais do Frase.me
+
+Entre os principais diferenciais do app, destacam-se:
+
+- foco em inspiração, motivação e crescimento pessoal;
+- organização simples, mas com recursos úteis de classificação;
+- interface moderna e amigável;
+- armazenamento local da coleção no dispositivo;
+- experiência personalizada por meio de favoritos, avaliações e categorias;
+- relatórios que transformam uma coleção de frases em informação útil.
+
+## Público-alvo
+
+O Frase.me pode ser utilizado por diferentes perfis de pessoas, especialmente:
+
+- usuários que gostam de frases motivacionais e inspiradoras;
+- estudantes e profissionais que salvam citações para estudo e reflexão;
+- pessoas que desejam manter mensagens positivas sempre à mão;
+- criadores de conteúdo que organizam referências e ideias;
+- qualquer pessoa que queira construir um acervo pessoal de frases com significado.
+
+## Tom e proposta de valor
+
+O app transmite uma proposta simples e direta: **guardar inspiração de forma organizada e pessoal**. Sua proposta de valor está em oferecer um ambiente em que frases e citações deixam de ser apenas registros soltos e passam a compor uma coleção viva, acessível e significativa.
+
+O Frase.me une praticidade, organização e inspiração em uma única experiência. Ele ajuda o usuário a registrar conteúdos que importam, revisitar mensagens marcantes e descobrir, por meio de relatórios e favoritos, quais ideias têm mais força dentro da sua própria jornada.
+
+## Texto-base resumido para materiais de divulgação
+
+O Frase.me é um aplicativo mobile criado para quem gosta de salvar frases motivacionais, reflexões e citações inspiradoras. Com ele, o usuário pode montar seu próprio acervo pessoal, cadastrar frases, identificar autores, organizar por categorias, marcar favoritas e atribuir avaliações. O app também apresenta relatórios com estatísticas da coleção, como frases mais bem avaliadas, autores mais frequentes e categorias mais populares. Com interface moderna e proposta simples, o Frase.me transforma frases importantes em uma biblioteca pessoal de inspiração, consulta e autoconhecimento.
+
+## Texto-base mais envolvente para vídeo, infográfico ou podcast
+
+Vivemos cercados de mensagens, pensamentos e frases que nos inspiram, mas quase sempre esse conteúdo fica espalhado em vários lugares e acaba se perdendo com o tempo. O Frase.me surge justamente para resolver isso. O aplicativo permite que cada usuário crie sua própria coleção de frases motivacionais e inspiradoras em um espaço organizado, bonito e fácil de usar. Nele, é possível cadastrar frases, registrar autores, separar por categorias, marcar favoritas, avaliar as mais impactantes e acompanhar relatórios inteligentes sobre a própria coleção. Mais do que guardar frases, o Frase.me ajuda a preservar ideias que motivam, ensinam e fortalecem a rotina. É um app pensado para transformar inspiração em organização, memória e significado.
+
+ 
+ 
+ 
+  

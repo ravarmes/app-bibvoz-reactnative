@@ -4,6 +4,9 @@ import type { PlaybackMode, EnVoice } from '../services/PlayerController';
 
 export type { PlaybackMode, EnVoice };
 
+export const REPEAT_OPTIONS = [1, 2, 3, 4] as const;
+export type RepeatCount = (typeof REPEAT_OPTIONS)[number];
+
 export interface LastPosition {
   bookId: string;
   chapter: number;
@@ -16,6 +19,8 @@ interface SettingsState {
   lastPosition: LastPosition | null;
   enSpeed: number;
   ptSpeed: number;
+  enVoiceId: string | null;
+  repeatCount: RepeatCount;
 }
 
 interface SettingsContextValue extends SettingsState {
@@ -24,6 +29,8 @@ interface SettingsContextValue extends SettingsState {
   saveLastPosition: (pos: LastPosition) => void;
   setEnSpeed: (r: number) => void;
   setPtSpeed: (r: number) => void;
+  setEnVoiceId: (id: string | null) => void;
+  setRepeatCount: (n: RepeatCount) => void;
 }
 
 const STORAGE_KEY = '@bibvoz_settings_v1';
@@ -34,6 +41,8 @@ const DEFAULTS: SettingsState = {
   lastPosition: null,
   enSpeed: 0.50,
   ptSpeed: 0.75,
+  enVoiceId: null,
+  repeatCount: 1,
 };
 
 const SettingsContext = createContext<SettingsContextValue | null>(null);
@@ -68,11 +77,13 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const saveLastPosition = useCallback((pos: LastPosition) => persist({ lastPosition: pos }), [persist]);
   const setEnSpeed = useCallback((r: number) => persist({ enSpeed: r }), [persist]);
   const setPtSpeed = useCallback((r: number) => persist({ ptSpeed: r }), [persist]);
+  const setEnVoiceId = useCallback((id: string | null) => persist({ enVoiceId: id }), [persist]);
+  const setRepeatCount = useCallback((n: RepeatCount) => persist({ repeatCount: n }), [persist]);
 
   if (!ready) return null;
 
   return (
-    <SettingsContext.Provider value={{ ...state, setEnVoice, setPlaybackMode, saveLastPosition, setEnSpeed, setPtSpeed }}>
+    <SettingsContext.Provider value={{ ...state, setEnVoice, setPlaybackMode, saveLastPosition, setEnSpeed, setPtSpeed, setEnVoiceId, setRepeatCount }}>
       {children}
     </SettingsContext.Provider>
   );

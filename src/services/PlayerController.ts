@@ -21,6 +21,7 @@ export interface PlayerController extends PlayerState {
 interface PlayerOptions {
   playbackMode: PlaybackMode;
   enVoice: EnVoice;
+  repeatCount?: number;
   initialIndex?: number;
   onVerseChange?: (index: number) => void;
 }
@@ -80,10 +81,13 @@ export function usePlayerController(verses: Verse[], options: PlayerOptions): Pl
             ];
         }
 
-        for (const step of steps) {
-          if (runTokenRef.current !== myToken) return;
-          setPhase(step.phase);
-          await AudioService.speak(step.text, step.lang);
+        const repeat = optionsRef.current.repeatCount ?? 1;
+        for (let r = 0; r < repeat; r++) {
+          for (const step of steps) {
+            if (runTokenRef.current !== myToken) return;
+            setPhase(step.phase);
+            await AudioService.speak(step.text, step.lang);
+          }
         }
 
         i += 1;

@@ -8,7 +8,7 @@
  * Substitui o app de frases por um leitor bíblico bilíngue com TTS sequencial.
  */
 
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import mobileAds, {
   BannerAd,
@@ -20,6 +20,7 @@ import adConfig from './src/utils/adConfig';
 import { IapProvider, useIap } from './src/context/IapContext';
 import { SettingsProvider } from './src/context/SettingsContext';
 import BibleReaderScreen from './src/screens/BibleReaderScreen';
+import SplashScreen from './src/screens/SplashScreen';
 
 const BottomBanner = () => {
   const { isAdFree } = useIap();
@@ -41,17 +42,18 @@ const BottomBanner = () => {
 };
 
 function App(): React.JSX.Element {
+  const [splashDone, setSplashDone] = useState(false);
+  const handleSplashFinish = useCallback(() => setSplashDone(true), []);
+
   useEffect(() => {
     mobileAds()
       .initialize()
-      .then(() => {
-        console.log('AdMob SDK inicializado com sucesso');
-      });
+      .then(() => {});
   }, []);
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#6366f1" />
+      <StatusBar barStyle="light-content" backgroundColor="#2D1B0E" />
       <SettingsProvider>
         <IapProvider>
           <PaperProvider>
@@ -60,6 +62,7 @@ function App(): React.JSX.Element {
           <BottomBanner />
         </IapProvider>
       </SettingsProvider>
+      {!splashDone && <SplashScreen onFinish={handleSplashFinish} />}
     </SafeAreaView>
   );
 }
@@ -67,7 +70,7 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#2D1B0E',
   },
   adContainer: {
     width: '100%',

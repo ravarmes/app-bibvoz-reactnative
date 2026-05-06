@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
+  ActivityIndicator,
   Modal,
   Pressable,
   ScrollView,
@@ -7,23 +8,26 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { Surface, Text } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { BibleService, Chapter, Verse } from '../services/BibleService';
 import { usePlayerController, Phase, PlaybackMode, EnVoice } from '../services/PlayerController';
 import { AudioService } from '../services/AudioService';
 import { useIap } from '../context/IapContext';
-import { useSettings } from '../context/SettingsContext';
+import { useSettings, REPEAT_OPTIONS, RepeatCount } from '../context/SettingsContext';
 
 const SPEED_STEP = 0.25;
 const SPEED_MIN = 0.25;
 const SPEED_MAX = 1.50;
 
-const INDIGO = '#6366f1';
-const INDIGO_DARK = '#4338ca';
-const INDIGO_LIGHT = '#818cf8';
-const INDIGO_PALE = '#eef2ff';
-const INDIGO_HEADER = '#5254CC';
+const BROWN_HEADER = '#2D1B0E';
+const BROWN = '#8B5430';
+const BROWN_DARK = '#5C3318';
+const BROWN_LIGHT = '#BA8A62';
+const BROWN_PALE = '#F0E4CC';
+const PARCHMENT = '#F4EED8';
+const PARCHMENT_CARD = '#FBF8F2';
+const INK = '#1A0D07';
 
 const MODE_LABELS: Record<PlaybackMode, string> = {
   'pt-en': 'PT → EN',
@@ -32,14 +36,24 @@ const MODE_LABELS: Record<PlaybackMode, string> = {
 };
 
 export default function BibleReaderScreen() {
-  const books = useMemo(() => BibleService.listBooks(), []);
+  const { isAdFree, purchaseRemoveAds, isLoading: iapLoading } = useIap();
   const {
     enVoice, setEnVoice,
     playbackMode, setPlaybackMode,
     lastPosition, saveLastPosition,
     enSpeed, setEnSpeed: saveEnSpeed,
     ptSpeed, setPtSpeed: savePtSpeed,
+    enVoiceId, setEnVoiceId,
+    repeatCount, setRepeatCount,
   } = useSettings();
+
+  const books = useMemo(
+    () => {
+      const all = BibleService.listBooks();
+      return isAdFree ? all : all.filter(b => b.id === 'john');
+    },
+    [isAdFree],
+  );
 
   const [selectedBookIdx, setSelectedBookIdx] = useState(() => {
     if (!lastPosition) return 0;
@@ -57,7 +71,16 @@ export default function BibleReaderScreen() {
   const [initialVerse, setInitialVerse] = useState(() => lastPosition?.verseIndex ?? 0);
   const [settingsVisible, setSettingsVisible] = useState(false);
 
-  const currentBook = books[selectedBookIdx];
+  // If the available books list shrinks (e.g. IAP state changes), clamp the index.
+  useEffect(() => {
+    if (selectedBookIdx >= books.length) {
+      setSelectedBookIdx(0);
+      setSelectedChapter(books[0].chapters[0]);
+      setInitialVerse(0);
+    }
+  }, [books, selectedBookIdx]);
+
+  const currentBook = books[Math.min(selectedBookIdx, books.length - 1)];
   const chapter = useMemo(
     () => BibleService.getChapter(currentBook.id, selectedChapter)!,
     [currentBook.id, selectedChapter],
@@ -66,8 +89,13 @@ export default function BibleReaderScreen() {
   useEffect(() => {
     AudioService.setRate('en-US', enSpeed);
     AudioService.setRate('pt-BR', ptSpeed);
+    AudioService.setVoice(enVoiceId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    AudioService.setVoice(enVoiceId);
+  }, [enVoiceId]);
 
   const handleBookChange = useCallback((idx: number) => {
     setSelectedBookIdx(idx);
@@ -165,6 +193,7 @@ export default function BibleReaderScreen() {
         setPtSpeed={handleSetPtSpeed}
         playbackMode={playbackMode}
         enVoice={enVoice}
+        repeatCount={repeatCount}
         initialVerseIndex={initialVerse}
         onVerseChange={handleVerseChange}
       />
@@ -181,52 +210,113 @@ export default function BibleReaderScreen() {
           <View style={styles.modalHandle} />
           <Text style={styles.modalTitle}>Configurações</Text>
 
-          <Text style={styles.modalSection}>Voz em Inglês</Text>
-          <View style={styles.modalVoiceRow}>
+          <ScrollView
+            style={styles.modalScroll}
+            contentContainerStyle={styles.modalScrollContent}
+            showsVerticalScrollIndicator={false}
+            keyboardShouldPersistTaps="handled"
+          >
+            <Text style={styles.modalSection}>Sotaque em Inglês</Text>
+            <View style={styles.modalVoiceRow}>
+              <ModeOption
+                icon="flag"
+                label="Americana"
+                sublabel="EN-US"
+                selected={enVoice === 'en-US'}
+                onPress={() => { setEnVoice('en-US'); setEnVoiceId(null); }}
+                style={styles.modalOptionHalf}
+              />
+              <ModeOption
+                icon="flag-outline"
+                label="Britânica"
+                sublabel="EN-GB"
+                selected={enVoice === 'en-GB'}
+                onPress={() => { setEnVoice('en-GB'); setEnVoiceId(null); }}
+                style={styles.modalOptionHalf}
+              />
+            </View>
+
+            <Text style={styles.modalSection}>Voz de Leitura</Text>
+            <VoicePickerSection
+              lang={enVoice}
+              selectedVoiceId={enVoiceId}
+              onSelect={setEnVoiceId}
+            />
+
+            <Text style={styles.modalSection}>Modo de Reprodução</Text>
             <ModeOption
-              icon="flag"
-              label="Americana"
-              sublabel="EN-US"
-              selected={enVoice === 'en-US'}
-              onPress={() => setEnVoice('en-US')}
-              style={styles.modalOptionHalf}
+              icon="swap-horizontal"
+              label="PT → EN"
+              sublabel="Primeiro português, depois inglês (padrão)"
+              selected={playbackMode === 'pt-en'}
+              onPress={() => setPlaybackMode('pt-en')}
             />
             <ModeOption
-              icon="flag-outline"
-              label="Britânica"
-              sublabel="EN-GB"
-              selected={enVoice === 'en-GB'}
-              onPress={() => setEnVoice('en-GB')}
-              style={styles.modalOptionHalf}
+              icon="swap-horizontal"
+              label="EN → PT"
+              sublabel="Primeiro inglês, depois português"
+              selected={playbackMode === 'en-pt'}
+              onPress={() => setPlaybackMode('en-pt')}
             />
+            <ModeOption
+              icon="volume-high"
+              label="Somente Inglês"
+              sublabel="Ideal para alunos avançados"
+              selected={playbackMode === 'en-only'}
+              onPress={() => setPlaybackMode('en-only')}
+            />
+
+            <Text style={styles.modalSection}>Repetições por versículo</Text>
+            <View style={styles.repeatRow}>
+              {REPEAT_OPTIONS.map(n => (
+                <TouchableOpacity
+                  key={n}
+                  style={[styles.repeatChip, repeatCount === n && styles.repeatChipActive]}
+                  onPress={() => setRepeatCount(n)}
+                  activeOpacity={0.7}
+                >
+                  <MaterialCommunityIcons
+                    name="repeat"
+                    size={13}
+                    color={repeatCount === n ? '#fff' : BROWN}
+                    style={{ marginRight: 3 }}
+                  />
+                  <Text style={[styles.repeatChipText, repeatCount === n && styles.repeatChipTextActive]}>
+                    {n}×
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+
+            {!isAdFree && (
+              <>
+                <Text style={styles.modalSection}>Premium</Text>
+                <TouchableOpacity
+                  style={[styles.premiumCard, iapLoading && styles.removeAdsDisabled]}
+                  onPress={purchaseRemoveAds}
+                  disabled={iapLoading}
+                  activeOpacity={0.85}
+                >
+                  <View style={styles.removeAdsIconWrap}>
+                    <MaterialCommunityIcons name="star-four-points" size={22} color="#f59e0b" />
+                  </View>
+                  <View style={styles.removeAdsTextWrap}>
+                    <Text style={styles.removeAdsTitle}>Remover anúncios</Text>
+                    <Text style={styles.removeAdsDesc}>
+                      {iapLoading ? 'Conectando...' : 'Pagamento único · sem propagandas'}
+                    </Text>
+                  </View>
+                  <MaterialCommunityIcons name="chevron-right" size={20} color="#d97706" />
+                </TouchableOpacity>
+              </>
+            )}
+          </ScrollView>
+
+          <View style={styles.modalCloseWrapper}>
+            <TouchableOpacity style={styles.modalClose} onPress={() => setSettingsVisible(false)} activeOpacity={0.85}>
+              <Text style={styles.modalCloseText}>Fechar</Text>
+            </TouchableOpacity>
           </View>
-
-          <Text style={styles.modalSection}>Modo de Reprodução</Text>
-          <ModeOption
-            icon="swap-horizontal"
-            label="PT → EN"
-            sublabel="Primeiro português, depois inglês (padrão)"
-            selected={playbackMode === 'pt-en'}
-            onPress={() => setPlaybackMode('pt-en')}
-          />
-          <ModeOption
-            icon="swap-horizontal"
-            label="EN → PT"
-            sublabel="Primeiro inglês, depois português"
-            selected={playbackMode === 'en-pt'}
-            onPress={() => setPlaybackMode('en-pt')}
-          />
-          <ModeOption
-            icon="volume-high"
-            label="Somente Inglês"
-            sublabel="Ideal para alunos avançados"
-            selected={playbackMode === 'en-only'}
-            onPress={() => setPlaybackMode('en-only')}
-          />
-
-          <TouchableOpacity style={styles.modalClose} onPress={() => setSettingsVisible(false)} activeOpacity={0.85}>
-            <Text style={styles.modalCloseText}>Fechar</Text>
-          </TouchableOpacity>
         </View>
       </Modal>
     </View>
@@ -251,7 +341,7 @@ const ModeOption = ({ icon, label, sublabel, selected, onPress, style }: ModeOpt
     activeOpacity={0.7}
   >
     <View style={[styles.modalOptionIcon, selected && styles.modalOptionIconSelected]}>
-      <MaterialCommunityIcons name={icon} size={16} color={selected ? '#fff' : INDIGO} />
+      <MaterialCommunityIcons name={icon} size={16} color={selected ? '#fff' : BROWN} />
     </View>
     <View style={styles.modalOptionContent}>
       <Text style={[styles.modalOptionText, selected && styles.modalOptionTextSelected]}>
@@ -264,11 +354,109 @@ const ModeOption = ({ icon, label, sublabel, selected, onPress, style }: ModeOpt
       ) : null}
     </View>
     {selected ? (
-      <MaterialCommunityIcons name="check-circle" size={20} color={INDIGO} />
+      <MaterialCommunityIcons name="check-circle" size={20} color={BROWN} />
     ) : (
       <View style={styles.modalOptionCheck} />
     )}
   </TouchableOpacity>
+);
+
+// ── VoicePickerSection ────────────────────────────────────────
+// Shows only two fixed voices: Female (system default) and Male (voice index 8).
+
+interface VoicePickerSectionProps {
+  lang: EnVoice;
+  selectedVoiceId: string | null;
+  onSelect: (id: string | null) => void;
+}
+
+const VoicePickerSection = ({ lang, selectedVoiceId, onSelect }: VoicePickerSectionProps) => {
+  const [maleVoiceId, setMaleVoiceId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    AudioService.getVoices(lang)
+      .then(voices => {
+        // Voice 8 = index 7 (voices are sorted by quality desc)
+        setMaleVoiceId(voices[7]?.id ?? null);
+      })
+      .finally(() => setLoading(false));
+  }, [lang]);
+
+  if (loading) {
+    return <ActivityIndicator size="small" color={BROWN} style={{ marginVertical: 12 }} />;
+  }
+
+  return (
+    <>
+      <VoiceOptionRow
+        label="Feminina"
+        sublabel="Voz padrão do sistema"
+        voiceId={null}
+        selected={selectedVoiceId === null}
+        onSelect={onSelect}
+        lang={lang}
+      />
+      {maleVoiceId !== null && (
+        <VoiceOptionRow
+          label="Masculina"
+          sublabel="Voz alternativa"
+          voiceId={maleVoiceId}
+          selected={selectedVoiceId === maleVoiceId}
+          onSelect={onSelect}
+          lang={lang}
+        />
+      )}
+    </>
+  );
+};
+
+// ── VoiceOptionRow ────────────────────────────────────────────
+
+interface VoiceOptionRowProps {
+  label: string;
+  sublabel?: string;
+  voiceId: string | null;
+  selected: boolean;
+  onSelect: (id: string | null) => void;
+  lang: EnVoice;
+}
+
+const VoiceOptionRow = ({ label, sublabel, voiceId, selected, onSelect, lang }: VoiceOptionRowProps) => (
+  <View style={styles.voiceOptionRow}>
+    <TouchableOpacity
+      onPress={() => onSelect(voiceId)}
+      style={[styles.modalOption, selected && styles.modalOptionSelected, styles.voiceOptionBtn]}
+      activeOpacity={0.7}
+    >
+      <View style={[styles.modalOptionIcon, selected && styles.modalOptionIconSelected]}>
+        <MaterialCommunityIcons name="account-voice" size={16} color={selected ? '#fff' : BROWN} />
+      </View>
+      <View style={styles.modalOptionContent}>
+        <Text style={[styles.modalOptionText, selected && styles.modalOptionTextSelected]}>
+          {label}
+        </Text>
+        {sublabel ? (
+          <Text style={[styles.modalOptionSublabel, selected && styles.modalOptionSublabelSelected]}>
+            {sublabel}
+          </Text>
+        ) : null}
+      </View>
+      {selected ? (
+        <MaterialCommunityIcons name="check-circle" size={20} color={BROWN} />
+      ) : (
+        <View style={styles.modalOptionCheck} />
+      )}
+    </TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => AudioService.previewVoice(voiceId, lang)}
+      style={styles.voiceTestBtn}
+      activeOpacity={0.7}
+    >
+      <MaterialCommunityIcons name="play-circle-outline" size={26} color={BROWN_LIGHT} />
+    </TouchableOpacity>
+  </View>
 );
 
 // ── ChapterPlayer ─────────────────────────────────────────────
@@ -281,18 +469,20 @@ interface ChapterPlayerProps {
   setPtSpeed: (r: number) => void;
   playbackMode: PlaybackMode;
   enVoice: EnVoice;
+  repeatCount: RepeatCount;
   initialVerseIndex: number;
   onVerseChange: (index: number) => void;
 }
 
 function ChapterPlayer({
   chapter, enSpeed, ptSpeed, setEnSpeed, setPtSpeed,
-  playbackMode, enVoice, initialVerseIndex, onVerseChange,
+  playbackMode, enVoice, repeatCount, initialVerseIndex, onVerseChange,
 }: ChapterPlayerProps) {
   const verses: Verse[] = chapter.verses;
   const player = usePlayerController(verses, {
     playbackMode,
     enVoice,
+    repeatCount,
     initialIndex: initialVerseIndex,
     onVerseChange,
   });
@@ -370,7 +560,7 @@ function ChapterPlayer({
                 <MaterialCommunityIcons
                   name={player.phase === 'pt' ? 'translate' : 'volume-high'}
                   size={11}
-                  color={INDIGO}
+                  color={BROWN}
                 />
                 <Text style={styles.langBadgeText}>
                   {player.phase === 'pt' ? 'PT-BR' : enLabel}
@@ -380,6 +570,12 @@ function ChapterPlayer({
             <View style={styles.modeBadge}>
               <Text style={styles.modeBadgeText}>{MODE_LABELS[playbackMode]}</Text>
             </View>
+            {repeatCount > 1 && (
+              <View style={styles.repeatBadge}>
+                <MaterialCommunityIcons name="repeat" size={11} color="#9ca3af" />
+                <Text style={styles.repeatBadgeText}>{repeatCount}×</Text>
+              </View>
+            )}
           </View>
 
           {/* Play controls */}
@@ -442,7 +638,7 @@ const SpeedRow = ({ label, speed, onDecrease, onIncrease }: SpeedRowProps) => (
         activeOpacity={0.7}
         hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}
       >
-        <MaterialCommunityIcons name="minus" size={14} color={speed <= SPEED_MIN ? '#d1d5db' : INDIGO} />
+        <MaterialCommunityIcons name="minus" size={14} color={speed <= SPEED_MIN ? '#C9B594' : BROWN} />
       </TouchableOpacity>
       <Text style={styles.speedValue}>{speed.toFixed(2)}×</Text>
       <TouchableOpacity
@@ -452,7 +648,7 @@ const SpeedRow = ({ label, speed, onDecrease, onIncrease }: SpeedRowProps) => (
         activeOpacity={0.7}
         hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}
       >
-        <MaterialCommunityIcons name="plus" size={14} color={speed >= SPEED_MAX ? '#d1d5db' : INDIGO} />
+        <MaterialCommunityIcons name="plus" size={14} color={speed >= SPEED_MAX ? '#C9B594' : BROWN} />
       </TouchableOpacity>
     </View>
   </View>
@@ -483,7 +679,7 @@ const VerseCard = ({ verse, active, phase, onPress, enLabel, onLayout }: VerseCa
             <MaterialCommunityIcons
               name={phase === 'pt' ? 'translate' : 'volume-high'}
               size={12}
-              color={INDIGO}
+              color={BROWN}
             />
             <Text style={styles.phasePillText}>
               {phase === 'pt' ? 'PT-BR' : enLabel}
@@ -522,7 +718,7 @@ const ControlButton = ({ icon, onPress, main }: ControlButtonProps) => (
     <MaterialCommunityIcons
       name={icon}
       size={main ? 34 : 26}
-      color={main ? '#fff' : INDIGO}
+      color={main ? '#fff' : BROWN}
     />
   </TouchableOpacity>
 );
@@ -532,7 +728,7 @@ const ControlButton = ({ icon, onPress, main }: ControlButtonProps) => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ECEEF8',
+    backgroundColor: PARCHMENT,
   },
 
   // Header
@@ -540,11 +736,11 @@ const styles = StyleSheet.create({
     paddingTop: 28,
     paddingBottom: 16,
     paddingHorizontal: 20,
-    backgroundColor: INDIGO_HEADER,
+    backgroundColor: BROWN_HEADER,
     borderBottomLeftRadius: 28,
     borderBottomRightRadius: 28,
     elevation: 8,
-    shadowColor: INDIGO_HEADER,
+    shadowColor: BROWN_HEADER,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.35,
     shadowRadius: 12,
@@ -648,7 +844,7 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.7)',
   },
   chapterChipTextActive: {
-    color: INDIGO_HEADER,
+    color: BROWN_HEADER,
   },
 
   // Verse list
@@ -663,23 +859,23 @@ const styles = StyleSheet.create({
 
   // Verse card
   verseCard: {
-    backgroundColor: '#fff',
+    backgroundColor: PARCHMENT_CARD,
     borderRadius: 16,
     padding: 16,
     marginBottom: 10,
     elevation: 1,
-    shadowColor: '#6366f1',
+    shadowColor: BROWN_HEADER,
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.06,
+    shadowOpacity: 0.08,
     shadowRadius: 4,
   },
   verseCardActive: {
-    backgroundColor: INDIGO_PALE,
+    backgroundColor: BROWN_PALE,
     elevation: 3,
     shadowOpacity: 0.12,
     shadowRadius: 8,
     borderLeftWidth: 3,
-    borderLeftColor: INDIGO,
+    borderLeftColor: BROWN,
   },
   verseHeader: {
     flexDirection: 'row',
@@ -694,15 +890,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#EEF2FF',
+    backgroundColor: BROWN_PALE,
   },
   verseBadgeActive: {
-    backgroundColor: INDIGO,
+    backgroundColor: BROWN,
   },
   verseBadgeText: {
     fontSize: 12,
     fontWeight: '700',
-    color: INDIGO,
+    color: BROWN,
   },
   verseBadgeTextActive: {
     color: '#fff',
@@ -710,7 +906,7 @@ const styles = StyleSheet.create({
   phasePill: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#E0E7FF',
+    backgroundColor: BROWN_PALE,
     borderRadius: 10,
     paddingHorizontal: 8,
     paddingVertical: 3,
@@ -719,30 +915,30 @@ const styles = StyleSheet.create({
   phasePillText: {
     fontSize: 11,
     fontWeight: '700',
-    color: INDIGO,
+    color: BROWN,
   },
   verseEn: {
     fontSize: 16,
-    color: '#1f2937',
+    color: INK,
     fontWeight: '600',
     lineHeight: 24,
   },
   verseEnActive: {
-    color: INDIGO_DARK,
+    color: BROWN_DARK,
   },
   verseDivider: {
     height: 1,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#E2D5BC',
     marginVertical: 10,
   },
   versePt: {
     fontSize: 13,
-    color: '#6b7280',
+    color: '#7A5C3E',
     fontStyle: 'italic',
     lineHeight: 20,
   },
   versePtActive: {
-    color: '#4f46e5',
+    color: BROWN_DARK,
     fontWeight: '500',
   },
 
@@ -785,23 +981,23 @@ const styles = StyleSheet.create({
 
   // Controls panel
   controls: {
-    backgroundColor: '#fff',
+    backgroundColor: PARCHMENT_CARD,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     elevation: 12,
-    shadowColor: '#000',
+    shadowColor: BROWN_HEADER,
     shadowOffset: { width: 0, height: -3 },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.15,
     shadowRadius: 12,
     overflow: 'hidden',
   },
   progressTrack: {
     height: 3,
-    backgroundColor: '#E0E7FF',
+    backgroundColor: '#E2D5BC',
   },
   progressFill: {
     height: 3,
-    backgroundColor: INDIGO,
+    backgroundColor: BROWN,
     borderRadius: 2,
   },
   controlsBody: {
@@ -818,14 +1014,14 @@ const styles = StyleSheet.create({
   },
   controlsStatus: {
     fontSize: 13,
-    color: '#6b7280',
+    color: '#7A5C3E',
     fontWeight: '500',
   },
   langBadge: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 3,
-    backgroundColor: INDIGO_PALE,
+    backgroundColor: BROWN_PALE,
     borderRadius: 8,
     paddingHorizontal: 7,
     paddingVertical: 3,
@@ -833,10 +1029,10 @@ const styles = StyleSheet.create({
   langBadgeText: {
     fontSize: 10,
     fontWeight: '700',
-    color: INDIGO,
+    color: BROWN,
   },
   modeBadge: {
-    backgroundColor: '#F3F4F6',
+    backgroundColor: BROWN_PALE,
     borderRadius: 8,
     paddingHorizontal: 8,
     paddingVertical: 3,
@@ -844,7 +1040,49 @@ const styles = StyleSheet.create({
   modeBadgeText: {
     fontSize: 10,
     fontWeight: '700',
-    color: '#6b7280',
+    color: '#7A5C3E',
+  },
+  repeatBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 2,
+    backgroundColor: '#F3F4F6',
+    borderRadius: 8,
+    paddingHorizontal: 6,
+    paddingVertical: 3,
+  },
+  repeatBadgeText: {
+    fontSize: 10,
+    fontWeight: '600',
+    color: '#9ca3af',
+  },
+  repeatRow: {
+    flexDirection: 'row',
+    gap: 8,
+    marginBottom: 4,
+  },
+  repeatChip: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
+    borderRadius: 12,
+    borderWidth: 1.5,
+    borderColor: '#E5E7EB',
+    backgroundColor: '#F9FAFB',
+  },
+  repeatChipActive: {
+    backgroundColor: BROWN,
+    borderColor: BROWN,
+  },
+  repeatChipText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: BROWN,
+  },
+  repeatChipTextActive: {
+    color: '#fff',
   },
   controlsButtons: {
     flexDirection: 'row',
@@ -859,22 +1097,22 @@ const styles = StyleSheet.create({
     borderRadius: 26,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: INDIGO_PALE,
+    backgroundColor: BROWN_PALE,
   },
   controlBtnMain: {
     width: 64,
     height: 64,
     borderRadius: 32,
-    backgroundColor: INDIGO,
+    backgroundColor: BROWN,
     elevation: 4,
-    shadowColor: INDIGO,
+    shadowColor: BROWN,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.35,
     shadowRadius: 8,
   },
   speedControls: {
     borderTopWidth: 1,
-    borderTopColor: '#f3f4f6',
+    borderTopColor: '#E2D5BC',
     paddingTop: 10,
     gap: 4,
   },
@@ -886,14 +1124,14 @@ const styles = StyleSheet.create({
     width: 28,
     fontSize: 11,
     fontWeight: '800',
-    color: '#374151',
+    color: '#3D2A1A',
     letterSpacing: 0.5,
   },
   speedControl: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F9FAFB',
+    backgroundColor: BROWN_PALE,
     borderRadius: 10,
     paddingHorizontal: 4,
     paddingVertical: 2,
@@ -913,7 +1151,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 13,
     fontWeight: '700',
-    color: INDIGO,
+    color: BROWN,
   },
 
   // Modal
@@ -922,31 +1160,38 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.4)',
   },
   modalSheet: {
-    backgroundColor: '#fff',
+    backgroundColor: PARCHMENT_CARD,
     borderTopLeftRadius: 28,
     borderTopRightRadius: 28,
-    paddingHorizontal: 24,
     paddingTop: 16,
-    paddingBottom: 36,
+    maxHeight: '88%',
   },
   modalHandle: {
     width: 36,
     height: 4,
     borderRadius: 2,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#D4C4A0',
     alignSelf: 'center',
-    marginBottom: 16,
+    marginBottom: 12,
   },
   modalTitle: {
     fontSize: 18,
     fontWeight: '800',
-    color: '#111827',
+    color: INK,
     marginBottom: 4,
+    paddingHorizontal: 24,
+  },
+  modalScroll: {
+    flexGrow: 0,
+  },
+  modalScrollContent: {
+    paddingHorizontal: 24,
+    paddingBottom: 8,
   },
   modalSection: {
     fontSize: 11,
     fontWeight: '700',
-    color: '#9CA3AF',
+    color: '#9B7B5E',
     textTransform: 'uppercase',
     letterSpacing: 1,
     marginTop: 20,
@@ -963,14 +1208,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     borderRadius: 14,
     borderWidth: 1.5,
-    borderColor: '#E5E7EB',
-    backgroundColor: '#F9FAFB',
+    borderColor: '#D4C4A0',
+    backgroundColor: PARCHMENT,
     marginBottom: 8,
     gap: 10,
   },
   modalOptionSelected: {
-    borderColor: INDIGO_LIGHT,
-    backgroundColor: INDIGO_PALE,
+    borderColor: BROWN_LIGHT,
+    backgroundColor: BROWN_PALE,
   },
   modalOptionHalf: {
     flex: 1,
@@ -981,10 +1226,10 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: INDIGO_PALE,
+    backgroundColor: BROWN_PALE,
   },
   modalOptionIconSelected: {
-    backgroundColor: INDIGO,
+    backgroundColor: BROWN,
   },
   modalOptionContent: {
     flex: 1,
@@ -992,34 +1237,74 @@ const styles = StyleSheet.create({
   modalOptionText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#374151',
+    color: '#3D2A1A',
   },
   modalOptionTextSelected: {
-    color: INDIGO_DARK,
+    color: BROWN_DARK,
   },
   modalOptionSublabel: {
     fontSize: 11,
-    color: '#9CA3AF',
+    color: '#9B7B5E',
     marginTop: 2,
   },
   modalOptionSublabelSelected: {
-    color: INDIGO_LIGHT,
+    color: BROWN_LIGHT,
   },
   modalOptionCheck: {
     width: 20,
     height: 20,
     borderRadius: 10,
     borderWidth: 1.5,
-    borderColor: '#D1D5DB',
+    borderColor: '#C9B594',
+  },
+  // Voice picker
+  voiceOptionRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 8,
+  },
+  voiceOptionBtn: {
+    flex: 1,
+    marginBottom: 0,
+  },
+  voiceTestBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: BROWN_PALE,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  voiceEmptyText: {
+    fontSize: 12,
+    color: '#9B7B5E',
+    marginBottom: 8,
+  },
+  // Premium card
+  premiumCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fffbeb',
+    borderRadius: 16,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: '#fde68a',
+    marginBottom: 8,
+  },
+  // Modal footer
+  modalCloseWrapper: {
+    paddingHorizontal: 24,
+    paddingTop: 8,
+    paddingBottom: 36,
   },
   modalClose: {
-    marginTop: 24,
     paddingVertical: 15,
     borderRadius: 14,
-    backgroundColor: INDIGO,
+    backgroundColor: BROWN,
     alignItems: 'center',
     elevation: 2,
-    shadowColor: INDIGO,
+    shadowColor: BROWN,
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.3,
     shadowRadius: 6,
