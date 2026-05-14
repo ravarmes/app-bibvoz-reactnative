@@ -13,6 +13,13 @@ export interface LastPosition {
   verseIndex: number;
 }
 
+export interface Bookmark {
+  bookId: string;
+  chapter: number;
+  verseNumber: number;
+  addedAt: number;
+}
+
 interface SettingsState {
   enVoice: EnVoice;
   playbackMode: PlaybackMode;
@@ -21,6 +28,7 @@ interface SettingsState {
   ptSpeed: number;
   enVoiceId: string | null;
   repeatCount: RepeatCount;
+  bookmarks: Bookmark[];
 }
 
 interface SettingsContextValue extends SettingsState {
@@ -31,6 +39,8 @@ interface SettingsContextValue extends SettingsState {
   setPtSpeed: (r: number) => void;
   setEnVoiceId: (id: string | null) => void;
   setRepeatCount: (n: RepeatCount) => void;
+  toggleBookmark: (bookId: string, chapter: number, verseNumber: number) => void;
+  isBookmarked: (bookId: string, chapter: number, verseNumber: number) => boolean;
 }
 
 const STORAGE_KEY = '@bibvoz_settings_v1';
@@ -43,6 +53,7 @@ const DEFAULTS: SettingsState = {
   ptSpeed: 0.75,
   enVoiceId: null,
   repeatCount: 1,
+  bookmarks: [],
 };
 
 const SettingsContext = createContext<SettingsContextValue | null>(null);
@@ -80,10 +91,28 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const setEnVoiceId = useCallback((id: string | null) => persist({ enVoiceId: id }), [persist]);
   const setRepeatCount = useCallback((n: RepeatCount) => persist({ repeatCount: n }), [persist]);
 
+  const toggleBookmark = useCallback((bookId: string, chapter: number, verseNumber: number) => {
+    setState(prev => {
+      const exists = prev.bookmarks.some(b => b.bookId === bookId && b.chapter === chapter && b.verseNumber === verseNumber);
+      const nextBookmarks = exists
+        ? prev.bookmarks.filter(b => !(b.bookId === bookId && b.chapter === chapter && b.verseNumber === verseNumber))
+        : [...prev.bookmarks, { bookId, chapter, verseNumber, addedAt: Date.now() }];
+      const next = { ...prev, bookmarks: nextBookmarks };
+      AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(next)).catch(() => {});
+      return next;
+    });
+  }, []);
+
+  const isBookmarked = useCallback(
+    (bookId: string, chapter: number, verseNumber: number) =>
+      state.bookmarks.some(b => b.bookId === bookId && b.chapter === chapter && b.verseNumber === verseNumber),
+    [state.bookmarks],
+  );
+
   if (!ready) return null;
 
   return (
-    <SettingsContext.Provider value={{ ...state, setEnVoice, setPlaybackMode, saveLastPosition, setEnSpeed, setPtSpeed, setEnVoiceId, setRepeatCount }}>
+    <SettingsContext.Provider value={{ ...state, setEnVoice, setPlaybackMode, saveLastPosition, setEnSpeed, setPtSpeed, setEnVoiceId, setRepeatCount, toggleBookmark, isBookmarked }}>
       {children}
     </SettingsContext.Provider>
   );

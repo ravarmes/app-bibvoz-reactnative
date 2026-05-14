@@ -2,35 +2,143 @@
   "book": "Proverbs",
   "bookPt": "Provérbios",
   "chapter": 4,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "Listen, my sons, to a father's instruction; pay attention and gain understanding.", "pt": "Filhos meus, deem atenção à instrução de um pai e prestem atenção para adquirir entendimento." },
-    { "verse": 2, "en": "I give you sound learning, so do not forsake my teaching.", "pt": "Pois vos dou bons ensinamentos; não abandonem a minha instrução." },
-    { "verse": 3, "en": "For I too was a son to my father, still tender, and cherished by my mother.", "pt": "Pois eu era filho de meu pai, tenro e único diante de minha mãe." },
-    { "verse": 4, "en": "Then he taught me, and he said to me: \"Take hold of my words with all your heart; keep my commands, and you will live.", "pt": "E ele me ensinava e me dizia: \"Que o seu coração retenha as minhas palavras; guarde os meus mandamentos e você viverá." },
-    { "verse": 5, "en": "Get wisdom, get understanding; do not forget my words or turn away from them.", "pt": "Adquira sabedoria, adquira entendimento; não se esqueça das palavras da minha boca, nem delas se afaste." },
-    { "verse": 6, "en": "Do not forsake wisdom, and she will protect you; love her, and she will watch over you.", "pt": "Não a desamparei, e ela o preservará; ame-a, e ela o guardará." },
-    { "verse": 7, "en": "The beginning of wisdom is this: Get wisdom. Though it cost all you have, get understanding.", "pt": "O começo da sabedoria é: adquira sabedoria; e com tudo o que adquirir, adquira entendimento." },
-    { "verse": 8, "en": "Cherish her, and she will exalt you; embrace her, and she will honor you.", "pt": "Exalte-a, e ela o exaltará; abrace-a, e ela o honrará." },
-    { "verse": 9, "en": "She will give you a garland to grace your head and present you with a glorious crown.\"", "pt": "Ela porá na sua cabeça um enfeite gracioso; uma coroa gloriosa lhe entregará.\"" },
-    { "verse": 10, "en": "Listen, my son, accept what I say, and the years of your life will be many.", "pt": "Ouça, filho meu, aceite o que digo; e os anos da sua vida se multiplicarão." },
-    { "verse": 11, "en": "I instruct you in the way of wisdom and lead you along straight paths.", "pt": "Eu o ensino no caminho da sabedoria; guio-o pelas veredas da retidão." },
-    { "verse": 12, "en": "When you walk, your steps will not be hampered; when you run, you will not stumble.", "pt": "Quando você caminhar, os seus passos não serão embaraçados; e quando correr, não tropeçará." },
-    { "verse": 13, "en": "Hold on to instruction, do not let it go; guard it well, for it is your life.", "pt": "Agarre-se à instrução, não a solte; guarde-a bem, porque ela é a sua vida." },
-    { "verse": 14, "en": "Do not set foot on the path of the wicked or walk in the way of evildoers.", "pt": "Não entre na vereda dos ímpios e não ande pelo caminho dos malvados." },
-    { "verse": 15, "en": "Avoid it, do not travel on it; turn from it and go on your way.", "pt": "Evite-o, não passe por ele; afaste-se dele e siga em frente." },
-    { "verse": 16, "en": "For they cannot rest until they do evil; they are robbed of sleep till they make someone stumble.", "pt": "Pois eles não podem dormir se não praticam o mal; o sono lhes é tirado se não fizeram alguém tropeçar." },
-    { "verse": 17, "en": "They eat the bread of wickedness and drink the wine of violence.", "pt": "Pois comem o pão da impiedade e bebem o vinho da violência." },
-    { "verse": 18, "en": "The path of the righteous is like the morning sun, shining ever brighter till the full light of day.", "pt": "Mas a vereda dos justos é como a luz da aurora, que vai brilhando cada vez mais até ser dia pleno." },
-    { "verse": 19, "en": "But the way of the wicked is like deep darkness; they do not know what makes them stumble.", "pt": "O caminho dos ímpios é como as trevas profundas; não sabem em que tropeçam." },
-    { "verse": 20, "en": "My son, pay attention to what I say; turn your ear to my words.", "pt": "Filho meu, dê atenção ao que digo; incline os seus ouvidos às minhas palavras." },
-    { "verse": 21, "en": "Do not let them out of your sight, keep them within your heart;", "pt": "Não as perca de vista; guarde-as no mais íntimo do seu coração;" },
-    { "verse": 22, "en": "for they are life to those who find them and health to one's whole body.", "pt": "pois são vida para os que as encontram e saúde para todo o seu corpo." },
-    { "verse": 23, "en": "Above all else, guard your heart, for everything you do flows from it.", "pt": "Acima de tudo, guarde o seu coração, porque dele procedem as fontes da vida." },
-    { "verse": 24, "en": "Keep your mouth free of perversity; keep corrupt talk far from your lips.", "pt": "Afaste de você a falsidade da boca; mantenha longe de seus lábios as palavras perversas." },
-    { "verse": 25, "en": "Let your eyes look straight ahead; fix your gaze directly before you.", "pt": "Que os seus olhos olhem para a frente; que o seu olhar se dirija em linha reta." },
-    { "verse": 26, "en": "Give careful thought to the paths for your feet and be steadfast in all your ways.", "pt": "Pondere bem o caminho dos seus pés e todos os seus caminhos serão firmes." },
-    { "verse": 27, "en": "Do not turn to the right or the left; keep your foot from evil.", "pt": "Não se desvie para a direita nem para a esquerda; afaste o seu pé do mal." }
+    {
+      "verse": 1,
+      "en": "Hear, ye children, the instruction of a father, and attend to know understanding.",
+      "pt": "Ouvi, filhos, a instrução do pai, e estai atentos para conhecerdes o entendimento."
+    },
+    {
+      "verse": 2,
+      "en": "For I give you good doctrine, forsake ye not my law.",
+      "pt": "Pois eu vos dou boa doutrina; não abandoneis o meu ensino."
+    },
+    {
+      "verse": 3,
+      "en": "For I was my father’s son, tender and only beloved in the sight of my mother.",
+      "pt": "Quando eu era filho aos pés de meu, pai, tenro e único em estima diante de minha mãe,"
+    },
+    {
+      "verse": 4,
+      "en": "He taught me also, and said unto me, Let thine heart retain my words: keep my commandments, and live.",
+      "pt": "ele me ensinava, e me dizia: Retenha o teu coração as minhas palavras; guarda os meus mandamentos, e vive."
+    },
+    {
+      "verse": 5,
+      "en": "Get wisdom, get understanding: forget it not; neither decline from the words of my mouth.",
+      "pt": "Adquire a sabedoria, adquire o entendimento; não te esqueças nem te desvies das palavras da minha boca."
+    },
+    {
+      "verse": 6,
+      "en": "Forsake her not, and she shall preserve thee: love her, and she shall keep thee.",
+      "pt": "Não a abandones, e ela te guardará; ama-a, e ela te preservará."
+    },
+    {
+      "verse": 7,
+      "en": "Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding.",
+      "pt": "A sabedoria é a coisa principal; adquire, pois, a sabedoria; sim, com tudo o que possuis adquire o entendimento."
+    },
+    {
+      "verse": 8,
+      "en": "Exalt her, and she shall promote thee: she shall bring thee to honour, when thou dost embrace her.",
+      "pt": "Estima-a, e ela te exaltará; se a abraçares, ela te honrará."
+    },
+    {
+      "verse": 9,
+      "en": "She shall give to thine head an ornament of grace: a crown of glory shall she deliver to thee.",
+      "pt": "Ela dará à tua cabeça uma grinalda de graça; e uma coroa de glória te entregará."
+    },
+    {
+      "verse": 10,
+      "en": "Hear, O my son, and receive my sayings; and the years of thy life shall be many.",
+      "pt": "Ouve, filho meu, e aceita as minhas palavras, para que se multipliquem os anos da tua vida."
+    },
+    {
+      "verse": 11,
+      "en": "I have taught thee in the way of wisdom; I have led thee in right paths.",
+      "pt": "Eu te ensinei o caminho da sabedoria; guiei-te pelas veredas da retidão."
+    },
+    {
+      "verse": 12,
+      "en": "When thou goest, thy steps shall not be straitened; and when thou runnest, thou shalt not stumble.",
+      "pt": "Quando andares, não se embaraçarão os teus passos; e se correres, não tropeçarás."
+    },
+    {
+      "verse": 13,
+      "en": "Take fast hold of instruction; let her not go: keep her; for she is thy life.",
+      "pt": "Apega-te à instrução e não a largues; guarda-a, porque ela é a tua vida."
+    },
+    {
+      "verse": 14,
+      "en": "Enter not into the path of the wicked, and go not in the way of evil men.",
+      "pt": "Não entres na vereda dos ímpios, nem andes pelo caminho dos maus."
+    },
+    {
+      "verse": 15,
+      "en": "Avoid it, pass not by it, turn from it, and pass away.",
+      "pt": "Evita-o, não passes por ele; desvia-te dele e passa de largo."
+    },
+    {
+      "verse": 16,
+      "en": "For they sleep not, except they have done mischief; and their sleep is taken away, unless they cause some to fall.",
+      "pt": "Pois não dormem, se não fizerem o mal, e foge deles o sono se não fizerem tropeçar alguém."
+    },
+    {
+      "verse": 17,
+      "en": "For they eat the bread of wickedness, and drink the wine of violence.",
+      "pt": "Porque comem o pão da impiedade, e bebem o vinho da violência."
+    },
+    {
+      "verse": 18,
+      "en": "But the path of the just is as the shining light, that shineth more and more unto the perfect day.",
+      "pt": "Mas a vereda dos justos é como a luz da aurora que vai brilhando mais e mais até ser dia perfeito."
+    },
+    {
+      "verse": 19,
+      "en": "The way of the wicked is as darkness: they know not at what they stumble.",
+      "pt": "O caminho dos ímpios é como a escuridão: não sabem eles em que tropeçam."
+    },
+    {
+      "verse": 20,
+      "en": "My son, attend to my words; incline thine ear unto my sayings.",
+      "pt": "Filho meu, atenta para as minhas palavras; inclina o teu ouvido às minhas instroções."
+    },
+    {
+      "verse": 21,
+      "en": "Let them not depart from thine eyes; keep them in the midst of thine heart.",
+      "pt": "Não se apartem elas de diante dos teus olhos; guarda-as dentro do teu coração."
+    },
+    {
+      "verse": 22,
+      "en": "For they are life unto those that find them, and health to all their flesh.",
+      "pt": "Porque são vida para os que as encontram, e saúde para todo o seu corpo."
+    },
+    {
+      "verse": 23,
+      "en": "Keep thy heart with all diligence; for out of it are the issues of life.",
+      "pt": "Guarda com toda a diligência o teu coração, porque dele procedem as fontes da vida."
+    },
+    {
+      "verse": 24,
+      "en": "Put away from thee a froward mouth, and perverse lips put far from thee.",
+      "pt": "Desvia de ti a malignidade da boca, e alonga de ti a perversidade dos lábios."
+    },
+    {
+      "verse": 25,
+      "en": "Let thine eyes look right on, and let thine eyelids look straight before thee.",
+      "pt": "Dirijam-se os teus olhos para a frente, e olhem as tuas pálpebras diretamente diante de ti."
+    },
+    {
+      "verse": 26,
+      "en": "Ponder the path of thy feet, and let all thy ways be established.",
+      "pt": "Pondera a vereda de teus pés, e serão seguros todos os teus caminhos."
+    },
+    {
+      "verse": 27,
+      "en": "Turn not to the right hand nor to the left: remove thy foot from evil.",
+      "pt": "Não declines nem para a direita nem para a esquerda; retira o teu pé do mal."
+    }
   ]
 }

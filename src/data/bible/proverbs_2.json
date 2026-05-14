@@ -2,30 +2,118 @@
   "book": "Proverbs",
   "bookPt": "Provérbios",
   "chapter": 2,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "My son, if you accept my words and store up my commands within you,", "pt": "Filho meu, se você aceitar as minhas palavras e guardar os meus mandamentos no coração," },
-    { "verse": 2, "en": "turning your ear to wisdom and applying your heart to understanding—", "pt": "inclinando os seus ouvidos à sabedoria e aplicando o seu coração ao entendimento," },
-    { "verse": 3, "en": "indeed, if you call out for insight and cry aloud for understanding,", "pt": "sim, se invocar a inteligência e pedir por entendimento em voz alta," },
-    { "verse": 4, "en": "and if you look for it as for silver and search for it as for hidden treasure,", "pt": "se buscá-la como se fosse prata e a procurar como se fossem tesouros escondidos," },
-    { "verse": 5, "en": "then you will understand the fear of the LORD and find the knowledge of God.", "pt": "então você entenderá o temor do Senhor e encontrará o conhecimento de Deus." },
-    { "verse": 6, "en": "For the LORD gives wisdom; from his mouth come knowledge and understanding.", "pt": "Pois o Senhor dá a sabedoria; da sua boca procedem o conhecimento e o entendimento." },
-    { "verse": 7, "en": "He holds success in store for the upright, he is a shield to those whose walk is blameless,", "pt": "Ele reserva a vitória para os retos; é escudo para os que caminham com integridade," },
-    { "verse": 8, "en": "for he guards the course of the just and protects the way of his faithful ones.", "pt": "pois guarda as veredas do juízo e preserva o caminho dos seus fiéis." },
-    { "verse": 9, "en": "Then you will understand what is right and just and fair—every good path.", "pt": "Então você entenderá a justiça, o juízo, a equidade e toda boa vereda." },
-    { "verse": 10, "en": "For wisdom will enter your heart, and knowledge will be pleasant to your soul.", "pt": "Pois a sabedoria entrará no seu coração e o conhecimento será agradável à sua alma." },
-    { "verse": 11, "en": "Discretion will protect you, and understanding will guard you.", "pt": "O bom senso o protegerá e o entendimento o guardará," },
-    { "verse": 12, "en": "Wisdom will save you from the ways of wicked men, from men whose words are perverse,", "pt": "para salvá-lo do caminho dos malvados, dos homens que falam coisas perversas," },
-    { "verse": 13, "en": "who have left the straight paths to walk in dark ways,", "pt": "que abandonam as veredas retas para andar por caminhos tenebrosos," },
-    { "verse": 14, "en": "who delight in doing wrong and rejoice in the perverseness of evil,", "pt": "que se alegram em fazer o mal e se regozijam nas perversidades do mal," },
-    { "verse": 15, "en": "whose paths are crooked and who are devious in their ways.", "pt": "cujos caminhos são tortuosos e que são desonestos em seus procedimentos." },
-    { "verse": 16, "en": "Wisdom will save you also from the adulterous woman, from the wayward woman with her seductive words,", "pt": "Ela também o salvará da mulher estranha, da mulher alheia de palavras sedutoras," },
-    { "verse": 17, "en": "who has left the partner of her youth and ignored the covenant she made before God.", "pt": "que abandona o companheiro de sua juventude e se esquece da aliança que fez com Deus." },
-    { "verse": 18, "en": "Surely her house leads down to death and her paths to the spirits of the dead.", "pt": "Pois a sua casa inclina para a morte, e os seus caminhos levam aos mortos." },
-    { "verse": 19, "en": "None who go to her return or attain the paths of life.", "pt": "Ninguém que vá até ela voltará; nem chegará às veredas da vida." },
-    { "verse": 20, "en": "Thus you will walk in the ways of the good and keep to the paths of the righteous.", "pt": "Assim você andará no caminho dos bons e se manterá nas veredas dos justos." },
-    { "verse": 21, "en": "For the upright will live in the land, and the blameless will remain in it;", "pt": "Pois os retos habitarão a terra, e os íntegros nela permanecerão;" },
-    { "verse": 22, "en": "but the wicked will be cut off from the land, and the unfaithful will be torn from it.", "pt": "mas os ímpios serão cortados da terra, e os pérfidos dela serão arrancados." }
+    {
+      "verse": 1,
+      "en": "My son, if thou wilt receive my words, and hide my commandments with thee;",
+      "pt": "Filho meu, se aceitares as minhas palavras, e entesourares contigo os meus mandamentos,"
+    },
+    {
+      "verse": 2,
+      "en": "So that thou incline thine ear unto wisdom, and apply thine heart to understanding;",
+      "pt": "para fazeres atento à sabedoria o teu ouvido, e para inclinares o teu coração ao entendimento;"
+    },
+    {
+      "verse": 3,
+      "en": "Yea, if thou criest after knowledge, and liftest up thy voice for understanding;",
+      "pt": "sim, se clamares por discernimento, e por entendimento alçares a tua voz;"
+    },
+    {
+      "verse": 4,
+      "en": "If thou seekest her as silver, and searchest for her as for hid treasures;",
+      "pt": "se o buscares como a prata e o procurares como a tesouros escondidos;"
+    },
+    {
+      "verse": 5,
+      "en": "Then shalt thou understand the fear of the LORD, and find the knowledge of God.",
+      "pt": "então entenderás o temor do Senhor, e acharás o conhecimento de Deus."
+    },
+    {
+      "verse": 6,
+      "en": "For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding.",
+      "pt": "Porque o Senhor dá a sabedoria; da sua boca procedem o conhecimento e o entendimento;"
+    },
+    {
+      "verse": 7,
+      "en": "He layeth up sound wisdom for the righteous: he is a buckler to them that walk uprightly.",
+      "pt": "ele reserva a verdadeira sabedoria para os retos; e escudo para os que caminham em integridade,"
+    },
+    {
+      "verse": 8,
+      "en": "He keepeth the paths of judgment, and preserveth the way of his saints.",
+      "pt": "guardando-lhes as veredas da justiça, e preservando o caminho dos seus santos."
+    },
+    {
+      "verse": 9,
+      "en": "Then shalt thou understand righteousness, and judgment, and equity; yea, every good path.",
+      "pt": "Então entenderás a retidão, a justiça, a eqüidade, e todas as boas veredas."
+    },
+    {
+      "verse": 10,
+      "en": "When wisdom entereth into thine heart, and knowledge is pleasant unto thy soul;",
+      "pt": "Pois a sabedoria entrará no teu coração, e o conhecimento será aprazível à tua alma;"
+    },
+    {
+      "verse": 11,
+      "en": "Discretion shall preserve thee, understanding shall keep thee:",
+      "pt": "o bom siso te protegerá, e o discernimento e guardará;"
+    },
+    {
+      "verse": 12,
+      "en": "To deliver thee from the way of the evil man, from the man that speaketh froward things;",
+      "pt": "para te livrar do mau caminho, e do homem que diz coisas perversas;"
+    },
+    {
+      "verse": 13,
+      "en": "Who leave the paths of uprightness, to walk in the ways of darkness;",
+      "pt": "dos que deixam as veredas da retidão, para andarem pelos caminhos das trevas;"
+    },
+    {
+      "verse": 14,
+      "en": "Who rejoice to do evil, and delight in the frowardness of the wicked;",
+      "pt": "que se alegram de fazer o mal, e se deleitam nas perversidades dos maus;"
+    },
+    {
+      "verse": 15,
+      "en": "Whose ways are crooked, and they froward in their paths:",
+      "pt": "dos que são tortuosos nas suas veredas; e iníquos nas suas carreiras;"
+    },
+    {
+      "verse": 16,
+      "en": "To deliver thee from the strange woman, even from the stranger which flattereth with her words;",
+      "pt": "e para te livrar da mulher estranha, da estrangeira que lisonjeia com suas palavras;"
+    },
+    {
+      "verse": 17,
+      "en": "Which forsaketh the guide of her youth, and forgetteth the covenant of her God.",
+      "pt": "a qual abandona o companheiro da sua mocidade e se esquece do concerto do seu Deus;"
+    },
+    {
+      "verse": 18,
+      "en": "For her house inclineth unto death, and her paths unto the dead.",
+      "pt": "pois a sua casa se inclina para a morte, e as suas veredas para as sombras."
+    },
+    {
+      "verse": 19,
+      "en": "None that go unto her return again, neither take they hold of the paths of life.",
+      "pt": "Nenhum dos que se dirigirem a ela, tornara a sair, nem retomará as veredas da vida."
+    },
+    {
+      "verse": 20,
+      "en": "That thou mayest walk in the way of good men, and keep the paths of the righteous.",
+      "pt": "Assim andarás pelo caminho dos bons, e guardarás as veredas dos justos."
+    },
+    {
+      "verse": 21,
+      "en": "For the upright shall dwell in the land, and the perfect shall remain in it.",
+      "pt": "Porque os retos habitarão a terra, e os íntegros permanecerão nela."
+    },
+    {
+      "verse": 22,
+      "en": "But the wicked shall be cut off from the earth, and the transgressors shall be rooted out of it.",
+      "pt": "Mas os ímpios serão exterminados da terra, e dela os aleivosos serão desarraigados."
+    }
   ]
 }

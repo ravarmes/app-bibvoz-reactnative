@@ -2,29 +2,113 @@
   "book": "Romans",
   "bookPt": "Romanos",
   "chapter": 5,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ,", "pt": "Portanto, tendo sido justificados pela fé, temos paz com Deus por meio de nosso Senhor Jesus Cristo," },
-    { "verse": 2, "en": "through whom we have gained access by faith into this grace in which we now stand. And we boast in the hope of the glory of God.", "pt": "por meio de quem também, pela fé, obtivemos acesso a esta graça na qual estamos firmes; e nos gloriamos na esperança da glória de Deus." },
-    { "verse": 3, "en": "Not only so, but we also glory in our sufferings, because we know that suffering produces perseverance;", "pt": "Não só isso, mas também nos gloriamos nas tribulações, porque sabemos que a tribulação produz perseverança;" },
-    { "verse": 4, "en": "perseverance, character; and character, hope.", "pt": "a perseverança, um caráter aprovado; e o caráter aprovado, esperança." },
-    { "verse": 5, "en": "And hope does not put us to shame, because God's love has been poured out into our hearts through the Holy Spirit, who has been given to us.", "pt": "E a esperança não nos decepciona, porque o amor de Deus foi derramado em nossos corações pelo Espírito Santo que nos foi dado." },
-    { "verse": 6, "en": "You see, at just the right time, when we were still powerless, Christ died for the ungodly.", "pt": "De fato, quando ainda éramos fracos, no tempo certo, Cristo morreu pelos ímpios." },
-    { "verse": 7, "en": "Very rarely will anyone die for a righteous person, though for a good person someone might possibly dare to die.", "pt": "Dificilmente alguém morreria por um homem justo, embora talvez alguém tivesse coragem de morrer por um homem bom." },
-    { "verse": 8, "en": "But God demonstrates his own love for us in this: While we were still sinners, Christ died for us.", "pt": "Mas Deus demonstra seu amor por nós pelo fato de Cristo ter morrido por nós quando ainda éramos pecadores." },
-    { "verse": 9, "en": "Since we have now been justified by his blood, how much more shall we be saved from God's wrath through him!", "pt": "Com muito mais razão, tendo sido agora justificados pelo seu sangue, seremos salvos da ira de Deus por meio dele!" },
-    { "verse": 10, "en": "For if, while we were God's enemies, we were reconciled to him through the death of his Son, how much more, having been reconciled, shall we be saved through his life!", "pt": "Pois se, quando éramos inimigos de Deus, fomos reconciliados com ele por meio da morte de seu Filho, com muito mais razão, tendo sido reconciliados, seremos salvos por sua vida!" },
-    { "verse": 11, "en": "Not only is this so, but we also boast in God through our Lord Jesus Christ, through whom we have now received reconciliation.", "pt": "E não apenas isso, mas também nos gloriamos em Deus por meio de nosso Senhor Jesus Cristo, por quem recebemos agora a reconciliação." },
-    { "verse": 12, "en": "Therefore, just as sin entered the world through one man, and death through sin, and in this way death came to all people, because all sinned—", "pt": "Portanto, assim como por um só homem o pecado entrou no mundo, e pelo pecado a morte, assim também a morte passou a todos os homens porque todos pecaram." },
-    { "verse": 13, "en": "To be sure, sin was in the world before the law was given, but sin is not charged against anyone's account where there is no law.", "pt": "De fato, o pecado estava no mundo antes de ser dada a lei; mas o pecado não é levado em conta quando não há lei." },
-    { "verse": 14, "en": "Nevertheless, death reigned from the time of Adam to the time of Moses, even over those who did not sin by breaking a command, as did Adam, who is a pattern of the one to come.", "pt": "Contudo, a morte reinou desde Adão até Moisés, mesmo sobre os que não pecaram à maneira da transgressão de Adão, que é figura daquele que haveria de vir." },
-    { "verse": 15, "en": "But the gift is not like the trespass. For if the many died by the trespass of the one man, how much more did God's grace and the gift that came by the grace of the one man, Jesus Christ, overflow to the many!", "pt": "Mas o dom gratuito não é como a transgressão. Pois, se pela transgressão de um só homem morreram muitos, muito mais a graça de Deus e o dom que veio pela graça de um só homem, Jesus Cristo, transbordaram para muitos!" },
-    { "verse": 16, "en": "Nor can the gift of God be compared with the result of one man's sin: The judgment followed one sin and brought condemnation, but the gift followed many trespasses and brought justification.", "pt": "Não é o mesmo com o dom, como aconteceu por meio de um único pecador: O julgamento seguiu-se a um único pecado e trouxe a condenação, mas o dom gratuito seguiu-se a muitas transgressões e trouxe a justificação." },
-    { "verse": 17, "en": "For if, by the trespass of the one man, death reigned through that one man, how much more will those who receive God's abundant provision of grace and of the gift of righteousness reign in life through the one man, Jesus Christ!", "pt": "Pois se pela transgressão de um só homem a morte reinou por meio desse homem, com muito mais razão os que recebem a abundante provisão da graça e do dom da justiça reinarão na vida por meio de um só, Jesus Cristo!" },
-    { "verse": 18, "en": "Consequently, just as one trespass resulted in condemnation for all people, so also one righteous act resulted in justification and life for all people.", "pt": "Portanto, assim como por uma transgressão veio a condenação sobre todos os homens, também por um ato de justiça veio a justificação que dá vida a todos os homens." },
-    { "verse": 19, "en": "For just as through the disobedience of the one man the many were made sinners, so also through the obedience of the one man the many will be made righteous.", "pt": "Pois assim como pela desobediência de um só homem muitos foram feitos pecadores, também pela obediência de um só muitos serão feitos justos." },
-    { "verse": 20, "en": "The law was brought in so that the trespass might increase. But where sin increased, grace increased all the more,", "pt": "A lei veio para que a transgressão se multiplicasse. Mas onde o pecado abundou, a graça superabundou," },
-    { "verse": 21, "en": "so that, just as sin reigned in death, so also grace might reign through righteousness to bring eternal life through Jesus Christ our Lord.", "pt": "para que, assim como o pecado reinou na morte, assim também a graça reinasse por meio da justiça para trazer a vida eterna, por meio de Jesus Cristo nosso Senhor." }
+    {
+      "verse": 1,
+      "en": "Therefore being justified by faith, we have peace with God through our Lord Jesus Christ:",
+      "pt": "Justificados, pois, pela fé, tenhamos paz com Deus, por nosso Senhor Jesus Cristo,"
+    },
+    {
+      "verse": 2,
+      "en": "By whom also we have access by faith into this grace wherein we stand, and rejoice in hope of the glory of God.",
+      "pt": "por quem obtivemos também nosso acesso pela fé a esta graça, na qual estamos firmes, e gloriemo-nos na esperança da glória de Deus."
+    },
+    {
+      "verse": 3,
+      "en": "And not only so, but we glory in tribulations also: knowing that tribulation worketh patience;",
+      "pt": "E não somente isso, mas também gloriemo-nos nas tribulações; sabendo que a tribulação produz a perseverança,"
+    },
+    {
+      "verse": 4,
+      "en": "And patience, experience; and experience, hope:",
+      "pt": "e a perseverança a experiência, e a experiência a esperança;"
+    },
+    {
+      "verse": 5,
+      "en": "And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+      "pt": "e a esperança não desaponta, porquanto o amor de Deus está derramado em nossos corações pelo Espírito Santo que nos foi dado."
+    },
+    {
+      "verse": 6,
+      "en": "For when we were yet without strength, in due time Christ died for the ungodly.",
+      "pt": "Pois, quando ainda éramos fracos, Cristo morreu a seu tempo pelos ímpios."
+    },
+    {
+      "verse": 7,
+      "en": "For scarcely for a righteous man will one die: yet peradventure for a good man some would even dare to die.",
+      "pt": "Porque dificilmente haverá quem morra por um justo; pois poderá ser que pelo homem bondoso alguém ouse morrer."
+    },
+    {
+      "verse": 8,
+      "en": "But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.",
+      "pt": "Mas Deus dá prova do seu amor para conosco, em que, quando éramos ainda pecadores, Cristo morreu por nós."
+    },
+    {
+      "verse": 9,
+      "en": "Much more then, being now justified by his blood, we shall be saved from wrath through him.",
+      "pt": "Logo muito mais, sendo agora justificados pelo seu sangue, seremos por ele salvos da ira."
+    },
+    {
+      "verse": 10,
+      "en": "For if, when we were enemies, we were reconciled to God by the death of his Son, much more, being reconciled, we shall be saved by his life.",
+      "pt": "Porque se nós, quando éramos inimigos, fomos reconciliados com Deus pela morte de seu Filho, muito mais, estando já reconciliados, seremos salvos pela sua vida."
+    },
+    {
+      "verse": 11,
+      "en": "And not only so, but we also joy in God through our Lord Jesus Christ, by whom we have now received the atonement.",
+      "pt": "E não somente isso, mas também nos gloriamos em Deus por nosso Senhor Jesus Cristo, pelo qual agora temos recebido a reconciliação."
+    },
+    {
+      "verse": 12,
+      "en": "Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:",
+      "pt": "Portanto, assim como por um só homem entrou o pecado no mundo, e pelo pecado a morte, assim também a morte passou a todos os homens, porquanto todos pecaram."
+    },
+    {
+      "verse": 13,
+      "en": "(For until the law sin was in the world: but sin is not imputed when there is no law.",
+      "pt": "Porque antes da lei já estava o pecado no mundo, mas onde não há lei o pecado não é levado em conta."
+    },
+    {
+      "verse": 14,
+      "en": "Nevertheless death reigned from Adam to Moses, even over them that had not sinned after the similitude of Adam’s transgression, who is the figure of him that was to come.",
+      "pt": "No entanto a morte reinou desde Adão até Moisés, mesmo sobre aqueles que não pecaram à semelhança da transgressão de Adão o qual é figura daquele que havia de vir."
+    },
+    {
+      "verse": 15,
+      "en": "But not as the offence, so also is the free gift. For if through the offence of one many be dead, much more the grace of God, and the gift by grace, which is by one man, Jesus Christ, hath abounded unto many.",
+      "pt": "Mas não é assim o dom gratuito como a ofensa; porque, se pela ofensa de um morreram muitos, muito mais a graça de Deus, e o dom pela graça de um só homem, Jesus Cristo, abund muitos."
+    },
+    {
+      "verse": 16,
+      "en": "And not as it was by one that sinned, so is the gift: for the judgment was by one to condemnation, but the free gift is of many offences unto justification.",
+      "pt": "Também não é assim o dom como a ofensa, que veio por um só que pecou; porque o juízo veio, na verdade, de uma só ofensa para condenação, mas o dom gratuito veio de muitas ofensas para justificação."
+    },
+    {
+      "verse": 17,
+      "en": "For if by one man’s offence death reigned by one; much more they which receive abundance of grace and of the gift of righteousness shall reign in life by one, Jesus Christ.)",
+      "pt": "Porque, se pela ofensa de um só, a morte veio a reinar por esse, muito mais os que recebem a abundância da graça, e do dom da justiça, reinarão em vida por um só, Jesus Cristo."
+    },
+    {
+      "verse": 18,
+      "en": "Therefore as by the offence of one judgment came upon all men to condemnation; even so by the righteousness of one the free gift came upon all men unto justification of life.",
+      "pt": "Portanto, assim como por uma só ofensa veio o juízo sobre todos os homens para condenação, assim também por um só ato de justiça veio a graça sobre todos os homens para justificação e vida."
+    },
+    {
+      "verse": 19,
+      "en": "For as by one man’s disobedience many were made sinners, so by the obedience of one shall many be made righteous.",
+      "pt": "Porque, assim como pela desobediência de um só homem muitos foram constituídos pecadores, assim também pela obediência de um muitos serão constituídos justos."
+    },
+    {
+      "verse": 20,
+      "en": "Moreover the law entered, that the offence might abound. But where sin abounded, grace did much more abound:",
+      "pt": "Sobreveio, porém, a lei para que a ofensa abundasse; mas, onde o pecado abundou, superabundou a graça;"
+    },
+    {
+      "verse": 21,
+      "en": "That as sin hath reigned unto death, even so might grace reign through righteousness unto eternal life by Jesus Christ our Lord.",
+      "pt": "para que, assim como o pecado veio a reinar na morte, assim também viesse a reinar a graça pela justiça para a vida eterna, por Jesus Cristo nosso Senhor."
+    }
   ]
 }

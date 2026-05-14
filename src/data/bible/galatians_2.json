@@ -2,29 +2,113 @@
   "book": "Galatians",
   "bookPt": "Gálatas",
   "chapter": 2,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "Then after fourteen years, I went up again to Jerusalem, this time with Barnabas. I took Titus along also.", "pt": "Depois de catorze anos, subi novamente a Jerusalém com Barnabé, levando também Tito." },
-    { "verse": 2, "en": "I went in response to a revelation and, meeting privately with those esteemed as leaders, I presented to them the gospel that I preach among the Gentiles. I wanted to be sure I was not running and had not been running my race in vain.", "pt": "Subi por revelação e lhes expus o evangelho que prego entre os gentios, porém em particular, para os de reputação, a fim de não correr ou ter corrido em vão." },
-    { "verse": 3, "en": "Yet not even Titus, who was with me, was compelled to be circumcised, even though he was a Greek.", "pt": "Mas nem Tito, que estava comigo, sendo grego, foi obrigado a circuncidar-se." },
-    { "verse": 4, "en": "This matter arose because some false believers had infiltrated our ranks to spy on the freedom we have in Christ Jesus and to make us slaves.", "pt": "Isso porque alguns falsos irmãos se introduziram sorrateiramente entre nós para espionar a liberdade que temos em Cristo Jesus e nos escravizarem." },
-    { "verse": 5, "en": "We did not give in to them for a moment, so that the truth of the gospel might be preserved for you.", "pt": "Mas nem por um momento cedemos a eles, para que a verdade do evangelho permanecesse com vocês." },
-    { "verse": 6, "en": "As for those who were held in high esteem—whatever they were makes no difference to me; God does not show favoritism—they added nothing to my message.", "pt": "Quanto aos que eram tidos como importantes — o que eram outrora não importa para mim; Deus não faz acepção de pessoas —, esses de reputação nada me acrescentaram." },
-    { "verse": 7, "en": "On the contrary, they recognized that I had been entrusted with the task of preaching the gospel to the uncircumcised, just as Peter had been to the circumcised.", "pt": "Pelo contrário, ao contrário, reconheceram que me foi confiado o evangelho para os incircuncisos, assim como a Pedro foi confiado para os circuncisos." },
-    { "verse": 8, "en": "For God, who was at work in Peter as an apostle to the circumcised, was also at work in me as an apostle to the Gentiles.", "pt": "Pois aquele que atuou em Pedro para o apostolado dos circuncisos também atuou em mim para o apostolado dos gentios." },
-    { "verse": 9, "en": "James, Cephas and John, those esteemed as pillars, gave me and Barnabas the right hand of fellowship when they recognized the grace given to me. They agreed that we should go to the Gentiles, and they to the circumcised.", "pt": "Quando Tiago, Pedro e João, que eram considerados colunas, reconheceram a graça que me foi dada, deram a mim e a Barnabé a destra de comunhão, a fim de que fôssemos aos gentios, e eles aos circuncisos." },
-    { "verse": 10, "en": "All they asked was that we should continue to remember the poor, the very thing I had been eager to do all along.", "pt": "Só nos pediram que nos lembrássemos dos pobres, o que de fato me empenhei em fazer." },
-    { "verse": 11, "en": "When Cephas came to Antioch, I opposed him to his face, because he stood condemned.", "pt": "Mas quando Pedro veio a Antioquia, resisti a ele de frente, porque era repreensível." },
-    { "verse": 12, "en": "For before certain people came from James, he used to eat with the Gentiles. But when they arrived, he began to draw back and separate himself from the Gentiles because he was afraid of those who belonged to the circumcision group.", "pt": "Pois antes de chegar alguns da parte de Tiago, ele comia com os gentios; mas, quando esses chegaram, passou a se retirar e se separar, temendo os da circuncisão." },
-    { "verse": 13, "en": "The other Jews joined him in his hypocrisy, so that by their hypocrisy even Barnabé was led astray.", "pt": "Os outros judeus também se uniram a ele em sua hipocrisia, de modo que até Barnabé se deixou arrastar pela hipocrisia deles." },
-    { "verse": 14, "en": "When I saw that they were not acting in line with the truth of the gospel, I said to Cephas in front of them all, \"You are a Jew, yet you live like a Gentile and not like a Jew. How is it, then, that you force Gentiles to follow Jewish customs?", "pt": "Mas, quando vi que não estavam agindo de acordo com a verdade do evangelho, disse a Pedro diante de todos: \"Se você, sendo judeu, vive como gentio e não como judeu, como pode obrigar os gentios a viver como judeus?\"" },
-    { "verse": 15, "en": "\"We who are Jews by birth and not sinful Gentiles", "pt": "\"Nós somos judeus de nascimento e não pecadores procedentes dos gentios;" },
-    { "verse": 16, "en": "know that a person is not justified by the works of the law, but by faith in Jesus Christ. So we, too, have put our faith in Christ Jesus that we may be justified by faith in Christ and not by the works of the law, because by the works of the law no one will be justified.", "pt": "no entanto, sabendo que o homem não é justificado pelas obras da lei, mas mediante a fé em Jesus Cristo, nós também cremos em Cristo Jesus, para sermos justificados pela fé em Cristo e não pelas obras da lei; porque pelas obras da lei nenhum mortal será justificado." },
-    { "verse": 17, "en": "\"But if, in seeking to be justified in Christ, we Jews find ourselves also among the sinners, doesn't that mean that Christ promotes sin? Absolutely not!", "pt": "\"Mas, se, enquanto procuramos ser justificados em Cristo, nós mesmos somos encontrados como pecadores, será que Cristo é ministro do pecado? De modo nenhum!" },
-    { "verse": 18, "en": "If I rebuild what I destroyed, then I really would be a lawbreaker.", "pt": "Pois se reconstruo o que destruí, mostro que sou transgressor." },
-    { "verse": 19, "en": "\"For through the law I died to the law so that I might live for God.", "pt": "\"Pois, pela lei, morri para a lei, a fim de viver para Deus." },
-    { "verse": 20, "en": "I have been crucified with Christ and I no longer live, but Christ lives in me. The life I now live in the body, I live by faith in the Son of God, who loved me and gave himself for me.", "pt": "Estou crucificado com Cristo; portanto, já não sou eu quem vive, mas Cristo vive em mim. A vida que agora vivo no corpo, vivo-a pela fé no Filho de Deus, que me amou e se entregou por mim." },
-    { "verse": 21, "en": "I do not set aside the grace of God, for if righteousness could be gained through the law, Christ died for nothing!\"", "pt": "Não ponho de lado a graça de Deus; pois, se a justiça vem pela lei, então Cristo morreu em vão!\"" }
+    {
+      "verse": 1,
+      "en": "Then fourteen years after I went up again to Jerusalem with Barnabas, and took Titus with me also.",
+      "pt": "Depois, passados catorze anos, subi outra vez a Jerusalém com Barnabé, levando também comigo a Tito."
+    },
+    {
+      "verse": 2,
+      "en": "And I went up by revelation, and communicated unto them that gospel which I preach among the Gentiles, but privately to them which were of reputation, lest by any means I should run, or had run, in vain.",
+      "pt": "E subi devido a uma revelação, e lhes expus o evangelho que prego entre os gentios, mas em particular aos que eram de destaque, para que de algum modo não estivesse correndo ou não tivesse corrido em vão."
+    },
+    {
+      "verse": 3,
+      "en": "But neither Titus, who was with me, being a Greek, was compelled to be circumcised:",
+      "pt": "Mas nem mesmo Tito, que estava comigo, embora sendo grego, foi constrangido a circuncidar-se;"
+    },
+    {
+      "verse": 4,
+      "en": "And that because of false brethren unawares brought in, who came in privily to spy out our liberty which we have in Christ Jesus, that they might bring us into bondage:",
+      "pt": "e isto por causa dos falsos irmãos intrusos, os quais furtivamente entraram a espiar a nossa liberdade, que temos em Cristo Jesus, para nos escravizar;"
+    },
+    {
+      "verse": 5,
+      "en": "To whom we gave place by subjection, no, not for an hour; that the truth of the gospel might continue with you.",
+      "pt": "aos quais nem ainda por uma hora cedemos em sujeição, para que a verdade do evangelho permanecesse entre vós."
+    },
+    {
+      "verse": 6,
+      "en": "But of these who seemed to be somewhat, (whatsoever they were, it maketh no matter to me: God accepteth no man’s person:) for they who seemed to be somewhat in conference added nothing to me:",
+      "pt": "Ora, daqueles que pareciam ser alguma coisa (quais outrora tenham sido, nada me importa; Deus não aceita a aparência do homem), esses, digo, que pareciam ser alguma coisa, nada me acrescentaram;"
+    },
+    {
+      "verse": 7,
+      "en": "But contrariwise, when they saw that the gospel of the uncircumcision was committed unto me, as the gospel of the circumcision was unto Peter;",
+      "pt": "antes, pelo contrário, quando viram que o evangelho da incircuncisão me fora confiado, como a Pedro o da circuncisão"
+    },
+    {
+      "verse": 8,
+      "en": "(For he that wrought effectually in Peter to the apostleship of the circumcision, the same was mighty in me toward the Gentiles:)",
+      "pt": "(porque aquele que operou a favor de Pedro para o apostolado da circuncisão, operou também a meu favor para com os gentios),"
+    },
+    {
+      "verse": 9,
+      "en": "And when James, Cephas, and John, who seemed to be pillars, perceived the grace that was given unto me, they gave to me and Barnabas the right hands of fellowship; that we should go unto the heathen, and they unto the circumcision.",
+      "pt": "e quando conheceram a graça que me fora dada, Tiago, Cefas e João, que pareciam ser as colunas, deram a mim e a Barnabé as destras de comunhão, para que nós fôssemos aos gentios, e eles à circuncisão;"
+    },
+    {
+      "verse": 10,
+      "en": "Only they would that we should remember the poor; the same which I also was forward to do.",
+      "pt": "recomendando-nos somente que nos lembrássemos dos pobres; o que também procurei fazer com diligência."
+    },
+    {
+      "verse": 11,
+      "en": "But when Peter was come to Antioch, I withstood him to the face, because he was to be blamed.",
+      "pt": "Quando, porém, Cefas veio a Antioquia, resisti-lhe na cara, porque era repreensível."
+    },
+    {
+      "verse": 12,
+      "en": "For before that certain came from James, he did eat with the Gentiles: but when they were come, he withdrew and separated himself, fearing them which were of the circumcision.",
+      "pt": "Pois antes de chegarem alguns da parte de Tiago, ele comia com os gentios; mas quando eles chegaram, se foi retirando e se apartava deles, temendo os que eram da circuncisão."
+    },
+    {
+      "verse": 13,
+      "en": "And the other Jews dissembled likewise with him; insomuch that Barnabas also was carried away with their dissimulation.",
+      "pt": "E os outros judeus também dissimularam com ele, de modo que até Barnabé se deixou levar pela sua dissimulação."
+    },
+    {
+      "verse": 14,
+      "en": "But when I saw that they walked not uprightly according to the truth of the gospel, I said unto Peter before them all, If thou, being a Jew, livest after the manner of Gentiles, and not as do the Jews, why compellest thou the Gentiles to live as do the Jews?",
+      "pt": "Mas, quando vi que não andavam retamente conforme a verdade do evangelho, disse a Cefas perante todos: Se tu, sendo judeu, vives como os gentios, e não como os judeus, como é que obrigas os gentios a viverem como judeus?"
+    },
+    {
+      "verse": 15,
+      "en": "We who are Jews by nature, and not sinners of the Gentiles,",
+      "pt": "Nós, judeus por natureza e não pecadores dentre os gentios,"
+    },
+    {
+      "verse": 16,
+      "en": "Knowing that a man is not justified by the works of the law, but by the faith of Jesus Christ, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified.",
+      "pt": "sabendo, contudo, que o homem não é justificado por obras da lei, mas sim, pela fé em Cristo Jesus, temos também crido em Cristo Jesus para sermos justificados pela fé em Cristo, e não por obras da lei; pois por obras da lei nenhuma carne será justificada."
+    },
+    {
+      "verse": 17,
+      "en": "But if, while we seek to be justified by Christ, we ourselves also are found sinners, is therefore Christ the minister of sin? God forbid.",
+      "pt": "Mas se, procurando ser justificados em Cristo, fomos nós mesmos também achados pecadores, é porventura Cristo ministro do pecado? De modo nenhum."
+    },
+    {
+      "verse": 18,
+      "en": "For if I build again the things which I destroyed, I make myself a transgressor.",
+      "pt": "Porque, se torno a edificar aquilo que destruí, constituo-me a mim mesmo transgressor."
+    },
+    {
+      "verse": 19,
+      "en": "For I through the law am dead to the law, that I might live unto God.",
+      "pt": "Pois eu pela lei morri para a lei, a fim de viver para Deus."
+    },
+    {
+      "verse": 20,
+      "en": "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.",
+      "pt": "Já estou crucificado com Cristo; e vivo, não mais eu, mas Cristo vive em mim; e a vida que agora vivo na carne, vivo-a na fé no filho de Deus, o qual me amou, e se entregou a si mesmo por mim."
+    },
+    {
+      "verse": 21,
+      "en": "I do not frustrate the grace of God: for if righteousness come by the law, then Christ is dead in vain.",
+      "pt": "Não faço nula a graça de Deus; porque, se a justiça vem mediante a lei, logo Cristo morreu em vão."
+    }
   ]
 }

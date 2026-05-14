@@ -2,31 +2,123 @@
   "book": "Proverbs",
   "bookPt": "Provérbios",
   "chapter": 5,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "My son, pay attention to my wisdom, turn your ear to my words of insight,", "pt": "Filho meu, dê atenção à minha sabedoria; incline os seus ouvidos à minha inteligência," },
-    { "verse": 2, "en": "that you may maintain discretion and your lips may preserve knowledge.", "pt": "para que guarde o discernimento e os seus lábios preservem o conhecimento." },
-    { "verse": 3, "en": "For the lips of the adulterous woman drip honey, and her speech is smoother than oil;", "pt": "Pois os lábios da mulher estranha destilam mel e o seu palato é mais suave do que o azeite;" },
-    { "verse": 4, "en": "but in the end she is bitter as gall, sharp as a double-edged sword.", "pt": "mas o seu fim é amargo como o absinto, agudo como espada de dois gumes." },
-    { "verse": 5, "en": "Her feet go down to death; her steps lead straight to the grave.", "pt": "Os seus pés descem para a morte; os seus passos chegam ao sepulcro." },
-    { "verse": 6, "en": "She gives no thought to the way of life; her paths wander aimlessly, but she does not know it.", "pt": "Para que não pondere a vereda da vida, os seus caminhos são instáveis e ela não o sabe." },
-    { "verse": 7, "en": "Now then, my sons, listen to me; do not turn aside from what I say.", "pt": "Agora, pois, filhos meus, ouçam-me e não se afastem das palavras da minha boca." },
-    { "verse": 8, "en": "Keep to a path far from her, do not go near the door of her house,", "pt": "Mantenha o seu caminho longe dela e não se chegue à porta de sua casa," },
-    { "verse": 9, "en": "lest you lose your honor to others and your dignity to one who is cruel,", "pt": "para que não entregue a outros a sua honra e os seus anos a quem é cruel," },
-    { "verse": 10, "en": "lest strangers feast on your wealth and your toil enrich the house of another.", "pt": "para que estranhos não se finos com a sua força e os seus trabalhos não entrem na casa de outro;" },
-    { "verse": 11, "en": "At the end of your life you will groan, when your flesh and body are spent.", "pt": "para que não se lamente no seu fim, quando a sua carne e o seu corpo se consumirem," },
-    { "verse": 12, "en": "You will say, \"How I hated discipline! How my heart spurned correction!", "pt": "e diga: \"Como aborreci a instrução e o meu coração desprezou a repreensão!" },
-    { "verse": 13, "en": "I would not obey my teachers or turn my ear to my instructors.", "pt": "Não dei ouvidos à voz dos meus mestres, nem inclinei o meu ouvido para os que me ensinavam." },
-    { "verse": 14, "en": "And I was soon in serious trouble in the assembly of God's people.\"", "pt": "Pouco me faltou para estar em todo o mal, no meio da congregação e da assembleia.\"" },
-    { "verse": 15, "en": "Drink water from your own cistern, running water from your own well.", "pt": "Beba água da sua própria cisterna e as correntes do seu próprio poço." },
-    { "verse": 16, "en": "Should your springs overflow in the streets, your streams of water in the public squares?", "pt": "Hão de derramar-se fora as suas fontes, os ribeiros de água pelas ruas?" },
-    { "verse": 17, "en": "Let them be yours alone, never to be shared with strangers.", "pt": "Sejam somente seus e não os partilhe com estranhos." },
-    { "verse": 18, "en": "May your fountain be blessed, and may you rejoice in the wife of your youth.", "pt": "Seja abençoada a sua fonte, e alegre-se com a mulher da sua juventude." },
-    { "verse": 19, "en": "A loving doe, a graceful deer—may her breasts satisfy you always, may you ever be intoxicated with her love.", "pt": "É ela como cerva amorosa e graciosa corça; que os seus seios o satisfaçam sempre, e você se embriague sempre do seu amor." },
-    { "verse": 20, "en": "Why, my son, be intoxicated with another man's wife? Why embrace the bosom of a wayward woman?", "pt": "Por que você, filho meu, se embriagaria com uma mulher estranha e abraçaria o seio de uma alheia?" },
-    { "verse": 21, "en": "For your ways are in full view of the LORD, and he examines all your paths.", "pt": "Pois os caminhos do homem estão na presença dos olhos do Senhor, e ele examina todas as suas veredas." },
-    { "verse": 22, "en": "The evil deeds of the wicked ensnare them; the cords of their sins hold them fast.", "pt": "As próprias iniquidades do ímpio o aprisionarão e ele ficará preso nos laços do seu pecado." },
-    { "verse": 23, "en": "For lack of discipline they will die, led astray by their own great folly.", "pt": "Ele morrerá por falta de instrução; e pela grandeza da sua tolice, andará perdido." }
+    {
+      "verse": 1,
+      "en": "My son, attend unto my wisdom, and bow thine ear to my understanding:",
+      "pt": "Filho meu, atende à minha sabedoria; inclinão teu ouvido à minha prudência;"
+    },
+    {
+      "verse": 2,
+      "en": "That thou mayest regard discretion, and that thy lips may keep knowledge.",
+      "pt": "para que observes a discrição, e os teus lábios guardem o conhecimento."
+    },
+    {
+      "verse": 3,
+      "en": "For the lips of a strange woman drop as an honeycomb, and her mouth is smoother than oil:",
+      "pt": "Porque os lábios da mulher licenciosa destilam mel, e a sua boca e mais macia do que o azeite;"
+    },
+    {
+      "verse": 4,
+      "en": "But her end is bitter as wormwood, sharp as a twoedged sword.",
+      "pt": "mas o seu fim é amargoso como o absinto, agudo como a espada de dois gumes."
+    },
+    {
+      "verse": 5,
+      "en": "Her feet go down to death; her steps take hold on hell.",
+      "pt": "Os seus pés descem à morte; os seus passos seguem no caminho do Seol."
+    },
+    {
+      "verse": 6,
+      "en": "Lest thou shouldest ponder the path of life, her ways are moveable, that thou canst not know them.",
+      "pt": "Ela não pondera a vereda da vida; incertos são os seus caminhos, e ela o ignora."
+    },
+    {
+      "verse": 7,
+      "en": "Hear me now therefore, O ye children, and depart not from the words of my mouth.",
+      "pt": "Agora, pois, filhos, dai-me ouvidos, e não vos desvieis das palavras da minha boca."
+    },
+    {
+      "verse": 8,
+      "en": "Remove thy way far from her, and come not nigh the door of her house:",
+      "pt": "Afasta para longe dela o teu caminho, e não te aproximes da porta da sua casa;"
+    },
+    {
+      "verse": 9,
+      "en": "Lest thou give thine honour unto others, and thy years unto the cruel:",
+      "pt": "para que não dês a outros a tua honra, nem os teus anos a cruéis;"
+    },
+    {
+      "verse": 10,
+      "en": "Lest strangers be filled with thy wealth; and thy labours be in the house of a stranger;",
+      "pt": "para que não se fartem os estranhos dos teus bens, e não entrem os teus trabalhos na casa do estrangeiro,"
+    },
+    {
+      "verse": 11,
+      "en": "And thou mourn at the last, when thy flesh and thy body are consumed,",
+      "pt": "e gemas no teu fim, quando se consumirem a tua carne e o teu corpo,"
+    },
+    {
+      "verse": 12,
+      "en": "And say, How have I hated instruction, and my heart despised reproof;",
+      "pt": "e digas: Como detestei a disciplina! e desprezou o meu coração a repreensão!"
+    },
+    {
+      "verse": 13,
+      "en": "And have not obeyed the voice of my teachers, nor inclined mine ear to them that instructed me!",
+      "pt": "e não escutei a voz dos que me ensinavam, nem aos que me instruíam inclinei o meu ouvido!"
+    },
+    {
+      "verse": 14,
+      "en": "I was almost in all evil in the midst of the congregation and assembly.",
+      "pt": "Quase cheguei à ruína completa, no meio da congregação e da assembléia."
+    },
+    {
+      "verse": 15,
+      "en": "Drink waters out of thine own cistern, and running waters out of thine own well.",
+      "pt": "Bebe a água da tua própria cisterna, e das correntes do teu poço."
+    },
+    {
+      "verse": 16,
+      "en": "Let thy fountains be dispersed abroad, and rivers of waters in the streets.",
+      "pt": "Derramar-se-iam as tuas fontes para fora, e pelas ruas os ribeiros de águas?"
+    },
+    {
+      "verse": 17,
+      "en": "Let them be only thine own, and not strangers’ with thee.",
+      "pt": "Sejam para ti só, e não para os estranhos juntamente contigo."
+    },
+    {
+      "verse": 18,
+      "en": "Let thy fountain be blessed: and rejoice with the wife of thy youth.",
+      "pt": "Seja bendito o teu manancial; e regozija-te na mulher da tua mocidade."
+    },
+    {
+      "verse": 19,
+      "en": "Let her be as the loving hind and pleasant roe; let her breasts satisfy thee at all times; and be thou ravished always with her love.",
+      "pt": "Como corça amorosa, e graciosa cabra montesa saciem-te os seus seios em todo o tempo; e pelo seu amor sê encantado perpetuamente."
+    },
+    {
+      "verse": 20,
+      "en": "And why wilt thou, my son, be ravished with a strange woman, and embrace the bosom of a stranger?",
+      "pt": "E por que, filho meu, andarias atraído pela mulher licenciosa, e abraÇarias o seio da adúltera?"
+    },
+    {
+      "verse": 21,
+      "en": "For the ways of man are before the eyes of the LORD, and he pondereth all his goings.",
+      "pt": "Porque os caminhos do homem estão diante dos olhos do Senhor, o qual observa todas as suas veredas."
+    },
+    {
+      "verse": 22,
+      "en": "His own iniquities shall take the wicked himself, and he shall be holden with the cords of his sins.",
+      "pt": "Quanto ao ímpio, as suas próprias iniqüidades o prenderão, e pelas cordas do seu pecado será detido."
+    },
+    {
+      "verse": 23,
+      "en": "He shall die without instruction; and in the greatness of his folly he shall go astray.",
+      "pt": "Ele morre pela falta de disciplina; e pelo excesso da sua loucura anda errado."
+    }
   ]
 }

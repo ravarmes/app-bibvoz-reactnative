@@ -2,37 +2,153 @@
   "book": "Galatians",
   "bookPt": "Gálatas",
   "chapter": 3,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "You foolish Galatians! Who has bewitched you? Before your very eyes Jesus Christ was clearly portrayed as crucified.", "pt": "Gálatas insensatos! Quem os enfeitiçou? Diante dos olhos de vocês Jesus Cristo foi mostrado claramente como crucificado." },
-    { "verse": 2, "en": "I would like to learn just one thing from you: Did you receive the Spirit by the works of the law, or by believing what you heard?", "pt": "Só quero saber de vocês uma coisa: Receberam o Espírito pelas obras da lei ou pela pregação que vocês ouviram com fé?" },
-    { "verse": 3, "en": "Are you so foolish? After beginning by means of the Spirit, are you now trying to finish by means of the flesh?", "pt": "São tão insensatos? Depois de terem começado pelo Espírito, estão agora tentando terminar pela carne?" },
-    { "verse": 4, "en": "Have you experienced so much in vain—if it really was in vain?", "pt": "Passaram por tanto em vão — se é que foi em vão?" },
-    { "verse": 5, "en": "So again I ask, does God give you his Spirit and work miracles among you by the works of the law, or by your believing what you heard?", "pt": "Então, aquele que lhes concede o Espírito e realiza milagres entre vocês o faz pelas obras da lei ou pela fé naquilo que vocês ouviram?" },
-    { "verse": 6, "en": "So also Abraham \"believed God, and it was credited to him as righteousness.\"", "pt": "Da mesma forma, \"Abraão creu em Deus, e isso lhe foi creditado como justiça\"." },
-    { "verse": 7, "en": "Understand, then, that those who have faith are children of Abraham.", "pt": "Saibam, portanto, que os que têm fé são filhos de Abraão." },
-    { "verse": 8, "en": "Scripture foresaw that God would justify the Gentiles by faith, and announced the gospel in advance to Abraham: \"All nations will be blessed through you.\"", "pt": "A Escritura previu que Deus justificaria os gentios pela fé e anunciou antecipadamente o evangelho a Abraão: \"Por meio de você serão abençoadas todas as nações.\"" },
-    { "verse": 9, "en": "So those who rely on faith are blessed along with Abraham, the man of faith.", "pt": "Portanto, os que têm fé são abençoados juntamente com Abraão, o homem de fé." },
-    { "verse": 10, "en": "For all who rely on the works of the law are under a curse, as it is written: \"Cursed is everyone who does not continue to do everything written in the Book of the Law.\"", "pt": "Pois todos os que dependem das obras da lei estão debaixo de maldição; porque está escrito: \"Maldito é todo aquele que não continua em tudo o que está escrito no Livro da Lei para praticá-lo.\"" },
-    { "verse": 11, "en": "Clearly no one who relies on the law is justified before God, because \"the righteous will live by faith.\"", "pt": "E que pela lei ninguém é justificado diante de Deus é evidente, porque \"o justo viverá pela fé\"." },
-    { "verse": 12, "en": "The law is not based on faith; on the contrary, it says, \"The person who does these things will live by them.\"", "pt": "A lei, porém, não se baseia em fé; pelo contrário, diz: \"Aquele que cumprir essas coisas viverá por elas.\"" },
-    { "verse": 13, "en": "Christ redeemed us from the curse of the law by becoming a curse for us, for it is written: \"Cursed is everyone who is hung on a pole.\"", "pt": "Cristo nos resgatou da maldição da lei, tornando-se maldição por nós; porque está escrito: \"Maldito todo aquele que for pendurado num madeiro\"." },
-    { "verse": 14, "en": "He redeemed us in order that the blessing given to Abraham might come to the Gentiles through Christ Jesus, so that by faith we might receive the promise of the Spirit.", "pt": "Ele fez isso para que a bênção prometida a Abraão chegasse aos gentios em Cristo Jesus, e para que pela fé recebêssemos a promessa do Espírito." },
-    { "verse": 15, "en": "Brothers and sisters, let me take an example from everyday life. Just as no one can set aside or add to a human covenant that has been duly established, so it is in this case.", "pt": "Irmãos, vou usar um exemplo humano: mesmo um acordo entre pessoas, uma vez ratificado, não pode ser anulado ou acrescido de condições." },
-    { "verse": 16, "en": "The promises were spoken to Abraham and to his seed. Scripture does not say \"and to seeds,\" meaning many people, but \"and to your seed,\" meaning one person, who is Christ.", "pt": "As promessas foram feitas a Abraão e ao seu descendente. A Escritura não diz \"e aos descendentes\", no plural, mas \"e ao teu descendente\", no singular, que é Cristo." },
-    { "verse": 17, "en": "What I mean is this: The law, introduced 430 years later, does not set aside the covenant previously established by God and thus do away with the promise.", "pt": "O que estou dizendo é o seguinte: a lei, introduzida 430 anos depois, não revoga a aliança anteriormente estabelecida por Deus, de modo a invalidar a promessa." },
-    { "verse": 18, "en": "For if the inheritance depends on the law, then it no longer depends on the promise; but God in his grace gave it to Abraham through a promise.", "pt": "Pois se a herança depende da lei, já não depende da promessa; mas Deus a concedeu gratuitamente a Abraão mediante uma promessa." },
-    { "verse": 19, "en": "Why, then, was the law given at all? It was added because of transgressions until the Seed to whom the promise referred had come. The law was given through angels and entrusted to a mediator.", "pt": "Para que serviu, então, a lei? Ela foi acrescentada por causa das transgressões, até que viesse o Descendente a quem a promessa se referia. A lei foi promulgada por anjos, por intermédio de um mediador." },
-    { "verse": 20, "en": "A mediator, however, implies more than one party; but God is one.", "pt": "Um mediador, porém, não representa apenas um, mas Deus é um." },
-    { "verse": 21, "en": "Is the law, therefore, opposed to the promises of God? Absolutely not! For if a law had been given that could impart life, then righteousness would certainly have come by the law.", "pt": "Então é a lei contrária às promessas de Deus? De modo nenhum! Pois se tivesse sido dada uma lei capaz de conferir vida, com certeza a justiça viria pela lei." },
-    { "verse": 22, "en": "But Scripture has locked up everything under the control of sin, so that what was promised, being given through faith in Jesus Christ, might be given to those who believe.", "pt": "Mas a Escritura encerrou tudo sob o poder do pecado, para que o que foi prometido, mediante a fé em Jesus Cristo, fosse dado aos que creem." },
-    { "verse": 23, "en": "Before the coming of this faith, we were held in custody under the law, locked up until the faith that was to come would be revealed.", "pt": "Antes de vir essa fé, estávamos custodiados pela lei, aprisionados, à espera da fé que haveria de ser revelada." },
-    { "verse": 24, "en": "So the law was our guardian until Christ came that we might be justified by faith.", "pt": "De modo que a lei nos serviu de aio para nos conduzir a Cristo, a fim de que fôssemos justificados pela fé." },
-    { "verse": 25, "en": "Now that this faith has come, we are no longer under a guardian.", "pt": "Mas, tendo chegado essa fé, já não estamos sob aio." },
-    { "verse": 26, "en": "So in Christ Jesus you are all children of God through faith,", "pt": "Pois todos vocês são filhos de Deus mediante a fé em Cristo Jesus," },
-    { "verse": 27, "en": "for all of you who were baptized into Christ have clothed yourselves with Christ.", "pt": "porque todos vocês que foram batizados em Cristo se revestiram de Cristo." },
-    { "verse": 28, "en": "There is neither Jew nor Gentile, neither slave nor free, nor is there male and female, for you are all one in Christ Jesus.", "pt": "Não há judeu nem grego, escravo nem livre, homem nem mulher, pois todos vocês são um em Cristo Jesus." },
-    { "verse": 29, "en": "If you belong to Christ, then you are Abraham's seed, and heirs according to the promise.", "pt": "E, se vocês pertencem a Cristo, então são descendentes de Abraão e herdeiros segundo a promessa." }
+    {
+      "verse": 1,
+      "en": "O foolish Galatians, who hath bewitched you, that ye should not obey the truth, before whose eyes Jesus Christ hath been evidently set forth, crucified among you?",
+      "pt": "ó insensatos gálatas! quem vos fascinou a vós, ante cujos olhos foi representado Jesus Cristo como crucificado?"
+    },
+    {
+      "verse": 2,
+      "en": "This only would I learn of you, Received ye the Spirit by the works of the law, or by the hearing of faith?",
+      "pt": "Só isto quero saber de vós: Foi por obras da lei que recebestes o Espírito, ou pelo ouvir com fé?"
+    },
+    {
+      "verse": 3,
+      "en": "Are ye so foolish? having begun in the Spirit, are ye now made perfect by the flesh?",
+      "pt": "Sois vós tão insensatos? tendo começado pelo Espírito, é pela carne que agora acabareis?"
+    },
+    {
+      "verse": 4,
+      "en": "Have ye suffered so many things in vain? if it be yet in vain.",
+      "pt": "Será que padecestes tantas coisas em vão? Se é que isso foi em vão."
+    },
+    {
+      "verse": 5,
+      "en": "He therefore that ministereth to you the Spirit, and worketh miracles among you, doeth he it by the works of the law, or by the hearing of faith?",
+      "pt": "Aquele pois que vos dá o Espírito, e que opera milagres entre vós, acaso o faz pelas obras da lei, ou pelo ouvir com fé?"
+    },
+    {
+      "verse": 6,
+      "en": "Even as Abraham believed God, and it was accounted to him for righteousness.",
+      "pt": "Assim como Abraão creu a Deus, e isso lhe foi imputado como justiça."
+    },
+    {
+      "verse": 7,
+      "en": "Know ye therefore that they which are of faith, the same are the children of Abraham.",
+      "pt": "Sabei, pois, que os que são da fé, esses são filhos de Abraão."
+    },
+    {
+      "verse": 8,
+      "en": "And the scripture, foreseeing that God would justify the heathen through faith, preached before the gospel unto Abraham, saying, In thee shall all nations be blessed.",
+      "pt": "Ora, a Escritura, prevendo que Deus havia de justificar pela fé os gentios, anunciou previamente a boa nova a Abraão, dizendo: Em ti serão abençoadas todas as nações."
+    },
+    {
+      "verse": 9,
+      "en": "So then they which be of faith are blessed with faithful Abraham.",
+      "pt": "De modo que os que são da fé são abençoados com o crente Abraão."
+    },
+    {
+      "verse": 10,
+      "en": "For as many as are of the works of the law are under the curse: for it is written, Cursed is every one that continueth not in all things which are written in the book of the law to do them.",
+      "pt": "Pois todos quantos são das obras da lei estão debaixo da maldição; porque escrito está: Maldito todo aquele que não permanece em todas as coisas que estão escritas no livro da lei, para fazê-las."
+    },
+    {
+      "verse": 11,
+      "en": "But that no man is justified by the law in the sight of God, it is evident: for, The just shall live by faith.",
+      "pt": "É evidente que pela lei ninguém é justificado diante de Deus, porque: O justo viverá da fé;"
+    },
+    {
+      "verse": 12,
+      "en": "And the law is not of faith: but, The man that doeth them shall live in them.",
+      "pt": "ora, a lei não é da fé, mas: O que fizer estas coisas, por elas viverá."
+    },
+    {
+      "verse": 13,
+      "en": "Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:",
+      "pt": "Cristo nos resgatou da maldição da lei, fazendo-se maldição por nós; porque está escrito: Maldito todo aquele que for pendurado no madeiro;"
+    },
+    {
+      "verse": 14,
+      "en": "That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith.",
+      "pt": "para que aos gentios viesse a bênção de Abraão em Jesus Cristo, a fim de que nós recebêssemos pela fé a promessa do Espírito."
+    },
+    {
+      "verse": 15,
+      "en": "Brethren, I speak after the manner of men; Though it be but a man’s covenant, yet if it be confirmed, no man disannulleth, or addeth thereto.",
+      "pt": "Irmãos, como homem falo. Um testamento, embora de homem, uma vez confirmado, ninguém o anula, nem lhe acrescenta coisa alguma."
+    },
+    {
+      "verse": 16,
+      "en": "Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ.",
+      "pt": "Ora, a Abraão e a seu descendente foram feitas as promessas; não diz: E a seus descendentes, como falando de muitos, mas como de um só: E a teu descendente, que é Cristo."
+    },
+    {
+      "verse": 17,
+      "en": "And this I say, that the covenant, that was confirmed before of God in Christ, the law, which was four hundred and thirty years after, cannot disannul, that it should make the promise of none effect.",
+      "pt": "E digo isto: Ao testamento anteriormente confirmado por Deus, a lei, que veio quatrocentos e trinta anos depois, não invalida, de forma a tornar inoperante a promessa."
+    },
+    {
+      "verse": 18,
+      "en": "For if the inheritance be of the law, it is no more of promise: but God gave it to Abraham by promise.",
+      "pt": "Pois se da lei provém a herança, já não provém mais da promessa; mas Deus, pela promessa, a deu gratuitamente a Abraão."
+    },
+    {
+      "verse": 19,
+      "en": "Wherefore then serveth the law? It was added because of transgressions, till the seed should come to whom the promise was made; and it was ordained by angels in the hand of a mediator.",
+      "pt": "Logo, para que é a lei? Foi acrescentada por causa das transgressões, até que viesse o descendente a quem a promessa tinha sido feita; e foi ordenada por meio de anjos, pela mão de um mediador."
+    },
+    {
+      "verse": 20,
+      "en": "Now a mediator is not a mediator of one, but God is one.",
+      "pt": "Ora, o mediador não o é de um só, mas Deus é um só."
+    },
+    {
+      "verse": 21,
+      "en": "Is the law then against the promises of God? God forbid: for if there had been a law given which could have given life, verily righteousness should have been by the law.",
+      "pt": "É a lei, então, contra as promessas de Deus? De modo nenhum; porque, se fosse dada uma lei que pudesse vivificar, a justiça, na verdade, teria sido pela lei."
+    },
+    {
+      "verse": 22,
+      "en": "But the scripture hath concluded all under sin, that the promise by faith of Jesus Christ might be given to them that believe.",
+      "pt": "Mas a Escritura encerrou tudo debaixo do pecado, para que a promessa pela fé em Jesus Cristo fosse dada aos que crêem."
+    },
+    {
+      "verse": 23,
+      "en": "But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed.",
+      "pt": "Mas, antes que viesse a fé, estávamos guardados debaixo da lei, encerrados para aquela fé que se havia de revelar."
+    },
+    {
+      "verse": 24,
+      "en": "Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith.",
+      "pt": "De modo que a lei se tornou nosso aio, para nos conduzir a Cristo, a fim de que pela fé fôssemos justificados."
+    },
+    {
+      "verse": 25,
+      "en": "But after that faith is come, we are no longer under a schoolmaster.",
+      "pt": "Mas, depois que veio a fé, já não estamos debaixo de aio."
+    },
+    {
+      "verse": 26,
+      "en": "For ye are all the children of God by faith in Christ Jesus.",
+      "pt": "Pois todos sois filhos de Deus pela fé em Cristo Jesus."
+    },
+    {
+      "verse": 27,
+      "en": "For as many of you as have been baptized into Christ have put on Christ.",
+      "pt": "Porque todos quantos fostes batizados em Cristo vos revestistes de Cristo."
+    },
+    {
+      "verse": 28,
+      "en": "There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus.",
+      "pt": "Não há judeu nem grego; não há escravo nem livre; não há homem nem mulher; porque todos vós sois um em Cristo Jesus."
+    },
+    {
+      "verse": 29,
+      "en": "And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise.",
+      "pt": "E, se sois de Cristo, então sois descendência de Abraão, e herdeiros conforme a promessa."
+    }
   ]
 }

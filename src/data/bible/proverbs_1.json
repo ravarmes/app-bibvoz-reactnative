@@ -2,41 +2,173 @@
   "book": "Proverbs",
   "bookPt": "Provérbios",
   "chapter": 1,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "The proverbs of Solomon son of David, king of Israel:", "pt": "Os provérbios de Salomão, filho de Davi, rei de Israel:" },
-    { "verse": 2, "en": "for gaining wisdom and instruction; for understanding words of insight;", "pt": "para se adquirir sabedoria e instrução; para compreender palavras de entendimento;" },
-    { "verse": 3, "en": "for receiving instruction in prudent behavior, doing what is right and just and fair;", "pt": "para receber instrução em sabedoria, justiça, juízo e equidade;" },
-    { "verse": 4, "en": "for giving prudence to those who are simple, knowledge and discretion to the young—", "pt": "para dar prudência ao inexperiente, conhecimento e bom senso ao jovem." },
-    { "verse": 5, "en": "let the wise listen and add to their learning, and let the discerning get guidance—", "pt": "Que o sábio ouça e acrescente ao seu saber, e que o inteligente receba orientação," },
-    { "verse": 6, "en": "for understanding proverbs and parables, the sayings and riddles of the wise.", "pt": "para compreender provérbios e parábolas, os ditos e os enigmas dos sábios." },
-    { "verse": 7, "en": "The fear of the LORD is the beginning of knowledge, but fools despise wisdom and instruction.", "pt": "O temor do Senhor é o começo do saber, mas os tolos desprezam a sabedoria e a instrução." },
-    { "verse": 8, "en": "Listen, my son, to your father's instruction and do not forsake your mother's teaching.", "pt": "Filho meu, dê atenção à instrução de seu pai e não abandone o ensinamento de sua mãe." },
-    { "verse": 9, "en": "They are a garland to grace your head and a chain to adorn your neck.", "pt": "Pois eles serão um enfeite gracioso para a sua cabeça e um colar para o seu pescoço." },
-    { "verse": 10, "en": "My son, if sinful men entice you, do not give in to them.", "pt": "Filho meu, se os pecadores tentarem seduzi-lo, não ceda a eles." },
-    { "verse": 11, "en": "If they say, \"Come along with us; let's lie in wait for innocent blood, let's ambush some harmless soul;", "pt": "Se disserem: \"Venha conosco! Vamos armar uma emboscada para derramar sangue, vamos espreitar o inocente sem razão alguma;" },
-    { "verse": 12, "en": "let's swallow them alive, like the grave, and whole, like those who go down to the pit;", "pt": "vamos engoli-los vivos como o sepulcro, e inteiros, como os que descem à cova;" },
-    { "verse": 13, "en": "we will get all sorts of valuable things and fill our houses with plunder;", "pt": "obteremos toda sorte de riquezas e encheremos as nossas casas de despojos;" },
-    { "verse": 14, "en": "cast lots with us; we will all share the loot\"—", "pt": "venha fazer parte do grupo conosco; teremos todos uma bolsa comum.\"" },
-    { "verse": 15, "en": "my son, do not go along with them, do not set foot on their paths;", "pt": "Filho meu, não siga esse caminho; guarde os seus pés dessas veredas," },
-    { "verse": 16, "en": "for their feet rush into evil, they are swift to shed blood.", "pt": "pois os pés deles correm para o mal e se apressam para derramar sangue." },
-    { "verse": 17, "en": "How useless to spread a net where every bird can see it!", "pt": "É inútil estender uma rede à vista dos pássaros." },
-    { "verse": 18, "en": "These men lie in wait for their own blood; they ambush only themselves!", "pt": "Mas essas pessoas armam ciladas para si mesmas e tramam contra a própria vida." },
-    { "verse": 19, "en": "Such are the paths of all who go after ill-gotten gain; it takes away the life of those who get it.", "pt": "Assim é o destino de todo aquele que busca ganho desonesto; esse ganho tira a vida de quem o possui." },
-    { "verse": 20, "en": "Out in the open wisdom calls aloud, she raises her voice in the public square;", "pt": "A sabedoria clama pelas ruas; faz ouvir a sua voz nas praças públicas;" },
-    { "verse": 21, "en": "on top of the wall she cries out, at the city gate she makes her speech:", "pt": "exclama nas esquinas movimentadas; fala na entrada das portas da cidade:" },
-    { "verse": 22, "en": "\"How long will you who are simple love your simple ways? How long will mockers delight in mockery and fools hate knowledge?", "pt": "\"Até quando, pessoas ingênuas, vocês amarão a ingenuidade? Até quando os zombadores se deleitarão em zombar, e os tolos odiarão o conhecimento?" },
-    { "verse": 23, "en": "Repent at my rebuke! Then I will pour out my thoughts to you, I will make known to you my teachings.", "pt": "Voltem para as minhas repreensões! Vejam, derramarei meu espírito sobre vocês e farei com que conheçam as minhas palavras." },
-    { "verse": 24, "en": "But since you refuse to listen when I call and no one pays attention when I stretch out my hand,", "pt": "Mas como vocês não quiseram ouvir quando eu chamei e não deram atenção quando estendi a minha mão," },
-    { "verse": 25, "en": "since you disregard all my advice and do not accept my rebuke,", "pt": "como vocês rejeitaram todo o meu conselho e não quiseram aceitar a minha repreensão," },
-    { "verse": 26, "en": "I in turn will laugh when disaster strikes you; I will mock when calamity overtakes you—", "pt": "também eu rerei da calamidade de vocês; zombarei quando o terror se apoderar de vocês;" },
-    { "verse": 27, "en": "when calamity overtakes you like a storm, when disaster sweeps over you like a whirlwind, when distress and trouble overwhelm you.", "pt": "quando o terror de vocês vier como uma tempestade e a calamidade chegar como um furacão, quando a tribulação e a angústia os alcançarem." },
-    { "verse": 28, "en": "\"Then they will call to me but I will not answer; they will look for me but will not find me,", "pt": "\"Então me chamarão, mas não responderei; me procurarão com diligência, mas não me acharão," },
-    { "verse": 29, "en": "since they hated knowledge and did not choose to fear the LORD.", "pt": "porque odiaram o conhecimento e não escolheram o temor do Senhor," },
-    { "verse": 30, "en": "Since they would not accept my advice and spurned my rebuke,", "pt": "porque não quiseram aceitar o meu conselho e desprezaram toda a minha repreensão." },
-    { "verse": 31, "en": "they will eat the fruit of their ways and be filled with the fruit of their schemes.", "pt": "Comerão do fruto de seus próprios caminhos e se fartarão de suas próprias maquinações." },
-    { "verse": 32, "en": "For the waywardness of the simple will kill them, and the complacency of fools will destroy them;", "pt": "Pois o desvio dos ingênuos os matará, e a tranquilidade dos tolos os destruirá." },
-    { "verse": 33, "en": "but whoever listens to me will live in safety and be at ease, without fear of harm.\"", "pt": "Mas aquele que me der ouvidos viverá em segurança e descansará tranquilo, sem temor de mal algum.\"" }
+    {
+      "verse": 1,
+      "en": "The proverbs of Solomon the son of David, king of Israel;",
+      "pt": "Provérbios de Salomão, filho de Davi, rei de Israel:"
+    },
+    {
+      "verse": 2,
+      "en": "To know wisdom and instruction; to perceive the words of understanding;",
+      "pt": "Para se conhecer a sabedoria e a instrução; para se entenderem as palavras de inteligência;"
+    },
+    {
+      "verse": 3,
+      "en": "To receive the instruction of wisdom, justice, and judgment, and equity;",
+      "pt": "para se instruir em sábio procedimento, em retidão, justiça e eqüidade;"
+    },
+    {
+      "verse": 4,
+      "en": "To give subtilty to the simple, to the young man knowledge and discretion.",
+      "pt": "para se dar aos simples prudência, e aos jovens conhecimento e bom siso."
+    },
+    {
+      "verse": 5,
+      "en": "A wise man will hear, and will increase learning; and a man of understanding shall attain unto wise counsels:",
+      "pt": "Ouça também, o sábio e cresça em ciência, e o entendido adquira habilidade,"
+    },
+    {
+      "verse": 6,
+      "en": "To understand a proverb, and the interpretation; the words of the wise, and their dark sayings.",
+      "pt": "para entender provérbios e parábolas, as palavras dos sábios, e seus enigmas."
+    },
+    {
+      "verse": 7,
+      "en": "The fear of the LORD is the beginning of knowledge: but fools despise wisdom and instruction.",
+      "pt": "O temor do Senhor é o princípio do conhecimento; mas os insensatos desprezam a sabedoria e a instrução."
+    },
+    {
+      "verse": 8,
+      "en": "My son, hear the instruction of thy father, and forsake not the law of thy mother:",
+      "pt": "Filho meu, ouve a instrução de teu pai, e não deixes o ensino de tua mãe."
+    },
+    {
+      "verse": 9,
+      "en": "For they shall be an ornament of grace unto thy head, and chains about thy neck.",
+      "pt": "Porque eles serão uma grinalda de graça para a tua cabeça, e colares para o teu pescoço."
+    },
+    {
+      "verse": 10,
+      "en": "My son, if sinners entice thee, consent thou not.",
+      "pt": "Filho meu, se os pecadores te quiserem seduzir, não consintas."
+    },
+    {
+      "verse": 11,
+      "en": "If they say, Come with us, let us lay wait for blood, let us lurk privily for the innocent without cause:",
+      "pt": "Se disserem: Vem conosco; embosquemo-nos para derramar sangue; espreitemos sem razão o inocente;"
+    },
+    {
+      "verse": 12,
+      "en": "Let us swallow them up alive as the grave; and whole, as those that go down into the pit:",
+      "pt": "traguemo-los vivos, como o Seol, e inteiros como os que descem à cova;"
+    },
+    {
+      "verse": 13,
+      "en": "We shall find all precious substance, we shall fill our houses with spoil:",
+      "pt": "acharemos toda sorte de bens preciosos; encheremos as nossas casas de despojos;"
+    },
+    {
+      "verse": 14,
+      "en": "Cast in thy lot among us; let us all have one purse:",
+      "pt": "lançarás a tua sorte entre nós; teremos todos uma só bolsa;"
+    },
+    {
+      "verse": 15,
+      "en": "My son, walk not thou in the way with them; refrain thy foot from their path:",
+      "pt": "filho meu, não andes no caminho com eles; guarda da sua vereda o teu pé,"
+    },
+    {
+      "verse": 16,
+      "en": "For their feet run to evil, and make haste to shed blood.",
+      "pt": "porque os seus pés correm para o mal, e eles se apressam a derramar sangue."
+    },
+    {
+      "verse": 17,
+      "en": "Surely in vain the net is spread in the sight of any bird.",
+      "pt": "Pois debalde se estende a rede à vista de qualquer ave."
+    },
+    {
+      "verse": 18,
+      "en": "And they lay wait for their own blood; they lurk privily for their own lives.",
+      "pt": "Mas estes se põem em emboscadas contra o seu próprio sangue, e as suas próprias vidas espreitam."
+    },
+    {
+      "verse": 19,
+      "en": "So are the ways of every one that is greedy of gain; which taketh away the life of the owners thereof.",
+      "pt": "Tais são as veredas de todo aquele que se entrega à cobiça; ela tira a vida dos que a possuem."
+    },
+    {
+      "verse": 20,
+      "en": "Wisdom crieth without; she uttereth her voice in the streets:",
+      "pt": "A suprema sabedoria altissonantemente clama nas ruas; nas praças levanta a sua voz."
+    },
+    {
+      "verse": 21,
+      "en": "She crieth in the chief place of concourse, in the openings of the gates: in the city she uttereth her words, saying,",
+      "pt": "Do alto dos muros clama; às entradas das portas e na cidade profere as suas palavras:"
+    },
+    {
+      "verse": 22,
+      "en": "How long, ye simple ones, will ye love simplicity? and the scorners delight in their scorning, and fools hate knowledge?",
+      "pt": "Até quando, ó estúpidos, amareis a estupidez? e até quando se deleitarão no escárnio os escarnecedores, e odiarão os insensatos o conhecimento?"
+    },
+    {
+      "verse": 23,
+      "en": "Turn you at my reproof: behold, I will pour out my spirit unto you, I will make known my words unto you.",
+      "pt": "Convertei-vos pela minha repreensão; eis que derramarei sobre vós o meu; espírito e vos farei saber as minhas palavras."
+    },
+    {
+      "verse": 24,
+      "en": "Because I have called, and ye refused; I have stretched out my hand, and no man regarded;",
+      "pt": "Mas, porque clamei, e vós recusastes; porque estendi a minha mão, e nao houve quem desse atenção;"
+    },
+    {
+      "verse": 25,
+      "en": "But ye have set at nought all my counsel, and would none of my reproof:",
+      "pt": "antes desprezastes todo o meu conselho, e não fizestes caso da minha repreensão;"
+    },
+    {
+      "verse": 26,
+      "en": "I also will laugh at your calamity; I will mock when your fear cometh;",
+      "pt": "também eu me rirei no dia da vossa calamidade; zombarei, quando sobrevier o vosso terror,"
+    },
+    {
+      "verse": 27,
+      "en": "When your fear cometh as desolation, and your destruction cometh as a whirlwind; when distress and anguish cometh upon you.",
+      "pt": "quando o terror vos sobrevier como tempestade, e a vossa calamidade passar como redemoinho, e quando vos sobrevierem aperto e angústia."
+    },
+    {
+      "verse": 28,
+      "en": "Then shall they call upon me, but I will not answer; they shall seek me early, but they shall not find me:",
+      "pt": "Então a mim clamarão, mas eu não responderei; diligentemente me buscarão, mas não me acharão."
+    },
+    {
+      "verse": 29,
+      "en": "For that they hated knowledge, and did not choose the fear of the LORD:",
+      "pt": "Porquanto aborreceram o conhecimento, e não preferiram o temor do Senhor;"
+    },
+    {
+      "verse": 30,
+      "en": "They would none of my counsel: they despised all my reproof.",
+      "pt": "não quiseram o meu conselho e desprezaram toda a minha repreensão;"
+    },
+    {
+      "verse": 31,
+      "en": "Therefore shall they eat of the fruit of their own way, and be filled with their own devices.",
+      "pt": "portanto comerão do fruto do seu caminho e se fartarão dos seus próprios conselhos."
+    },
+    {
+      "verse": 32,
+      "en": "For the turning away of the simple shall slay them, and the prosperity of fools shall destroy them.",
+      "pt": "Porque o desvio dos néscios os matará, e a prosperidade dos loucos os destruirá."
+    },
+    {
+      "verse": 33,
+      "en": "But whoso hearkeneth unto me shall dwell safely, and shall be quiet from fear of evil.",
+      "pt": "Mas o que me der ouvidos habitará em segurança, e estará tranqüilo, sem receio do mal."
+    }
   ]
 }
