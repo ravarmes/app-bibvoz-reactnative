@@ -1,0 +1,38 @@
+BibVoz - Versão 1.0.5
+======================
+
+MODIFICAÇÕES DESTA VERSÃO
+--------------------------
+
+1. SISTEMA DE FAVORITOS (BOOKMARKS)
+   - Adicionado botão de estrela em cada versículo para marcar como favorito
+   - Favoritos são salvos de forma persistente no dispositivo
+   - Novo ícone no cabeçalho exibe a lista completa de favoritos salvos
+   - Ao tocar em um favorito na lista, o app navega diretamente para o versículo correspondente
+   - O ícone do cabeçalho muda visualmente quando há favoritos salvos
+
+2. REPRODUÇÃO DE ÁUDIO MAIS SUAVE
+   - Adicionado intervalo de 180ms entre as etapas de cada versículo (inglês → português)
+   - Adicionado intervalo de 360ms entre versículos consecutivos
+   - Pausa e avanço cancelam corretamente os intervalos pendentes, eliminando saltos bruscos
+   - Experiência de escuta significativamente mais fluida e natural
+
+3. CONTEÚDO BÍBLICO COMPLETO EM DOMÍNIO PÚBLICO
+   - Cobertura total de capítulos: João 1–21, Provérbios 1–31, Romanos 1–16, Gálatas 1–6 (74 capítulos)
+   - Todos os textos migrados para traduções de domínio público: KJV (inglês) e Almeida Revista e Corrigida (português)
+   - Elimina qualquer risco de licenciamento associado às versões anteriores (NIV / NTLH)
+
+4. ÁREAS DE TOQUE AMPLIADAS
+   - Chips de seleção de capítulo com área de toque expandida (hitSlop)
+   - Botões do cabeçalho (favoritos e configurações) com área de toque maior
+   - Controles de velocidade e prévia de voz mais fáceis de acionar
+   - Melhoria de usabilidade especialmente em telas menores
+
+5. CORREÇÃO DE ÍCONE DE NAVEGAÇÃO
+   - Adicionado ícone de seta (back chevron) do React Native Paper nos recursos nativos
+   - Corrige ausência visual do ícone em determinados dispositivos e versões do Android
+
+
+RESUMO
+------
+A versão 1.0.5 traz melhorias diretamente solicitadas pelos testadores: um sistema completo de favoritos para salvar e navegar rapidamente entre versículos marcados, reprodução de áudio mais fluida com pausas naturais entre etapas e versículos, cobertura integral dos 74 capítulos disponíveis com textos em domínio público (KJV e Almeida), além de ajustes de usabilidade com áreas de toque maiores em toda a interface.
