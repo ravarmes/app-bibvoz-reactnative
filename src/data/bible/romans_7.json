@@ -2,33 +2,133 @@
   "book": "Romans",
   "bookPt": "Romanos",
   "chapter": 7,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "Do you not know, brothers and sisters—for I am speaking to those who know the law—that the law has authority over someone only as long as that person lives?", "pt": "Irmãos, não sabem vocês — pois estou falando com os que conhecem a lei — que a lei tem autoridade sobre uma pessoa somente enquanto ela vive?" },
-    { "verse": 2, "en": "For example, by law a married woman is bound to her husband as long as he is alive, but if her husband dies, she is released from the law that binds her to him.", "pt": "Por exemplo, pela lei uma mulher casada está ligada ao marido enquanto ele vive; mas, se o marido morrer, ela fica desobrigada da lei que a prendia a ele." },
-    { "verse": 3, "en": "So then, if she has sexual relations with another man while her husband is still alive, she is called an adulteress. But if her husband dies, she is released from that law and is not an adulteress if she marries another man.", "pt": "Por isso, se ela se unir a outro homem enquanto o marido ainda vive, será chamada adúltera. Mas se o marido morrer, ela fica livre dessa lei e não é adúltera se se casar com outro homem." },
-    { "verse": 4, "en": "So, my brothers and sisters, you also died to the law through the body of Christ, that you might belong to another, to him who was raised from the dead, in order that we might bear fruit for God.", "pt": "Da mesma forma, meus irmãos, vocês também morreram para a lei por meio do corpo de Cristo, a fim de pertencerem a outro, ao que foi ressuscitado dos mortos, para que produzíssemos fruto para Deus." },
-    { "verse": 5, "en": "For when we were in the realm of the flesh, the sinful passions aroused by the law were at work in us, so that we bore fruit for death.", "pt": "Pois quando estávamos no domínio da carne, as paixões pecaminosas, despertadas pela lei, agiam nos nossos membros, produzindo frutos para a morte." },
-    { "verse": 6, "en": "But now, by dying to what once bound us, we have been released from the law so that we serve in the new way of the Spirit, and not in the old way of the written code.", "pt": "Mas agora, morrendo para o que nos aprisionava, fomos libertados da lei, a fim de servir no novo caminho do Espírito, e não no velho caminho da lei escrita." },
-    { "verse": 7, "en": "What shall we say, then? Is the law sinful? Certainly not! Nevertheless, I would not have known what sin was had it not been for the law. For I would not have known what coveting really was if the law had not said, \"You shall not covet.\"", "pt": "O que diremos então? Que a lei é pecado? De modo nenhum! Contudo, eu não teria conhecido o pecado senão pela lei. Por exemplo, eu não teria conhecido a cobiça se a lei não dissesse: \"Não cobices.\"" },
-    { "verse": 8, "en": "But sin, seizing the opportunity afforded by the commandment, produced in me every kind of coveting. For apart from the law, sin was dead.", "pt": "Mas o pecado, aproveitando-se do mandamento, produziu em mim todo tipo de cobiça. Pois sem a lei o pecado está morto." },
-    { "verse": 9, "en": "Once I was alive apart from the law; but when the commandment came, sin sprang to life and I died.", "pt": "Antes de conhecer a lei, eu estava vivo; mas quando o mandamento veio, o pecado ganhou vida e eu morri." },
-    { "verse": 10, "en": "I found that the very commandment that was intended to bring life actually brought death.", "pt": "E descobri que o mandamento que devia trazer vida trouxe-me morte." },
-    { "verse": 11, "en": "For sin, seizing the opportunity afforded by the commandment, deceived me, and through the commandment put me to death.", "pt": "Pois o pecado, aproveitando-se do mandamento, me enganou e, por meio dele, me matou." },
-    { "verse": 12, "en": "So then, the law is holy, and the commandment is holy, righteous and good.", "pt": "De modo que a lei é santa, e o mandamento é santo, justo e bom." },
-    { "verse": 13, "en": "Did that which is good, then, become death to me? By no means! Nevertheless, in order that sin might be recognized as sin, it used what is good to bring about my death, so that through the commandment sin might become utterly sinful.", "pt": "Então o que é bom me causou a morte? De modo nenhum! E sim, o pecado, para se mostrar como pecado, usou o que é bom para causar minha morte, a fim de que por meio do mandamento o pecado se tornasse muito mais pecaminoso." },
-    { "verse": 14, "en": "We know that the law is spiritual; but I am unspiritual, sold as a slave to sin.", "pt": "Sabemos que a lei é espiritual; mas eu sou carnal, vendido como escravo ao pecado." },
-    { "verse": 15, "en": "I do not understand what I do. For what I want to do I do not do, but what I hate I do.", "pt": "Não entendo o que faço. Pois não faço o que quero; pelo contrário, faço o que odeio." },
-    { "verse": 16, "en": "And if I do what I do not want to do, I agree that the law is good.", "pt": "E se faço o que não quero, concordo que a lei é boa." },
-    { "verse": 17, "en": "As it is now, it is no longer I myself who do it, but it is sin living in me.", "pt": "Na verdade, já não sou eu que faço isso, mas o pecado que habita em mim." },
-    { "verse": 18, "en": "For I know that good itself does not dwell in me, that is, in my sinful nature. For I have the desire to do what is good, but I cannot carry it out.", "pt": "Pois sei que em mim, isto é, na minha natureza pecaminosa, nada de bom habita. Tenho o desejo de fazer o bem, mas não tenho capacidade para realizá-lo." },
-    { "verse": 19, "en": "For I do not do the good I want to do, but the evil I do not want to do—this I keep on doing.", "pt": "Pois não faço o bem que quero, mas o mal que não quero é o que continuo fazendo." },
-    { "verse": 20, "en": "Now if I do what I do not want to do, it is no longer I who do it, but it is sin living in me that does it.", "pt": "Ora, se faço o que não quero, já não sou eu que o faço, mas o pecado que habita em mim." },
-    { "verse": 21, "en": "So I find this law at work: Although I want to do good, evil is right there with me.", "pt": "Assim, descobri esta lei: Quando quero fazer o bem, o mal está presente em mim." },
-    { "verse": 22, "en": "For in my inner being I delight in God's law;", "pt": "Pois no meu íntimo me deleito na lei de Deus;" },
-    { "verse": 23, "en": "but I see another law at work in me, waging war against the law of my mind and making me a prisoner of the law of sin at work within me.", "pt": "mas vejo outra lei agindo nos membros do meu corpo, travando guerra contra a lei da minha mente e fazendo-me prisioneiro da lei do pecado que age nos meus membros." },
-    { "verse": 24, "en": "What a wretched man I am! Who will rescue me from this body that is subject to death?", "pt": "Que homem miserável sou eu! Quem me livrará deste corpo sujeito à morte?" },
-    { "verse": 25, "en": "Thanks be to God, who delivers me through Jesus Christ our Lord! So then, I myself in my mind am a slave to God's law, but in my sinful nature a slave to the law of sin.", "pt": "Graças a Deus, que o faz por meio de Jesus Cristo nosso Senhor! Portanto, com a minha mente sirvo à lei de Deus, mas com a natureza pecaminosa sirvo à lei do pecado." }
+    {
+      "verse": 1,
+      "en": "Know ye not, brethren, (for I speak to them that know the law,) how that the law hath dominion over a man as long as he liveth?",
+      "pt": "Ou ignorais, irmãos (pois falo aos que conhecem a lei), que a lei tem domínio sobre o homem por todo o tempo que ele vive?"
+    },
+    {
+      "verse": 2,
+      "en": "For the woman which hath an husband is bound by the law to her husband so long as he liveth; but if the husband be dead, she is loosed from the law of her husband.",
+      "pt": "Porque a mulher casada está ligada pela lei a seu marido enquanto ele viver; mas, se ele morrer, ela está livre da lei do marido."
+    },
+    {
+      "verse": 3,
+      "en": "So then if, while her husband liveth, she be married to another man, she shall be called an adulteress: but if her husband be dead, she is free from that law; so that she is no adulteress, though she be married to another man.",
+      "pt": "De sorte que, enquanto viver o marido, será chamado adúltera, se for de outro homem; mas, se ele morrer, ela está livre da lei, e assim não será adúltera se for de outro marido."
+    },
+    {
+      "verse": 4,
+      "en": "Wherefore, my brethren, ye also are become dead to the law by the body of Christ; that ye should be married to another, even to him who is raised from the dead, that we should bring forth fruit unto God.",
+      "pt": "Assim também vós, meus irmãos, fostes mortos quanto à lei mediante o corpo de Cristo, para pertencerdes a outro, àquele que ressurgiu dentre os mortos a fim de que demos fruto para Deus."
+    },
+    {
+      "verse": 5,
+      "en": "For when we were in the flesh, the motions of sins, which were by the law, did work in our members to bring forth fruit unto death.",
+      "pt": "Pois, quando estávamos na carne, as paixões dos pecados, suscitadas pela lei, operavam em nossos membros para darem fruto para a morte."
+    },
+    {
+      "verse": 6,
+      "en": "But now we are delivered from the law, that being dead wherein we were held; that we should serve in newness of spirit, and not in the oldness of the letter.",
+      "pt": "Mas agora fomos libertos da lei, havendo morrido para aquilo em que estávamos retidos, para servirmos em novidade de espírito, e não na velhice da letra."
+    },
+    {
+      "verse": 7,
+      "en": "What shall we say then? Is the law sin? God forbid. Nay, I had not known sin, but by the law: for I had not known lust, except the law had said, Thou shalt not covet.",
+      "pt": "Que diremos pois? É a lei pecado? De modo nenhum. Contudo, eu não conheci o pecado senão pela lei; porque eu não conheceria a concupiscência, se a lei não dissesse: Não cobiçarás."
+    },
+    {
+      "verse": 8,
+      "en": "But sin, taking occasion by the commandment, wrought in me all manner of concupiscence. For without the law sin was dead.",
+      "pt": "Mas o pecado, tomando ocasião, pelo mandamento operou em mim toda espécie de concupiscência; porquanto onde não há lei está morto o pecado."
+    },
+    {
+      "verse": 9,
+      "en": "For I was alive without the law once: but when the commandment came, sin revived, and I died.",
+      "pt": "E outrora eu vivia sem a lei; mas assim que veio o mandamento, reviveu o pecado, e eu morri;"
+    },
+    {
+      "verse": 10,
+      "en": "And the commandment, which was ordained to life, I found to be unto death.",
+      "pt": "e o mandamento que era para vida, esse achei que me era para morte."
+    },
+    {
+      "verse": 11,
+      "en": "For sin, taking occasion by the commandment, deceived me, and by it slew me.",
+      "pt": "Porque o pecado, tomando ocasião, pelo mandamento me enganou, e por ele me matou."
+    },
+    {
+      "verse": 12,
+      "en": "Wherefore the law is holy, and the commandment holy, and just, and good.",
+      "pt": "De modo que a lei é santa, e o mandamento santo, justo e bom."
+    },
+    {
+      "verse": 13,
+      "en": "Was then that which is good made death unto me? God forbid. But sin, that it might appear sin, working death in me by that which is good; that sin by the commandment might become exceeding sinful.",
+      "pt": "Logo o bom tornou-se morte para mim? De modo nenhum; mas o pecado, para que se mostrasse pecado, operou em mim a morte por meio do bem; a fim de que pelo mandamento o pecado se manifestasse excessivamente maligno."
+    },
+    {
+      "verse": 14,
+      "en": "For we know that the law is spiritual: but I am carnal, sold under sin.",
+      "pt": "Porque bem sabemos que a lei é espiritual; mas eu sou carnal, vendido sob o pecado."
+    },
+    {
+      "verse": 15,
+      "en": "For that which I do I allow not: for what I would, that do I not; but what I hate, that do I.",
+      "pt": "Pois o que faço, não o entendo; porque o que quero, isso não pratico; mas o que aborreço, isso faço."
+    },
+    {
+      "verse": 16,
+      "en": "If then I do that which I would not, I consent unto the law that it is good.",
+      "pt": "E, se faço o que não quero, consinto com a lei, que é boa."
+    },
+    {
+      "verse": 17,
+      "en": "Now then it is no more I that do it, but sin that dwelleth in me.",
+      "pt": "Agora, porém, não sou mais eu que faço isto, mas o pecado que habita em mim."
+    },
+    {
+      "verse": 18,
+      "en": "For I know that in me (that is, in my flesh,) dwelleth no good thing: for to will is present with me; but how to perform that which is good I find not.",
+      "pt": "Porque eu sei que em mim, isto é, na minha carne, não habita bem algum; com efeito o querer o bem está em mim, mas o efetuá-lo não está."
+    },
+    {
+      "verse": 19,
+      "en": "For the good that I would I do not: but the evil which I would not, that I do.",
+      "pt": "Pois não faço o bem que quero, mas o mal que não quero, esse pratico."
+    },
+    {
+      "verse": 20,
+      "en": "Now if I do that I would not, it is no more I that do it, but sin that dwelleth in me.",
+      "pt": "Ora, se eu faço o que não quero, já o não faço eu, mas o pecado que habita em mim."
+    },
+    {
+      "verse": 21,
+      "en": "I find then a law, that, when I would do good, evil is present with me.",
+      "pt": "Acho então esta lei em mim, que, mesmo querendo eu fazer o bem, o mal está comigo."
+    },
+    {
+      "verse": 22,
+      "en": "For I delight in the law of God after the inward man:",
+      "pt": "Porque, segundo o homem interior, tenho prazer na lei de Deus;"
+    },
+    {
+      "verse": 23,
+      "en": "But I see another law in my members, warring against the law of my mind, and bringing me into captivity to the law of sin which is in my members.",
+      "pt": "mas vejo nos meus membros outra lei guerreando contra a lei do meu entendimento, e me levando cativo à lei do pecado, que está nos meus membros."
+    },
+    {
+      "verse": 24,
+      "en": "O wretched man that I am! who shall deliver me from the body of this death?",
+      "pt": "Miserável homem que eu sou! quem me livrará do corpo desta morte?"
+    },
+    {
+      "verse": 25,
+      "en": "I thank God through Jesus Christ our Lord. So then with the mind I myself serve the law of God; but with the flesh the law of sin.",
+      "pt": "Graças a Deus, por Jesus Cristo nosso Senhor! De modo que eu mesmo com o entendimento sirvo à lei de Deus, mas com a carne à lei do pecado."
+    }
   ]
 }

@@ -2,39 +2,163 @@
   "book": "Romans",
   "bookPt": "Romanos",
   "chapter": 3,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "What advantage, then, is there in being a Jew, or what value is there in circumcision?", "pt": "Qual é então a vantagem de ser judeu? Ou qual é o valor da circuncisão?" },
-    { "verse": 2, "en": "Much in every way! First of all, the Jews have been entrusted with the very words of God.", "pt": "Grande em todos os sentidos! Em primeiro lugar, os judeus receberam as palavras de Deus." },
-    { "verse": 3, "en": "What if some were unfaithful? Will their unfaithfulness nullify God's faithfulness?", "pt": "E se alguns foram infiéis? A infidelidade deles anulará a fidelidade de Deus?" },
-    { "verse": 4, "en": "Not at all! Let God be true, and every human being a liar. As it is written: \"So that you may be proved right when you speak and prevail when you judge.\"", "pt": "De modo nenhum! Seja Deus verdadeiro e todo ser humano mentiroso. Como está escrito: \"Para que você seja reconhecido como justo nas suas palavras e seja vencedor quando for julgado.\"" },
-    { "verse": 5, "en": "But if our unrighteousness brings out God's righteousness more clearly, what shall we say? That God is unjust in bringing his wrath on us? (I am using a human argument.)", "pt": "Se a nossa injustiça ressalta a justiça de Deus, o que diremos? Que Deus é injusto ao castigar com a sua ira? (Estou usando um argumento humano.)" },
-    { "verse": 6, "en": "Certainly not! If that were so, how could God judge the world?", "pt": "De forma alguma! Se assim fosse, como poderia Deus julgar o mundo?" },
-    { "verse": 7, "en": "Someone might argue, \"If my falsehood enhances God's truthfulness and so increases his glory, why am I still condemned as a sinner?\"", "pt": "Mas alguém poderia argumentar: \"Se a minha mentira ressalta a veracidade de Deus para a sua glória, por que ainda sou condenado como pecador?\"" },
-    { "verse": 8, "en": "Why not say—as some slanderously claim that we say—\"Let us do evil that good may result\"? Their condemnation is just!", "pt": "Por que não dizer: 'Façamos o mal para que venha o bem', como nos caluniosos afirmam que dizemos? A condenação desses tais é justa!" },
-    { "verse": 9, "en": "What shall we conclude then? Do we have any advantage? Not at all! For we have already made the charge that Jews and Gentiles alike are all under the power of sin.", "pt": "Concluiremos então que temos alguma vantagem? De forma nenhuma! Já demonstramos que tanto judeus como gregos estão todos debaixo do domínio do pecado." },
-    { "verse": 10, "en": "As it is written: \"There is no one righteous, not even one;", "pt": "Como está escrito: \"Não há nenhum justo, nem um sequer;" },
-    { "verse": 11, "en": "there is no one who understands; there is no one who seeks God.", "pt": "não há ninguém que entenda, não há ninguém que busque a Deus." },
-    { "verse": 12, "en": "All have turned away, they have together become worthless; there is no one who does good, not even one.\"", "pt": "Todos se desviaram, e juntos tornaram-se inúteis; não há quem faça o bem, não há nem um sequer.\"" },
-    { "verse": 13, "en": "\"Their throats are open graves; their tongues practice deceit.\" \"The poison of vipers is on their lips.\"", "pt": "\"A garganta deles é um sepulcro aberto; com a língua enganam.\" \"O veneno das cobras está nos seus lábios.\"" },
-    { "verse": 14, "en": "\"Their mouths are full of cursing and bitterness.\"", "pt": "\"A boca deles está cheia de maldição e amargura.\"" },
-    { "verse": 15, "en": "\"Their feet are swift to shed blood;", "pt": "\"Os seus pés são ágeis para derramar sangue;" },
-    { "verse": 16, "en": "ruin and misery mark their ways,", "pt": "a ruína e a miséria marcam os seus caminhos," },
-    { "verse": 17, "en": "and the way of peace they do not know.\"", "pt": "e o caminho da paz eles não conhecem.\"" },
-    { "verse": 18, "en": "\"There is no fear of God before their eyes.\"", "pt": "\"Não há temor de Deus diante dos seus olhos.\"" },
-    { "verse": 19, "en": "Now we know that whatever the law says, it says to those who are under the law, so that every mouth may be silenced and the whole world held accountable to God.", "pt": "Ora, sabemos que tudo o que a lei diz, diz àqueles que estão debaixo da lei, para que toda boca seja fechada e o mundo inteiro seja considerado culpável perante Deus." },
-    { "verse": 20, "en": "Therefore no one will be declared righteous in God's sight by the works of the law; rather, through the law we become conscious of our sin.", "pt": "Portanto, pelas obras da lei nenhum ser humano será declarado justo diante de Deus; por meio da lei é que vem o conhecimento do pecado." },
-    { "verse": 21, "en": "But now apart from the law the righteousness of God has been made known, to which the Law and the Prophets testify.", "pt": "Mas agora, independentemente da lei, a justiça de Deus foi manifestada, a qual a Lei e os Profetas testemunham;" },
-    { "verse": 22, "en": "This righteousness is given through faith in Jesus Christ to all who believe. There is no difference between Jew and Gentile,", "pt": "a justiça de Deus, mediante a fé em Jesus Cristo, para todos que creem. Não há distinção," },
-    { "verse": 23, "en": "for all have sinned and fall short of the glory of God,", "pt": "pois todos pecaram e estão destituídos da glória de Deus," },
-    { "verse": 24, "en": "and all are justified freely by his grace through the redemption that came by Christ Jesus.", "pt": "sendo justificados gratuitamente pela sua graça, por meio da redenção que há em Cristo Jesus." },
-    { "verse": 25, "en": "God presented Christ as a sacrifice of atonement, through the shedding of his blood—to be received by faith. He did this to demonstrate his righteousness, because in his forbearance he had left the sins committed beforehand unpunished—", "pt": "Deus o apresentou como sacrifício de expiação, mediante a fé, pelo seu sangue, para demonstrar a sua justiça. Ele deixou impunes os pecados cometidos anteriormente," },
-    { "verse": 26, "en": "he did it to demonstrate his righteousness at the present time, so as to be just and the one who justifies those who have faith in Jesus.", "pt": "em sua paciência, para demonstrar a sua justiça no tempo presente, a fim de ser justo e justificador daquele que tem fé em Jesus." },
-    { "verse": 27, "en": "Where, then, is boasting? It is excluded. Because of what law? The law that requires works? No, because of the law that requires faith.", "pt": "Onde está então o motivo para se orgulhar? Ele ficou excluído. Por qual lei? A das obras? Não, mas pela lei da fé." },
-    { "verse": 28, "en": "For we maintain that a person is justified by faith apart from the works of the law.", "pt": "Pois sustentamos que o homem é justificado pela fé, independentemente das obras da lei." },
-    { "verse": 29, "en": "Or is God the God of Jews only? Is he not the God of Gentiles too? Yes, of Gentiles too,", "pt": "Ou será que Deus é somente o Deus dos judeus? Não é ele também o Deus dos gentios? Sim, também dos gentios," },
-    { "verse": 30, "en": "since there is only one God, who will justify the circumcised by faith and the uncircumcised through that same faith.", "pt": "uma vez que há somente um Deus, que justificará os circuncidados pela fé e os incircuncisos mediante a mesma fé." },
-    { "verse": 31, "en": "Do we, then, nullify the law by this faith? Not at all! Rather, we uphold the law.", "pt": "Anulamos então a lei pela fé? De modo nenhum! Ao contrário, confirmamos a lei." }
+    {
+      "verse": 1,
+      "en": "What advantage then hath the Jew? or what profit is there of circumcision?",
+      "pt": "Que vantagem, pois, tem o judeu? ou qual a utilidade da circuncisão?"
+    },
+    {
+      "verse": 2,
+      "en": "Much every way: chiefly, because that unto them were committed the oracles of God.",
+      "pt": "Muita, em todo sentido; primeiramente, porque lhe foram confiados os oráculos de Deus."
+    },
+    {
+      "verse": 3,
+      "en": "For what if some did not believe? shall their unbelief make the faith of God without effect?",
+      "pt": "Pois quê? Se alguns foram infiéis, porventura a sua infidelidade anulará a fidelidade de Deus?"
+    },
+    {
+      "verse": 4,
+      "en": "God forbid: yea, let God be true, but every man a liar; as it is written, That thou mightest be justified in thy sayings, and mightest overcome when thou art judged.",
+      "pt": "De modo nenhum; antes seja Deus verdadeiro, e todo homem mentiroso; como está escrito: Para que sejas justificado em tuas palavras, e venças quando fores julgado."
+    },
+    {
+      "verse": 5,
+      "en": "But if our unrighteousness commend the righteousness of God, what shall we say? Is God unrighteous who taketh vengeance? (I speak as a man)",
+      "pt": "E, se a nossa injustiça prova a justiça de Deus, que diremos? Acaso Deus, que castiga com ira, é injusto? (Falo como homem.)"
+    },
+    {
+      "verse": 6,
+      "en": "God forbid: for then how shall God judge the world?",
+      "pt": "De modo nenhum; do contrário, como julgará Deus o mundo?"
+    },
+    {
+      "verse": 7,
+      "en": "For if the truth of God hath more abounded through my lie unto his glory; why yet am I also judged as a sinner?",
+      "pt": "Mas, se pela minha mentira abundou mais a verdade de Deus para sua glória, por que sou eu ainda julgado como pecador?"
+    },
+    {
+      "verse": 8,
+      "en": "And not rather, (as we be slanderously reported, and as some affirm that we say,) Let us do evil, that good may come? whose damnation is just.",
+      "pt": "E por que não dizemos: Façamos o mal para que venha o bem? - como alguns caluniosamente afirmam que dizemos; a condenação dos quais é justa."
+    },
+    {
+      "verse": 9,
+      "en": "What then? are we better than they? No, in no wise: for we have before proved both Jews and Gentiles, that they are all under sin;",
+      "pt": "Pois quê? Somos melhores do que eles? De maneira nenhuma, pois já demonstramos que, tanto judeus como gregos, todos estão debaixo do pecado;"
+    },
+    {
+      "verse": 10,
+      "en": "As it is written, There is none righteous, no, not one:",
+      "pt": "como está escrito: Não há justo, nem sequer um."
+    },
+    {
+      "verse": 11,
+      "en": "There is none that understandeth, there is none that seeketh after God.",
+      "pt": "Não há quem entenda; não há quem busque a Deus."
+    },
+    {
+      "verse": 12,
+      "en": "They are all gone out of the way, they are together become unprofitable; there is none that doeth good, no, not one.",
+      "pt": "Todos se extraviaram; juntamente se fizeram inúteis. Não há quem faça o bem, não há nem um só."
+    },
+    {
+      "verse": 13,
+      "en": "Their throat is an open sepulchre; with their tongues they have used deceit; the poison of asps is under their lips:",
+      "pt": "A sua garganta é um sepulcro aberto; com as suas línguas tratam enganosamente; peçonha de áspides está debaixo dos seus lábios;"
+    },
+    {
+      "verse": 14,
+      "en": "Whose mouth is full of cursing and bitterness:",
+      "pt": "a sua boca está cheia de maldição e amargura."
+    },
+    {
+      "verse": 15,
+      "en": "Their feet are swift to shed blood:",
+      "pt": "Os seus pés são ligeiros para derramar sangue."
+    },
+    {
+      "verse": 16,
+      "en": "Destruction and misery are in their ways:",
+      "pt": "Nos seus caminhos há destruição e miséria;"
+    },
+    {
+      "verse": 17,
+      "en": "And the way of peace have they not known:",
+      "pt": "e não conheceram o caminho da paz."
+    },
+    {
+      "verse": 18,
+      "en": "There is no fear of God before their eyes.",
+      "pt": "Não há temor de Deus diante dos seus olhos."
+    },
+    {
+      "verse": 19,
+      "en": "Now we know that what things soever the law saith, it saith to them who are under the law: that every mouth may be stopped, and all the world may become guilty before God.",
+      "pt": "Ora, nós sabemos que tudo o que a lei diz, aos que estão debaixo da lei o diz, para que se cale toda boca e todo o mundo fique sujeito ao juízo de Deus;"
+    },
+    {
+      "verse": 20,
+      "en": "Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin.",
+      "pt": "porquanto pelas obras da lei nenhum homem será justificado diante dele; pois o que vem pela lei é o pleno conhecimento do pecado."
+    },
+    {
+      "verse": 21,
+      "en": "But now the righteousness of God without the law is manifested, being witnessed by the law and the prophets;",
+      "pt": "Mas agora, sem lei, tem-se manifestado a justiça de Deus, que é atestada pela lei e pelos profetas;"
+    },
+    {
+      "verse": 22,
+      "en": "Even the righteousness of God which is by faith of Jesus Christ unto all and upon all them that believe: for there is no difference:",
+      "pt": "isto é, a justiça de Deus pela fé em Jesus Cristo para todos os que crêem; pois não há distinção."
+    },
+    {
+      "verse": 23,
+      "en": "For all have sinned, and come short of the glory of God;",
+      "pt": "Porque todos pecaram e destituídos estão da glória de Deus;"
+    },
+    {
+      "verse": 24,
+      "en": "Being justified freely by his grace through the redemption that is in Christ Jesus:",
+      "pt": "sendo justificados gratuitamente pela sua graça, mediante a redenção que há em Cristo Jesus,"
+    },
+    {
+      "verse": 25,
+      "en": "Whom God hath set forth to be a propitiation through faith in his blood, to declare his righteousness for the remission of sins that are past, through the forbearance of God;",
+      "pt": "ao qual Deus propôs como propiciação, pela fé, no seu sangue, para demonstração da sua justiça por ter ele na sua paciência, deixado de lado os delitos outrora cometidos;"
+    },
+    {
+      "verse": 26,
+      "en": "To declare, I say, at this time his righteousness: that he might be just, and the justifier of him which believeth in Jesus.",
+      "pt": "para demonstração da sua justiça neste tempo presente, para que ele seja justo e também justificador daquele que tem fé em Jesus."
+    },
+    {
+      "verse": 27,
+      "en": "Where is boasting then? It is excluded. By what law? of works? Nay: but by the law of faith.",
+      "pt": "Onde está logo a jactância? Foi excluída. Por que lei? Das obras? Não; mas pela lei da fé."
+    },
+    {
+      "verse": 28,
+      "en": "Therefore we conclude that a man is justified by faith without the deeds of the law.",
+      "pt": "concluímos pois que o homem é justificado pela fé sem as obras da lei."
+    },
+    {
+      "verse": 29,
+      "en": "Is he the God of the Jews only? is he not also of the Gentiles? Yes, of the Gentiles also:",
+      "pt": "É porventura Deus somente dos judeus? Não é também dos gentios? Também dos gentios, certamente,"
+    },
+    {
+      "verse": 30,
+      "en": "Seeing it is one God, which shall justify the circumcision by faith, and uncircumcision through faith.",
+      "pt": "se é que Deus é um só, que pela fé há de justificar a circuncisão, e também por meio da fé a incircuncisão."
+    },
+    {
+      "verse": 31,
+      "en": "Do we then make void the law through faith? God forbid: yea, we establish the law.",
+      "pt": "Anulamos, pois, a lei pela fé? De modo nenhum; antes estabelecemos a lei."
+    }
   ]
 }

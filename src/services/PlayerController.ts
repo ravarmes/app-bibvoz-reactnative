@@ -6,6 +6,20 @@ export type EnVoice = 'en-US' | 'en-GB';
 export type PlaybackMode = 'pt-en' | 'en-pt' | 'en-only';
 export type Phase = 'en' | 'pt' | 'idle';
 
+const INTER_STEP_DELAY_MS = 180;
+const INTER_VERSE_DELAY_MS = 360;
+
+const sleepCancellable = (ms: number, isCancelled: () => boolean): Promise<void> =>
+  new Promise(resolve => {
+    const start = Date.now();
+    const tick = () => {
+      if (isCancelled()) return resolve();
+      if (Date.now() - start >= ms) return resolve();
+      setTimeout(tick, 40);
+    };
+    tick();
+  });
+
 export interface PlayerState {
   isPlaying: boolean;
   currentIndex: number;
@@ -82,15 +96,23 @@ export function usePlayerController(verses: Verse[], options: PlayerOptions): Pl
         }
 
         const repeat = optionsRef.current.repeatCount ?? 1;
+        const isCancelled = () => runTokenRef.current !== myToken;
         for (let r = 0; r < repeat; r++) {
-          for (const step of steps) {
-            if (runTokenRef.current !== myToken) return;
-            setPhase(step.phase);
-            await AudioService.speak(step.text, step.lang);
+          for (let s = 0; s < steps.length; s++) {
+            if (isCancelled()) return;
+            setPhase(steps[s].phase);
+            await AudioService.speak(steps[s].text, steps[s].lang);
+            const isLastStepOfLastRepeat = s === steps.length - 1 && r === repeat - 1;
+            if (!isLastStepOfLastRepeat) {
+              await sleepCancellable(INTER_STEP_DELAY_MS, isCancelled);
+            }
           }
         }
 
         i += 1;
+        if (i < verses.length && !isCancelled()) {
+          await sleepCancellable(INTER_VERSE_DELAY_MS, isCancelled);
+        }
       }
 
       if (runTokenRef.current === myToken) {

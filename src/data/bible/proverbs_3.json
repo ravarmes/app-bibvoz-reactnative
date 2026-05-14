@@ -2,43 +2,183 @@
   "book": "Proverbs",
   "bookPt": "Provérbios",
   "chapter": 3,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "My son, do not forget my teaching, but keep my commands in your heart,", "pt": "Filho meu, não se esqueça dos meus ensinamentos; que o seu coração guarde os meus mandamentos," },
-    { "verse": 2, "en": "for they will prolong your life many years and bring you peace and prosperity.", "pt": "pois eles lhe acrescentarão longura de dias, anos de vida e paz." },
-    { "verse": 3, "en": "Let love and faithfulness never leave you; bind them around your neck, write them on the tablet of your heart.", "pt": "Não o abandonem o amor e a fidelidade; ate-os ao seu pescoço; escreva-os na tábua do seu coração." },
-    { "verse": 4, "en": "Then you will win favor and a good name in the sight of God and man.", "pt": "Assim você achará graça e boa consideração aos olhos de Deus e dos homens." },
-    { "verse": 5, "en": "Trust in the LORD with all your heart and lean not on your own understanding;", "pt": "Confie no Senhor de todo o seu coração e não se apoie no seu próprio entendimento." },
-    { "verse": 6, "en": "in all your ways submit to him, and he will make your paths straight.", "pt": "Reconheça-o em todos os seus caminhos, e ele endireitará as suas veredas." },
-    { "verse": 7, "en": "Do not be wise in your own eyes; fear the LORD and shun evil.", "pt": "Não seja sábio aos seus próprios olhos; tema o Senhor e afaste-se do mal." },
-    { "verse": 8, "en": "This will bring health to your body and nourishment to your bones.", "pt": "Isso trará saúde ao seu corpo e refrigério para os seus ossos." },
-    { "verse": 9, "en": "Honor the LORD with your wealth, with the firstfruits of all your crops;", "pt": "Honre o Senhor com os seus bens e com as primícias de todos os seus lucros;" },
-    { "verse": 10, "en": "then your barns will be filled to overflowing, and your vats will brim over with new wine.", "pt": "assim os seus celeiros se encherão com abundância, e os seus lagares transbordarão de mosto." },
-    { "verse": 11, "en": "My son, do not despise the LORD's discipline, and do not resent his rebuke,", "pt": "Filho meu, não despreze a correção do Senhor, nem se abata com a sua repreensão;" },
-    { "verse": 12, "en": "because the LORD disciplines those he loves, as a father the son he delights in.", "pt": "pois o Senhor corrige a quem ama, assim como um pai ao filho que tem prazer nele." },
-    { "verse": 13, "en": "Blessed are those who find wisdom, those who gain understanding,", "pt": "Feliz o homem que encontra a sabedoria e o homem que adquire o entendimento," },
-    { "verse": 14, "en": "for she is more profitable than silver and yields better returns than gold.", "pt": "porque é melhor o lucro que ela proporciona do que o da prata, e as suas rendas são melhores do que o ouro fino." },
-    { "verse": 15, "en": "She is more precious than rubies; nothing you desire can compare with her.", "pt": "É mais preciosa do que rubis; e nada do que você possa desejar se compara a ela." },
-    { "verse": 16, "en": "Long life is in her right hand; in her left hand are riches and honor.", "pt": "Na sua mão direita há longa vida; na sua mão esquerda, riquezas e honra." },
-    { "verse": 17, "en": "Her ways are pleasant ways, and all her paths are peace.", "pt": "Os seus caminhos são caminhos agradáveis e todas as suas veredas são paz." },
-    { "verse": 18, "en": "She is a tree of life to those who take hold of her; those who hold her fast will be blessed.", "pt": "Ela é árvore de vida para os que a abraçam; e felizes são os que a retêm." },
-    { "verse": 19, "en": "By wisdom the LORD laid the earth's foundations, by understanding he set the heavens in place;", "pt": "Com sabedoria o Senhor fundou a terra; com entendimento estabeleceu os céus." },
-    { "verse": 20, "en": "by his knowledge the watery depths were divided, and the clouds let drop the dew.", "pt": "Com o seu conhecimento as profundezas se abriram e as nuvens destilam orvalho." },
-    { "verse": 21, "en": "My son, do not let wisdom and understanding out of your sight, preserve sound judgment and discretion;", "pt": "Filho meu, não perca estas coisas de vista; guarde o bom senso e a discrição." },
-    { "verse": 22, "en": "they will be life for you, an ornament to grace your neck.", "pt": "Elas serão vida para a sua alma e enfeite para o seu pescoço." },
-    { "verse": 23, "en": "Then you will go on your way in safety, and your foot will not stumble.", "pt": "Então você andará com segurança no seu caminho e o seu pé não tropeçará." },
-    { "verse": 24, "en": "When you lie down, you will not be afraid; when you lie down, your sleep will be sweet.", "pt": "Quando você se deitar, não terá medo; ao se deitar, o seu sono será suave." },
-    { "verse": 25, "en": "Have no fear of sudden disaster or of the ruin that overtakes the wicked,", "pt": "Não tema o terror súbito nem a ruína dos ímpios quando vier," },
-    { "verse": 26, "en": "for the LORD will be at your side and will keep your foot from being snared.", "pt": "pois o Senhor estará ao seu lado e guardará o seu pé de ser apanhado." },
-    { "verse": 27, "en": "Do not withhold good from those to whom it is due, when it is in your power to act.", "pt": "Não se recuse a fazer o bem a quem merece, quando estiver ao seu alcance praticá-lo." },
-    { "verse": 28, "en": "Do not say to your neighbor, \"Come back tomorrow and I'll give it to you\"—when you already have it with you.", "pt": "Não diga ao seu próximo: \"Vá embora e volte amanhã, e eu o darei\" — quando você já tem o que ele precisa." },
-    { "verse": 29, "en": "Do not plot harm against your neighbor, who lives trustfully near you.", "pt": "Não trame o mal contra o seu próximo que mora confiante ao seu lado." },
-    { "verse": 30, "en": "Do not accuse anyone for no reason—when they have done you no wrong.", "pt": "Não litigue com alguém sem razão alguma, quando ele não lhe tenha feito mal." },
-    { "verse": 31, "en": "Do not envy the violent or choose any of their ways.", "pt": "Não inveje o homem violento e não escolha nenhum dos seus caminhos." },
-    { "verse": 32, "en": "For the LORD detests the perverse but takes the upright into his confidence.", "pt": "Pois o Senhor abomina o perverso, mas o seu segredo é com os retos." },
-    { "verse": 33, "en": "The LORD's curse is on the house of the wicked, but he blesses the home of the righteous.", "pt": "A maldição do Senhor está sobre a casa do ímpio, mas ele abençoa a morada dos justos." },
-    { "verse": 34, "en": "He mocks proud mockers but shows favor to the humble and oppressed.", "pt": "Ele zomba dos zombadores, mas dá graça aos humildes." },
-    { "verse": 35, "en": "The wise inherit honor, but fools get only shame.", "pt": "Os sábios herdarão a honra, mas os tolos receberão vergonha." }
+    {
+      "verse": 1,
+      "en": "My son, forget not my law; but let thine heart keep my commandments:",
+      "pt": "Filho meu, não te esqueças da minha instrução, e o teu coração guarde os meus mandamentos;"
+    },
+    {
+      "verse": 2,
+      "en": "For length of days, and long life, and peace, shall they add to thee.",
+      "pt": "porque eles te darão longura de dias, e anos de vida e paz."
+    },
+    {
+      "verse": 3,
+      "en": "Let not mercy and truth forsake thee: bind them about thy neck; write them upon the table of thine heart:",
+      "pt": "Não se afastem de ti a benignidade e a fidelidade; ata-as ao teu pescoço, escreve-as na tábua do teu coração;"
+    },
+    {
+      "verse": 4,
+      "en": "So shalt thou find favour and good understanding in the sight of God and man.",
+      "pt": "assim acharás favor e bom entendimento à vista de Deus e dos homens."
+    },
+    {
+      "verse": 5,
+      "en": "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+      "pt": "Confia no Senhor de todo o teu coração, e não te estribes no teu próprio entendimento."
+    },
+    {
+      "verse": 6,
+      "en": "In all thy ways acknowledge him, and he shall direct thy paths.",
+      "pt": "Reconhece-o em todos os teus caminhos, e ele endireitará as tuas veredas."
+    },
+    {
+      "verse": 7,
+      "en": "Be not wise in thine own eyes: fear the LORD, and depart from evil.",
+      "pt": "Não sejas sábio a teus próprios olhos; teme ao Senhor e aparta-te do mal."
+    },
+    {
+      "verse": 8,
+      "en": "It shall be health to thy navel, and marrow to thy bones.",
+      "pt": "Isso será saúde para a tua carne; e refrigério para os teus ossos."
+    },
+    {
+      "verse": 9,
+      "en": "Honour the LORD with thy substance, and with the firstfruits of all thine increase:",
+      "pt": "Honra ao Senhor com os teus bens, e com as primícias de toda a tua renda;"
+    },
+    {
+      "verse": 10,
+      "en": "So shall thy barns be filled with plenty, and thy presses shall burst out with new wine.",
+      "pt": "assim se encherão de fartura os teus celeiros, e trasbordarão de mosto os teus lagares."
+    },
+    {
+      "verse": 11,
+      "en": "My son, despise not the chastening of the LORD; neither be weary of his correction:",
+      "pt": "Filho meu, não rejeites a disciplina do Senhor, nem te enojes da sua repreensão;"
+    },
+    {
+      "verse": 12,
+      "en": "For whom the LORD loveth he correcteth; even as a father the son in whom he delighteth.",
+      "pt": "porque o Senhor repreende aquele a quem ama, assim como o pai ao filho a quem quer bem."
+    },
+    {
+      "verse": 13,
+      "en": "Happy is the man that findeth wisdom, and the man that getteth understanding.",
+      "pt": "Feliz é o homem que acha sabedoria, e o homem que adquire entendimento;"
+    },
+    {
+      "verse": 14,
+      "en": "For the merchandise of it is better than the merchandise of silver, and the gain thereof than fine gold.",
+      "pt": "pois melhor é o lucro que ela dá do que o lucro da prata, e a sua renda do que o ouro."
+    },
+    {
+      "verse": 15,
+      "en": "She is more precious than rubies: and all the things thou canst desire are not to be compared unto her.",
+      "pt": "Mais preciosa é do que as jóias, e nada do que possas desejar é comparável a ela."
+    },
+    {
+      "verse": 16,
+      "en": "Length of days is in her right hand; and in her left hand riches and honour.",
+      "pt": "Longura de dias há na sua mão direita; na sua esquerda riquezas e honra."
+    },
+    {
+      "verse": 17,
+      "en": "Her ways are ways of pleasantness, and all her paths are peace.",
+      "pt": "Os seus caminhos são caminhos de delícias, e todas as suas veredas são paz."
+    },
+    {
+      "verse": 18,
+      "en": "She is a tree of life to them that lay hold upon her: and happy is every one that retaineth her.",
+      "pt": "É árvore da vida para os que dela lançam mão, e bem-aventurado é todo aquele que a retém."
+    },
+    {
+      "verse": 19,
+      "en": "The LORD by wisdom hath founded the earth; by understanding hath he established the heavens.",
+      "pt": "O Senhor pela sabedoria fundou a terra; pelo entendimento estabeleceu o céu."
+    },
+    {
+      "verse": 20,
+      "en": "By his knowledge the depths are broken up, and the clouds drop down the dew.",
+      "pt": "Pelo seu conhecimento se fendem os abismos, e as nuvens destilam o orvalho."
+    },
+    {
+      "verse": 21,
+      "en": "My son, let not them depart from thine eyes: keep sound wisdom and discretion:",
+      "pt": "Filho meu, não se apartem estas coisas dos teus olhos: guarda a verdadeira sabedoria e o bom siso;"
+    },
+    {
+      "verse": 22,
+      "en": "So shall they be life unto thy soul, and grace to thy neck.",
+      "pt": "assim serão elas vida para a tua alma, e adorno para o teu pescoço."
+    },
+    {
+      "verse": 23,
+      "en": "Then shalt thou walk in thy way safely, and thy foot shall not stumble.",
+      "pt": "Então andarás seguro pelo teu caminho, e não tropeçará o teu pé."
+    },
+    {
+      "verse": 24,
+      "en": "When thou liest down, thou shalt not be afraid: yea, thou shalt lie down, and thy sleep shall be sweet.",
+      "pt": "Quando te deitares, não temerás; sim, tu te deitarás e o teu sono será suave."
+    },
+    {
+      "verse": 25,
+      "en": "Be not afraid of sudden fear, neither of the desolation of the wicked, when it cometh.",
+      "pt": "Não temas o pavor repentino, nem a assolação dos ímpios quando vier."
+    },
+    {
+      "verse": 26,
+      "en": "For the LORD shall be thy confidence, and shall keep thy foot from being taken.",
+      "pt": "Porque o Senhor será a tua confiança, e guardará os teus pés de serem presos."
+    },
+    {
+      "verse": 27,
+      "en": "Withhold not good from them to whom it is due, when it is in the power of thine hand to do it.",
+      "pt": "Não negues o bem a quem de direito, estando no teu poder fazê-lo."
+    },
+    {
+      "verse": 28,
+      "en": "Say not unto thy neighbour, Go, and come again, and to morrow I will give; when thou hast it by thee.",
+      "pt": "Não digas ao teu próximo: Vai, e volta, amanhã to darei; tendo-o tu contigo."
+    },
+    {
+      "verse": 29,
+      "en": "Devise not evil against thy neighbour, seeing he dwelleth securely by thee.",
+      "pt": "Não maquines o mal contra o teu próximo, que habita contigo confiadamente."
+    },
+    {
+      "verse": 30,
+      "en": "Strive not with a man without cause, if he have done thee no harm.",
+      "pt": "Não contendas com um homem, sem motivo, não te havendo ele feito o mal."
+    },
+    {
+      "verse": 31,
+      "en": "Envy thou not the oppressor, and choose none of his ways.",
+      "pt": "Não tenhas inveja do homem violento, nem escolhas nenhum de seus caminhos."
+    },
+    {
+      "verse": 32,
+      "en": "For the froward is abomination to the LORD: but his secret is with the righteous.",
+      "pt": "Porque o perverso é abominação para o Senhor, mas com os retos está o seu segredo."
+    },
+    {
+      "verse": 33,
+      "en": "The curse of the LORD is in the house of the wicked: but he blesseth the habitation of the just.",
+      "pt": "A maldição do Senhor habita na casa do ímpio, mas ele abençoa a habitação dos justos."
+    },
+    {
+      "verse": 34,
+      "en": "Surely he scorneth the scorners: but he giveth grace unto the lowly.",
+      "pt": "Ele escarnece dos escarnecedores, mas dá graça aos humildes."
+    },
+    {
+      "verse": 35,
+      "en": "The wise shall inherit glory: but shame shall be the promotion of fools.",
+      "pt": "Os sábios herdarão honra, mas a exaltação dos loucos se converte em ignomínia."
+    }
   ]
 }

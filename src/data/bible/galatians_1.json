@@ -2,32 +2,128 @@
   "book": "Galatians",
   "bookPt": "Gálatas",
   "chapter": 1,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "Paul, an apostle—sent not from men nor by a man, but by Jesus Christ and God the Father, who raised him from the dead—", "pt": "Paulo, apóstolo enviado não por homens nem por intermédio de homem algum, mas por Jesus Cristo e por Deus Pai, que o ressuscitou dos mortos," },
-    { "verse": 2, "en": "and all the brothers and sisters with me, To the churches in Galatia:", "pt": "e todos os irmãos que estão comigo, às igrejas da Galácia:" },
-    { "verse": 3, "en": "Grace and peace to you from God our Father and the Lord Jesus Christ,", "pt": "Que Deus nosso Pai e o Senhor Jesus Cristo lhes concedam graça e paz." },
-    { "verse": 4, "en": "who gave himself for our sins to rescue us from the present evil age, according to the will of our God and Father,", "pt": "O qual se entregou pelos nossos pecados para nos libertar desta era do mal, conforme a vontade de nosso Deus e Pai," },
-    { "verse": 5, "en": "to whom be glory for ever and ever. Amen.", "pt": "a quem seja a glória pelos séculos dos séculos. Amém." },
-    { "verse": 6, "en": "I am astonished that you are so quickly deserting the one who called you to live in the grace of Christ and are turning to a different gospel—", "pt": "Estou admirado de que vocês estejam tão rapidamente abandonando aquele que os chamou pela graça de Cristo e estejam se voltando para um evangelho diferente—" },
-    { "verse": 7, "en": "which is really no gospel at all. Evidently some people are throwing you into confusion and are trying to pervert the gospel of Christ.", "pt": "que na verdade não é nenhum evangelho. O que há é que algumas pessoas estão perturbando vocês e procurando distorcer o evangelho de Cristo." },
-    { "verse": 8, "en": "But even if we or an angel from heaven should preach a gospel other than the one we preached to you, let them be under God's curse!", "pt": "Mas, ainda que nós mesmos ou um anjo do céu lhes pregar um evangelho diferente do que lhes pregamos, que seja amaldiçoado!" },
-    { "verse": 9, "en": "As we have already said, so now I say again: If anybody is preaching to you a gospel other than what you accepted, let them be under God's curse!", "pt": "Como já dissemos, agora repito: Se alguém pregar para vocês um evangelho diferente do que receberam, que seja amaldiçoado!" },
-    { "verse": 10, "en": "Am I now trying to win the approval of human beings, or of God? Or am I trying to please people? If I were still trying to please people, I would not be a servant of Christ.", "pt": "Será que agora estou procurando ganhar a aprovação dos homens ou a de Deus? Estou procurando agradar a homens? Se eu ainda estivesse tentando agradar a homens, não seria servo de Cristo." },
-    { "verse": 11, "en": "I want you to know, brothers and sisters, that the gospel I preached is not of human origin.", "pt": "Irmãos, quero que saibam que o evangelho que preguei não é de origem humana." },
-    { "verse": 12, "en": "I did not receive it from any man, nor was I taught it; rather, I received it by revelation from Jesus Christ.", "pt": "Pois não o recebi de nenhum homem, nem me foi ensinado; antes, o recebi mediante revelação de Jesus Cristo." },
-    { "verse": 13, "en": "For you have heard of my previous way of life in Judaism, how intensely I persecuted the church of God and tried to destroy it.", "pt": "Porque vocês ouviram falar do meu procedimento passado no judaísmo, como perseguia com violência a igreja de Deus e procurava destruí-la." },
-    { "verse": 14, "en": "I was advancing in Judaism beyond many of my own age among my people and was extremely zealous for the traditions of my fathers.", "pt": "E progredia no judaísmo acima de muitos dos meus compatriotas da mesma idade, sendo muito mais zeloso das tradições dos meus antepassados." },
-    { "verse": 15, "en": "But when God, who set me apart from my mother's womb and called me by his grace, was pleased", "pt": "Mas, quando aquele que me separou desde o ventre de minha mãe e me chamou pela sua graça se agradou" },
-    { "verse": 16, "en": "to reveal his Son in me so that I might preach him among the Gentiles, my immediate response was not to consult any human being.", "pt": "de revelar o seu Filho em mim para que eu o pregasse entre os gentios, imediatamente não consultei carne nem sangue," },
-    { "verse": 17, "en": "I did not go up to Jerusalem to see those who were apostles before I was, but I went into Arabia. Later I returned to Damascus.", "pt": "nem subi a Jerusalém para ver os que eram apóstolos antes de mim, mas fui logo para a Arábia e, depois, voltei a Damasco." },
-    { "verse": 18, "en": "Then after three years, I went up to Jerusalem to get acquainted with Cephas and stayed with him fifteen days.", "pt": "Depois de três anos, subi a Jerusalém para conhecer Pedro e fiquei com ele quinze dias." },
-    { "verse": 19, "en": "I saw none of the other apostles—only James, the Lord's brother.", "pt": "Mas não vi nenhum outro dos apóstolos, senão Tiago, o irmão do Senhor." },
-    { "verse": 20, "en": "I assure you before God that what I am writing you is no lie.", "pt": "Afirmo diante de Deus que o que estou escrevendo a vocês não é mentira." },
-    { "verse": 21, "en": "Then I went to Syria and Cilicia.", "pt": "Depois disso, fui às regiões da Síria e da Cilícia." },
-    { "verse": 22, "en": "I was personally unknown to the churches of Judea that are in Christ.", "pt": "Era desconhecido pessoalmente das igrejas de Cristo na Judeia." },
-    { "verse": 23, "en": "They only heard the report: \"The man who formerly persecuted us is now preaching the faith he once tried to destroy.\"", "pt": "Somente ouviam dizer: \"Aquele que antes nos perseguia agora prega a fé que outrora procurava destruir.\"" },
-    { "verse": 24, "en": "And they praised God because of me.", "pt": "E davam glória a Deus por causa de mim." }
+    {
+      "verse": 1,
+      "en": "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)",
+      "pt": "Paulo, apóstolo (não da parte dos homens, nem por intermédio de homem algum, mas sim por Jesus Cristo, e por Deus Pai, que o ressuscitou dentre os mortos),"
+    },
+    {
+      "verse": 2,
+      "en": "And all the brethren which are with me, unto the churches of Galatia:",
+      "pt": "e todos os irmãos que estão comigo, às igrejas da Galácia:"
+    },
+    {
+      "verse": 3,
+      "en": "Grace be to you and peace from God the Father, and from our Lord Jesus Christ,",
+      "pt": "Graça a vós, e paz da parte de Deus nosso Pai, e do Senhor Jesus Cristo,"
+    },
+    {
+      "verse": 4,
+      "en": "Who gave himself for our sins, that he might deliver us from this present evil world, according to the will of God and our Father:",
+      "pt": "o qual se deu a si mesmo por nossos pecados, para nos livrar do presente século mau, segundo a vontade de nosso Deus e Pai,"
+    },
+    {
+      "verse": 5,
+      "en": "To whom be glory for ever and ever. Amen.",
+      "pt": "a quem seja a glória para todo o sempre. Amém."
+    },
+    {
+      "verse": 6,
+      "en": "I marvel that ye are so soon removed from him that called you into the grace of Christ unto another gospel:",
+      "pt": "Estou admirado de que tão depressa estejais desertando daquele que vos chamou na graça de Cristo, para outro evangelho,"
+    },
+    {
+      "verse": 7,
+      "en": "Which is not another; but there be some that trouble you, and would pervert the gospel of Christ.",
+      "pt": "o qual não é outro; senão que há alguns que vos perturbam e querem perverter o evangelho de Cristo."
+    },
+    {
+      "verse": 8,
+      "en": "But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed.",
+      "pt": "Mas, ainda que nós mesmos ou um anjo do céu vos pregasse outro evangelho além do que já vos pregamos, seja anátema."
+    },
+    {
+      "verse": 9,
+      "en": "As we said before, so say I now again, If any man preach any other gospel unto you than that ye have received, let him be accursed.",
+      "pt": "Como antes temos dito, assim agora novamente o digo: Se alguém vos pregar outro evangelho além do que já recebestes, seja anátema."
+    },
+    {
+      "verse": 10,
+      "en": "For do I now persuade men, or God? or do I seek to please men? for if I yet pleased men, I should not be the servant of Christ.",
+      "pt": "Pois busco eu agora o favor dos homens, ou o favor de Deus? ou procuro agradar aos homens? se estivesse ainda agradando aos homens, não seria servo de Cristo."
+    },
+    {
+      "verse": 11,
+      "en": "But I certify you, brethren, that the gospel which was preached of me is not after man.",
+      "pt": "Mas faço-vos saber, irmãos, que o evangelho que por mim foi anunciado não é segundo os homens;"
+    },
+    {
+      "verse": 12,
+      "en": "For I neither received it of man, neither was I taught it, but by the revelation of Jesus Christ.",
+      "pt": "porque não o recebi de homem algum, nem me foi ensinado; mas o recebi por revelação de Jesus Cristo."
+    },
+    {
+      "verse": 13,
+      "en": "For ye have heard of my conversation in time past in the Jews’ religion, how that beyond measure I persecuted the church of God, and wasted it:",
+      "pt": "Pois já ouvistes qual foi outrora o meu procedimento no judaísmo, como sobremaneira perseguia a igreja de Deus e a assolava,"
+    },
+    {
+      "verse": 14,
+      "en": "And profited in the Jews’ religion above many my equals in mine own nation, being more exceedingly zealous of the traditions of my fathers.",
+      "pt": "e na minha nação excedia em judaísmo a muitos da minha idade, sendo extremamente zeloso das tradições de meus pais."
+    },
+    {
+      "verse": 15,
+      "en": "But when it pleased God, who separated me from my mother’s womb, and called me by his grace,",
+      "pt": "Mas, quando aprouve a Deus, que desde o ventre de minha mãe me separou, e me chamou pela sua graça,"
+    },
+    {
+      "verse": 16,
+      "en": "To reveal his Son in me, that I might preach him among the heathen; immediately I conferred not with flesh and blood:",
+      "pt": "revelar seu Filho em mim, para que eu o pregasse entre os gentios, não consultei carne e sangue,"
+    },
+    {
+      "verse": 17,
+      "en": "Neither went I up to Jerusalem to them which were apostles before me; but I went into Arabia, and returned again unto Damascus.",
+      "pt": "nem subi a Jerusalém para estar com os que já antes de mim eram apóstolos, mas parti para a Arábia, e voltei outra vez a Damasco."
+    },
+    {
+      "verse": 18,
+      "en": "Then after three years I went up to Jerusalem to see Peter, and abode with him fifteen days.",
+      "pt": "Depois, passados três anos, subi a Jerusalém para visitar a Cefas, e demorei com ele quinze dias."
+    },
+    {
+      "verse": 19,
+      "en": "But other of the apostles saw I none, save James the Lord’s brother.",
+      "pt": "Mas não vi a nenhum outro dos apóstolos, senão a Tiago, irmão do Senhor."
+    },
+    {
+      "verse": 20,
+      "en": "Now the things which I write unto you, behold, before God, I lie not.",
+      "pt": "Ora, acerca do que vos escrevo, eis que diante de Deus testifico que não minto."
+    },
+    {
+      "verse": 21,
+      "en": "Afterwards I came into the regions of Syria and Cilicia;",
+      "pt": "Depois fui para as regiões da Síria e da Cilícia."
+    },
+    {
+      "verse": 22,
+      "en": "And was unknown by face unto the churches of Judaea which were in Christ:",
+      "pt": "Não era conhecido de vista das igrejas de Cristo na Judéia;"
+    },
+    {
+      "verse": 23,
+      "en": "But they had heard only, That he which persecuted us in times past now preacheth the faith which once he destroyed.",
+      "pt": "mas somente tinham ouvido dizer: Aquele que outrora nos perseguia agora prega a fé que antes procurava destruir;"
+    },
+    {
+      "verse": 24,
+      "en": "And they glorified God in me.",
+      "pt": "e glorificavam a Deus a respeito de mim."
+    }
   ]
 }

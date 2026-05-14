@@ -2,39 +2,163 @@
   "book": "Galatians",
   "bookPt": "Gálatas",
   "chapter": 4,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "What I am saying is that as long as an heir is underage, he is no different from a slave, although he owns the whole estate.", "pt": "O que estou dizendo é que, enquanto o herdeiro é menor de idade, em nada se diferencia de um escravo, embora seja dono de tudo." },
-    { "verse": 2, "en": "The heir is subject to guardians and trustees until the time set by his father.", "pt": "Está sujeito a tutores e administradores até a data estabelecida por seu pai." },
-    { "verse": 3, "en": "So also, when we were underage, we were in slavery under the elemental spiritual forces of the world.", "pt": "Da mesma forma, quando éramos menores, vivíamos escravizados pelos princípios elementares do mundo." },
-    { "verse": 4, "en": "But when the set time had fully come, God sent his Son, born of a woman, born under the law,", "pt": "Mas, quando chegou a plenitude do tempo, Deus enviou seu Filho, nascido de mulher, nascido debaixo da lei," },
-    { "verse": 5, "en": "to redeem those under the law, that we might receive adoption to sonship.", "pt": "para resgatar os que estavam debaixo da lei, a fim de recebermos a adoção de filhos." },
-    { "verse": 6, "en": "Because you are his sons, God sent the Spirit of his Son into our hearts, the Spirit who calls out, \"Abba, Father.\"", "pt": "E porque vocês são filhos, Deus enviou o Espírito de seu Filho aos nossos corações, que clama: \"Aba, Pai!\"" },
-    { "verse": 7, "en": "So you are no longer a slave, but God's child; and since you are his child, God has made you also an heir.", "pt": "Assim, você já não é mais escravo, mas filho; e, se filho, também herdeiro, por meio de Deus." },
-    { "verse": 8, "en": "Formerly, when you did not know God, you were slaves to those who by nature are not gods.", "pt": "Antigamente, quando não conheciam a Deus, eram escravos daqueles que, por natureza, não são deuses." },
-    { "verse": 9, "en": "But now that you know God—or rather are known by God—how is it that you are turning back to those weak and miserable forces? Do you wish to be enslaved by them all over again?", "pt": "Mas agora, quando conheceram a Deus — ou antes, foram conhecidos por Deus —, como podem voltar para esses princípios fracos e miseráveis? Desejam ser outra vez escravizados por eles?" },
-    { "verse": 10, "en": "You are observing special days and months and seasons and years!", "pt": "Vocês estão observando dias, meses, estações e anos especiais!" },
-    { "verse": 11, "en": "I fear for you, that somehow I have wasted my efforts on you.", "pt": "Tenho medo de que tenha trabalhado em vão por vocês." },
-    { "verse": 12, "en": "I plead with you, brothers and sisters, become like me, for I became like you. You did me no wrong.", "pt": "Peço-lhes, irmãos, que se tornem como eu, pois também me tornei como vocês. Em nada me prejudicaram." },
-    { "verse": 13, "en": "As you know, it was because of an illness that I first preached the gospel to you,", "pt": "Como sabem, foi por causa de uma enfermidade que lhes preguei o evangelho pela primeira vez." },
-    { "verse": 14, "en": "and even though my illness was a trial to you, you did not treat me with contempt or scorn. Instead, you welcomed me as if I were an angel of God, as if I were Christ Jesus himself.", "pt": "E, embora a minha condição física fosse uma provação para vocês, não me desprezaram nem rejeitaram. Ao contrário, me receberam como um anjo de Deus, como se eu fosse o próprio Cristo Jesus." },
-    { "verse": 15, "en": "Where, then, is your blessing of me now? I can testify that, if you could have done so, you would have torn out your eyes and given them to me.", "pt": "Que aconteceu, então, com a bênção que vocês sentiam? Posso afirmar que, se fosse possível, vocês teriam arrancado os próprios olhos e me dado." },
-    { "verse": 16, "en": "Have I now become your enemy by telling you the truth?", "pt": "Tornei-me, então, inimigo de vocês por dizer-lhes a verdade?" },
-    { "verse": 17, "en": "Those people are zealous to win you over, but for no good. What they want is to alienate you from us, so that you may have zeal for them.", "pt": "Essas pessoas zelam por vocês, mas com má intenção. O que querem é separá-los de nós para que vocês sejam zelosos delas." },
-    { "verse": 18, "en": "It is fine to be zealous, provided the purpose is good, and to be so always, not just when I am with you.", "pt": "É bom ser zeloso, desde que seja para o bem, e sê-lo sempre, e não somente quando estou com vocês." },
-    { "verse": 19, "en": "My dear children, for whom I am again in the pains of childbirth until Christ is formed in you,", "pt": "Meus filhos, pelos quais de novo passo as dores do parto até que Cristo seja formado em vocês," },
-    { "verse": 20, "en": "how I wish I could be with you now and change my tone, because I am perplexed about you!", "pt": "como gostaria de estar presente com vocês agora e falar de outra maneira, pois estou perplexo com vocês!" },
-    { "verse": 21, "en": "Tell me, you who want to be under the law, are you not aware of what the law says?", "pt": "Digam-me, os que querem estar debaixo da lei: não ouvem o que a lei diz?" },
-    { "verse": 22, "en": "For it is written that Abraham had two sons, one by the slave woman and the other by the free woman.", "pt": "Pois está escrito que Abraão teve dois filhos, um da escrava e outro da livre." },
-    { "verse": 23, "en": "His son by the slave woman was born according to the flesh, but his son by the free woman was born as the result of a divine promise.", "pt": "Mas o filho da escrava nasceu segundo a carne, ao passo que o filho da livre nasceu em consequência da promessa." },
-    { "verse": 24, "en": "These things are being taken figuratively: The women represent two covenants. One covenant is from Mount Sinai and bears children who are to be slaves: This is Hagar.", "pt": "Isso é uma alegoria: as duas mulheres representam duas alianças. Uma é do monte Sinai e gera filhos para a escravidão; esta é Agar." },
-    { "verse": 25, "en": "Now Hagar stands for Mount Sinai in Arabia and corresponds to the present city of Jerusalem, because she is in slavery with her children.", "pt": "Agar corresponde ao monte Sinai, na Arábia, e é semelhante à Jerusalém atual, que está em escravidão com seus filhos." },
-    { "verse": 26, "en": "But the Jerusalem that is above is free, and she is our mother.", "pt": "Mas a Jerusalém celestial é livre, e ela é nossa mãe." },
-    { "verse": 27, "en": "For it is written: \"Be glad, barren woman, you who never bore a child; shout for joy and cry aloud, you who were never in labor; because more are the children of the desolate woman than of her who has a husband.\"", "pt": "Pois está escrito: \"Alegra-te, mulher estéril, que não dás à luz; irrompas em gritos de alegria, tu que não conheces as dores do parto; porque a mulher solitária tem mais filhos do que a que tem marido.\"" },
-    { "verse": 28, "en": "Now you, brothers and sisters, like Isaac, are children of promise.", "pt": "Agora vocês, irmãos, como Isaque, são filhos da promessa." },
-    { "verse": 29, "en": "At that time the son born according to the flesh persecuted the son born by the power of the Spirit. It is the same now.", "pt": "Naquele tempo, o filho nascido segundo a carne perseguia o nascido segundo o Espírito. O mesmo acontece hoje." },
-    { "verse": 30, "en": "But what does Scripture say? \"Get rid of the slave woman and her son, for the slave woman's son will never share in the inheritance with the free woman's son.\"", "pt": "Mas o que diz a Escritura? \"Lance fora a escrava e seu filho; pois o filho da escrava jamais será herdeiro com o filho da livre.\"" },
-    { "verse": 31, "en": "Therefore, brothers and sisters, we are not children of the slave woman, but of the free woman.", "pt": "Portanto, irmãos, não somos filhos da escrava, mas da livre." }
+    {
+      "verse": 1,
+      "en": "Now I say, That the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all;",
+      "pt": "Ora, digo que por todo o tempo em que o herdeiro é menino, em nada difere de um servo, ainda que seja senhor de tudo;"
+    },
+    {
+      "verse": 2,
+      "en": "But is under tutors and governors until the time appointed of the father.",
+      "pt": "mas está debaixo de tutores e curadores até o tempo determinado pelo pai."
+    },
+    {
+      "verse": 3,
+      "en": "Even so we, when we were children, were in bondage under the elements of the world:",
+      "pt": "Assim também nós, quando éramos meninos, estávamos reduzidos à servidão debaixo dos rudimentos do mundo;"
+    },
+    {
+      "verse": 4,
+      "en": "But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,",
+      "pt": "mas, vindo a plenitude dos tempos, Deus enviou seu Filho, nascido de mulher, nascido debaixo de lei,"
+    },
+    {
+      "verse": 5,
+      "en": "To redeem them that were under the law, that we might receive the adoption of sons.",
+      "pt": "para resgatar os que estavam debaixo de lei, a fim de recebermos a adoção de filhos."
+    },
+    {
+      "verse": 6,
+      "en": "And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father.",
+      "pt": "E, porque sois filhos, Deus enviou aos nossos corações o Espírito de seu Filho, que clama: Aba, Pai."
+    },
+    {
+      "verse": 7,
+      "en": "Wherefore thou art no more a servant, but a son; and if a son, then an heir of God through Christ.",
+      "pt": "Portanto já não és mais servo, mas filho; e se és filho, és também herdeiro por Deus."
+    },
+    {
+      "verse": 8,
+      "en": "Howbeit then, when ye knew not God, ye did service unto them which by nature are no gods.",
+      "pt": "Outrora, quando não conhecíeis a Deus, servíeis aos que por natureza não são deuses;"
+    },
+    {
+      "verse": 9,
+      "en": "But now, after that ye have known God, or rather are known of God, how turn ye again to the weak and beggarly elements, whereunto ye desire again to be in bondage?",
+      "pt": "agora, porém, que já conheceis a Deus, ou, melhor, sendo conhecidos por Deus, como tornais outra vez a esses rudimentos fracos e pobres, aos quais de novo quereis servir?"
+    },
+    {
+      "verse": 10,
+      "en": "Ye observe days, and months, and times, and years.",
+      "pt": "Guardais dias, e meses, e tempos, e anos."
+    },
+    {
+      "verse": 11,
+      "en": "I am afraid of you, lest I have bestowed upon you labour in vain.",
+      "pt": "Temo a vosso respeito não haja eu trabalhado em vão entre vós."
+    },
+    {
+      "verse": 12,
+      "en": "Brethren, I beseech you, be as I am; for I am as ye are: ye have not injured me at all.",
+      "pt": "Irmãos, rogo-vos que vos torneis como eu, porque também eu me tornei como vós. Nenhum mal me fizestes;"
+    },
+    {
+      "verse": 13,
+      "en": "Ye know how through infirmity of the flesh I preached the gospel unto you at the first.",
+      "pt": "e vós sabeis que por causa de uma enfermidade da carne vos anunciei o evangelho a primeira vez,"
+    },
+    {
+      "verse": 14,
+      "en": "And my temptation which was in my flesh ye despised not, nor rejected; but received me as an angel of God, even as Christ Jesus.",
+      "pt": "e aquilo que na minha carne era para vós uma tentação, não o desprezastes nem o repelistes, antes me recebestes como a um anjo de Deus, mesmo como a Cristo Jesus."
+    },
+    {
+      "verse": 15,
+      "en": "Where is then the blessedness ye spake of? for I bear you record, that, if it had been possible, ye would have plucked out your own eyes, and have given them to me.",
+      "pt": "Onde está, pois, aquela vossa satisfação? Porque vos dou testemunho de que, se possível fora, teríeis arrancado os vossos olhos, e mos teríeis dado."
+    },
+    {
+      "verse": 16,
+      "en": "Am I therefore become your enemy, because I tell you the truth?",
+      "pt": "Tornei-me acaso vosso inimigo, porque vos disse a verdade?"
+    },
+    {
+      "verse": 17,
+      "en": "They zealously affect you, but not well; yea, they would exclude you, that ye might affect them.",
+      "pt": "Eles vos procuram zelosamente não com bons motivos, mas querem vos excluir, para que zelosamente os procureis a eles."
+    },
+    {
+      "verse": 18,
+      "en": "But it is good to be zealously affected always in a good thing, and not only when I am present with you.",
+      "pt": "No que é bom, é bom serdes sempre procurados, e não só quando estou presente convosco."
+    },
+    {
+      "verse": 19,
+      "en": "My little children, of whom I travail in birth again until Christ be formed in you,",
+      "pt": "Meus filhinhos, por quem de novo sinto as dores de parto, até que Cristo seja formado em vós;"
+    },
+    {
+      "verse": 20,
+      "en": "I desire to be present with you now, and to change my voice; for I stand in doubt of you.",
+      "pt": "eu bem quisera estar presente convosco agora, e mudar o tom da minha voz; porque estou perplexo a vosso respeito."
+    },
+    {
+      "verse": 21,
+      "en": "Tell me, ye that desire to be under the law, do ye not hear the law?",
+      "pt": "Dizei-me, os que quereis estar debaixo da lei, não ouvis vós a lei?"
+    },
+    {
+      "verse": 22,
+      "en": "For it is written, that Abraham had two sons, the one by a bondmaid, the other by a freewoman.",
+      "pt": "Porque está escrito que Abraão teve dois filhos, um da escrava, e outro da livre."
+    },
+    {
+      "verse": 23,
+      "en": "But he who was of the bondwoman was born after the flesh; but he of the freewoman was by promise.",
+      "pt": "Todavia o que era da escrava nasceu segundo a carne, mas, o que era da livre, por promessa."
+    },
+    {
+      "verse": 24,
+      "en": "Which things are an allegory: for these are the two covenants; the one from the mount Sinai, which gendereth to bondage, which is Agar.",
+      "pt": "O que se entende por alegoria: pois essas mulheres são dois pactos; um do monte Sinai, que dá à luz filhos para a servidão, e que é Agar."
+    },
+    {
+      "verse": 25,
+      "en": "For this Agar is mount Sinai in Arabia, and answereth to Jerusalem which now is, and is in bondage with her children.",
+      "pt": "Ora, esta Agar é o monte Sinai na Arábia e corresponde à Jerusalém atual, pois é escrava com seus filhos."
+    },
+    {
+      "verse": 26,
+      "en": "But Jerusalem which is above is free, which is the mother of us all.",
+      "pt": "Mas a Jerusalém que é de cima é livre; a qual é nossa mãe."
+    },
+    {
+      "verse": 27,
+      "en": "For it is written, Rejoice, thou barren that bearest not; break forth and cry, thou that travailest not: for the desolate hath many more children than she which hath an husband.",
+      "pt": "Pois está escrito: Alegra-te, estéril, que não dás à luz; esforça-te e clama, tu que não estás de parto; porque mais são os filhos da desolada do que os da que tem marido."
+    },
+    {
+      "verse": 28,
+      "en": "Now we, brethren, as Isaac was, are the children of promise.",
+      "pt": "Ora vós, irmãos, sois filhos da promessa, como Isaque."
+    },
+    {
+      "verse": 29,
+      "en": "But as then he that was born after the flesh persecuted him that was born after the Spirit, even so it is now.",
+      "pt": "Mas, como naquele tempo o que nasceu segundo a carne perseguia ao que nasceu segundo o Espírito, assim é também agora."
+    },
+    {
+      "verse": 30,
+      "en": "Nevertheless what saith the scripture? Cast out the bondwoman and her son: for the son of the bondwoman shall not be heir with the son of the free woman.",
+      "pt": "Que diz, porém, a Escritura? Lança fora a escrava e seu filho, porque de modo algum o filho da escrava herdará com o filho da livre."
+    },
+    {
+      "verse": 31,
+      "en": "So then, brethren, we are not children of the bondwoman, but of the free.",
+      "pt": "Pelo que, irmãos, não somos filhos da escrava, mas da livre."
+    }
   ]
 }

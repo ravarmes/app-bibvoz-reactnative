@@ -2,26 +2,98 @@
   "book": "Galatians",
   "bookPt": "Gálatas",
   "chapter": 6,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "Brothers and sisters, if someone is caught in a sin, you who live by the Spirit should restore that person gently. But watch yourselves, or you also may be tempted.", "pt": "Irmãos, se alguém for surpreendido em algum pecado, vocês que são espirituais devem restaurá-lo com espírito de mansidão. Mas cuidem de si mesmos, para que vocês também não sejam tentados." },
-    { "verse": 2, "en": "Carry each other's burdens, and in this way you will fulfill the law of Christ.", "pt": "Levem os fardos uns dos outros e assim cumprirão a lei de Cristo." },
-    { "verse": 3, "en": "If anyone thinks they are something when they are not, they deceive themselves.", "pt": "Se alguém pensa que é alguma coisa, não sendo nada, engana a si mesmo." },
-    { "verse": 4, "en": "Each one should test their own actions. Then they can take pride in themselves alone, without comparing themselves to someone else,", "pt": "Cada um deve examinar as próprias ações e, então, terá motivo de orgulho em si mesmo, sem comparar-se com outro." },
-    { "verse": 5, "en": "for each one should carry their own load.", "pt": "Pois cada um levará sua própria carga." },
-    { "verse": 6, "en": "Nevertheless, the one who receives instruction in the word should share all good things with their instructor.", "pt": "Aquele que é instruído na palavra deve compartilhar todos os bens com quem o instrui." },
-    { "verse": 7, "en": "Do not be deceived: God cannot be mocked. A man reaps what he sows.", "pt": "Não se enganem: Deus não pode ser zombado. O homem colhe o que semeia." },
-    { "verse": 8, "en": "Whoever sows to please their flesh, from the flesh will reap destruction; whoever sows to please the Spirit, from the Spirit will reap eternal life.", "pt": "Quem semeia para agradar à sua carne, da carne colherá destruição; quem semeia para agradar ao Espírito, do Espírito colherá vida eterna." },
-    { "verse": 9, "en": "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up.", "pt": "Não nos cansemos de fazer o bem, porque a seu tempo colheremos, se não desanimarmos." },
-    { "verse": 10, "en": "Therefore, as we have opportunity, let us do good to all people, especially to those who belong to the family of believers.", "pt": "Portanto, enquanto temos oportunidade, façamos o bem a todos, especialmente aos da família da fé." },
-    { "verse": 11, "en": "See what large letters I use as I write to you with my own hand!", "pt": "Vejam com que letras grandes estou escrevendo com a minha própria mão!" },
-    { "verse": 12, "en": "Those who want to impress people by means of the flesh are trying to compel you to be circumcised. The only reason they do this is to avoid being persecuted for the cross of Christ.", "pt": "Os que querem fazer boa impressão na carne são os que o estão compelindo a serem circuncidados. O único motivo para isso é evitar a perseguição por causa da cruz de Cristo." },
-    { "verse": 13, "en": "Not even those who are circumcised keep the law, yet they want you to be circumcised that they may boast about your circumcision in the flesh.", "pt": "Pois nem mesmo os que são circuncidados guardam a lei; mas querem que vocês se circuncidem para que se gloriem na carne de vocês." },
-    { "verse": 14, "en": "May I never boast except in the cross of our Lord Jesus Christ, through which the world has been crucified to me, and I to the world.", "pt": "Quanto a mim, nunca me gloriarei senão na cruz de nosso Senhor Jesus Cristo, pela qual o mundo está crucificado para mim e eu para o mundo." },
-    { "verse": 15, "en": "Neither circumcision nor uncircumcision means anything; what counts is the new creation.", "pt": "Pois nem a circuncisão nem a incircuncisão é coisa alguma; o que importa é ser uma nova criação." },
-    { "verse": 16, "en": "Peace and mercy to all who follow this rule—to the Israel of God.", "pt": "Que haja paz e misericórdia sobre todos os que seguirem essa regra, sobre o Israel de Deus." },
-    { "verse": 17, "en": "From now on, let no one cause me trouble, for I bear on my body the marks of Jesus.", "pt": "De agora em diante, que ninguém me cause trabalho; pois trago no meu corpo as marcas de Jesus." },
-    { "verse": 18, "en": "The grace of our Lord Jesus Christ be with your spirit, brothers and sisters. Amen.", "pt": "Que a graça de nosso Senhor Jesus Cristo seja com o espírito de vocês, irmãos. Amém." }
+    {
+      "verse": 1,
+      "en": "Brethren, if a man be overtaken in a fault, ye which are spiritual, restore such an one in the spirit of meekness; considering thyself, lest thou also be tempted.",
+      "pt": "Irmãos, se um homem chegar a ser surpreendido em algum delito, vós que sois espirituais corrigi o tal com espírito de mansidão; e olha por ti mesmo, para que também tu não sejas tentado."
+    },
+    {
+      "verse": 2,
+      "en": "Bear ye one another’s burdens, and so fulfil the law of Christ.",
+      "pt": "Levai as cargas uns dos outros, e assim cumprireis a lei de Cristo."
+    },
+    {
+      "verse": 3,
+      "en": "For if a man think himself to be something, when he is nothing, he deceiveth himself.",
+      "pt": "Pois, se alguém pensa ser alguma coisa, não sendo nada, engana-se a si mesmo."
+    },
+    {
+      "verse": 4,
+      "en": "But let every man prove his own work, and then shall he have rejoicing in himself alone, and not in another.",
+      "pt": "Mas prove cada um a sua própria obra, e então terá motivo de glória somente em si mesmo, e não em outrem;"
+    },
+    {
+      "verse": 5,
+      "en": "For every man shall bear his own burden.",
+      "pt": "porque cada qual levará o seu próprio fardo."
+    },
+    {
+      "verse": 6,
+      "en": "Let him that is taught in the word communicate unto him that teacheth in all good things.",
+      "pt": "E o que está sendo instruído na palavra, faça participante em todas as boas coisas aquele que o instrui."
+    },
+    {
+      "verse": 7,
+      "en": "Be not deceived; God is not mocked: for whatsoever a man soweth, that shall he also reap.",
+      "pt": "Não vos enganeis; Deus não se deixa escarnecer; pois tudo o que o homem semear, isso também ceifará."
+    },
+    {
+      "verse": 8,
+      "en": "For he that soweth to his flesh shall of the flesh reap corruption; but he that soweth to the Spirit shall of the Spirit reap life everlasting.",
+      "pt": "Porque quem semeia na sua carne, da carne ceifará a corrupção; mas quem semeia no Espírito, do Espírito ceifará a vida eterna."
+    },
+    {
+      "verse": 9,
+      "en": "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
+      "pt": "E não nos cansemos de fazer o bem, porque a seu tempo ceifaremos, se não houvermos desfalecido."
+    },
+    {
+      "verse": 10,
+      "en": "As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith.",
+      "pt": "Então, enquanto temos oportunidade, façamos bem a todos, mas principamente aos domésticos da fé."
+    },
+    {
+      "verse": 11,
+      "en": "Ye see how large a letter I have written unto you with mine own hand.",
+      "pt": "Vede com que grandes letras vos escrevo com minha própria mão."
+    },
+    {
+      "verse": 12,
+      "en": "As many as desire to make a fair shew in the flesh, they constrain you to be circumcised; only lest they should suffer persecution for the cross of Christ.",
+      "pt": "Todos os que querem ostentar boa aparência na carne, esses vos obrigam a circuncidar-vos, somente para não serem perseguidos por causa da cruz de Cristo."
+    },
+    {
+      "verse": 13,
+      "en": "For neither they themselves who are circumcised keep the law; but desire to have you circumcised, that they may glory in your flesh.",
+      "pt": "Porque nem ainda esses mesmos que se circuncidam guardam a lei, mas querem que vos circuncideis, para se gloriarem na vossa carne."
+    },
+    {
+      "verse": 14,
+      "en": "But God forbid that I should glory, save in the cross of our Lord Jesus Christ, by whom the world is crucified unto me, and I unto the world.",
+      "pt": "Mas longe esteja de mim gloriar-me, a não ser na cruz de nosso Senhor Jesus Cristo, pela qual o mundo está crucificado para mim e eu para o mundo."
+    },
+    {
+      "verse": 15,
+      "en": "For in Christ Jesus neither circumcision availeth any thing, nor uncircumcision, but a new creature.",
+      "pt": "Pois nem a circuncisão nem a incircuncisão é coisa alguma, mas sim o ser uma nova criatura."
+    },
+    {
+      "verse": 16,
+      "en": "And as many as walk according to this rule, peace be on them, and mercy, and upon the Israel of God.",
+      "pt": "E a todos quantos andarem conforme esta norma, paz e misericórdia sejam sobre eles e sobre o Israel de Deus."
+    },
+    {
+      "verse": 17,
+      "en": "From henceforth let no man trouble me: for I bear in my body the marks of the Lord Jesus.",
+      "pt": "Daqui em diante ninguém me moleste; porque eu trago no meu corpo as marcas de Jesus."
+    },
+    {
+      "verse": 18,
+      "en": "Brethren, the grace of our Lord Jesus Christ be with your spirit. Amen.",
+      "pt": "A graça de nosso Senhor Jesus Cristo seja, irmãos, com o vosso espírito. Amém."
+    }
   ]
 }

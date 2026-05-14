@@ -2,31 +2,123 @@
   "book": "Romans",
   "bookPt": "Romanos",
   "chapter": 6,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "What shall we say, then? Shall we go on sinning so that grace may increase?", "pt": "O que diremos então? Persistiremos no pecado para que a graça se multiplique?" },
-    { "verse": 2, "en": "By no means! We are those who have died to sin; how can we live in it any longer?", "pt": "De jeito nenhum! Nós que morremos para o pecado, como ainda viveremos nele?" },
-    { "verse": 3, "en": "Or don't you know that all of us who were baptized into Christ Jesus were baptized into his death?", "pt": "Ou não sabem que todos nós que fomos batizados em Cristo Jesus fomos batizados na sua morte?" },
-    { "verse": 4, "en": "We were therefore buried with him through baptism into death in order that, just as Christ was raised from the dead through the glory of the Father, we too may live a new life.", "pt": "Fomos, portanto, sepultados com ele pelo batismo na morte, a fim de que, assim como Cristo foi ressuscitado dos mortos pela glória do Pai, também nós vivamos uma vida nova." },
-    { "verse": 5, "en": "For if we have been united with him in a death like his, we will certainly also be united with him in a resurrection like his.", "pt": "Pois se fomos unidos a ele em morte semelhante à dele, certamente também o seremos em sua ressurreição." },
-    { "verse": 6, "en": "For we know that our old self was crucified with him so that the body ruled by sin might be done away with, that we should no longer be slaves to sin—", "pt": "Pois sabemos que o nosso velho homem foi crucificado com ele para que o corpo do pecado fosse destruído, a fim de que não sirvamos mais ao pecado," },
-    { "verse": 7, "en": "because anyone who has died has been set free from sin.", "pt": "porque quem morreu foi libertado do pecado." },
-    { "verse": 8, "en": "Now if we died with Christ, we believe that we will also live with him.", "pt": "Ora, se morremos com Cristo, cremos que também viveremos com ele." },
-    { "verse": 9, "en": "For we know that since Christ was raised from the dead, he cannot die again; death no longer has mastery over him.", "pt": "Pois sabemos que Cristo, tendo sido ressuscitado dos mortos, não morre mais; a morte não tem mais domínio sobre ele." },
-    { "verse": 10, "en": "The death he died, he died to sin once for all; but the life he lives, he lives to God.", "pt": "A morte que ele morreu, morreu para o pecado uma vez por todas; mas a vida que vive, vive para Deus." },
-    { "verse": 11, "en": "In the same way, count yourselves dead to sin but alive to God in Christ Jesus.", "pt": "Da mesma forma, considerem-se mortos para o pecado, mas vivos para Deus em Cristo Jesus." },
-    { "verse": 12, "en": "Therefore do not let sin reign in your mortal body so that you obey its evil desires.", "pt": "Portanto, não deixem que o pecado reine no seu corpo mortal, de modo que vocês obedeçam aos seus maus desejos." },
-    { "verse": 13, "en": "Do not offer any part of yourself to sin as an instrument of wickedness, but rather offer yourselves to God as those who have been brought from death to life; and offer every part of yourself to him as an instrument of righteousness.", "pt": "Não ofereçam os membros do seu corpo ao pecado, como instrumentos de maldade, mas antes se ofereçam a Deus, como quem passou da morte para a vida; e ofereçam os membros do seu corpo a ele como instrumentos de justiça." },
-    { "verse": 14, "en": "For sin shall no longer be your master, because you are not under the law, but under grace.", "pt": "Pois o pecado não terá domínio sobre vocês, porque vocês não estão debaixo da lei, mas da graça." },
-    { "verse": 15, "en": "What then? Shall we sin because we are not under the law but under grace? By no means!", "pt": "O que então? Pecaremos porque não estamos debaixo da lei, mas da graça? De modo nenhum!" },
-    { "verse": 16, "en": "Don't you know that when you offer yourselves to someone as obedient slaves, you are slaves of the one you obey—whether you are slaves to sin, which leads to death, or to obedience, which leads to righteousness?", "pt": "Não sabem que, quando se oferecem a alguém como escravos obedientes, são escravos daquele a quem obedecem: do pecado, que leva à morte, ou da obediência, que leva à justiça?" },
-    { "verse": 17, "en": "But thanks be to God that, though you used to be slaves to sin, you have come to obey from your heart the pattern of teaching that has now claimed your allegiance,", "pt": "Mas graças a Deus que, embora vocês tenham sido escravos do pecado, de coração obedeceram ao padrão de ensinamento ao qual foram confiados." },
-    { "verse": 18, "en": "You have been set free from sin and have become slaves to righteousness.", "pt": "Vocês foram libertados do pecado e se tornaram escravos da justiça." },
-    { "verse": 19, "en": "I am using an example from everyday life because of your human limitations. Just as you used to offer yourselves as slaves to impurity and to ever-increasing wickedness, so now offer yourselves as slaves to righteousness leading to holiness.", "pt": "Estou usando termos humanos por causa das suas limitações humanas. Assim como antes ofereciam os membros do seu corpo como escravos da impureza e da iniquidade que leva a mais iniquidade, ofereçam-nos agora como escravos da justiça que leva à santidade." },
-    { "verse": 20, "en": "When you were slaves to sin, you were free from the control of righteousness.", "pt": "Pois quando eram escravos do pecado, eram livres do controle da justiça." },
-    { "verse": 21, "en": "What benefit did you reap at that time from the things you are now ashamed of? Those things result in death!", "pt": "Que fruto vocês colhiam naquele tempo das coisas das quais agora se envergonham? Essas coisas resultam em morte!" },
-    { "verse": 22, "en": "But now that you have been set free from sin and have become slaves of God, the benefit you reap leads to holiness, and the result is eternal life.", "pt": "Mas agora, tendo sido libertos do pecado e se tornado escravos de Deus, o fruto que vocês colhem leva à santidade; e o resultado é a vida eterna." },
-    { "verse": 23, "en": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.", "pt": "Pois o salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna em Cristo Jesus, nosso Senhor." }
+    {
+      "verse": 1,
+      "en": "What shall we say then? Shall we continue in sin, that grace may abound?",
+      "pt": "Que diremos, pois? Permaneceremos no pecado, para que abunde a graça?"
+    },
+    {
+      "verse": 2,
+      "en": "God forbid. How shall we, that are dead to sin, live any longer therein?",
+      "pt": "De modo nenhum. Nós, que já morremos para o pecado, como viveremos ainda nele?"
+    },
+    {
+      "verse": 3,
+      "en": "Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death?",
+      "pt": "Ou, porventura, ignorais que todos quantos fomos batizados em Cristo Jesus fomos batizados na sua morte?"
+    },
+    {
+      "verse": 4,
+      "en": "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.",
+      "pt": "Fomos, pois, sepultados com ele pelo batismo na morte, para que, como Cristo foi ressuscitado dentre os mortos pela glória do Pai, assim andemos nós também em novidade de vida."
+    },
+    {
+      "verse": 5,
+      "en": "For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection:",
+      "pt": "Porque, se temos sido unidos a ele na semelhança da sua morte, certamente também o seremos na semelhança da sua ressurreição;"
+    },
+    {
+      "verse": 6,
+      "en": "Knowing this, that our old man is crucified with him, that the body of sin might be destroyed, that henceforth we should not serve sin.",
+      "pt": "sabendo isto, que o nosso homem velho foi crucificado com ele, para que o corpo do pecado fosse desfeito, a fim de não servirmos mais ao pecado."
+    },
+    {
+      "verse": 7,
+      "en": "For he that is dead is freed from sin.",
+      "pt": "Pois quem está morto está justificado do pecado."
+    },
+    {
+      "verse": 8,
+      "en": "Now if we be dead with Christ, we believe that we shall also live with him:",
+      "pt": "Ora, se já morremos com Cristo, cremos que também com ele viveremos,"
+    },
+    {
+      "verse": 9,
+      "en": "Knowing that Christ being raised from the dead dieth no more; death hath no more dominion over him.",
+      "pt": "sabendo que, tendo Cristo ressurgido dentre os mortos, já não morre mais; a morte não mais tem domínio sobre ele."
+    },
+    {
+      "verse": 10,
+      "en": "For in that he died, he died unto sin once: but in that he liveth, he liveth unto God.",
+      "pt": "Pois quanto a ter morrido, de uma vez por todas morreu para o pecado, mas quanto a viver, vive para Deus."
+    },
+    {
+      "verse": 11,
+      "en": "Likewise reckon ye also yourselves to be dead indeed unto sin, but alive unto God through Jesus Christ our Lord.",
+      "pt": "Assim também vós considerai-vos como mortos para o pecado, mas vivos para Deus, em Cristo Jesus."
+    },
+    {
+      "verse": 12,
+      "en": "Let not sin therefore reign in your mortal body, that ye should obey it in the lusts thereof.",
+      "pt": "Não reine, portanto, o pecado em vosso corpo mortal, para obedecerdes às suas concupiscências;"
+    },
+    {
+      "verse": 13,
+      "en": "Neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God.",
+      "pt": "nem tampouco apresenteis os vossos membros ao pecado como instrumentos de iniqüidade; mas apresentai-vos a Deus, como redivivos dentre os mortos, e os vossos membros a Deus, como instrumentos de justiça."
+    },
+    {
+      "verse": 14,
+      "en": "For sin shall not have dominion over you: for ye are not under the law, but under grace.",
+      "pt": "Pois o pecado não terá domínio sobre vós, porquanto não estais debaixo da lei, mas debaixo da graça."
+    },
+    {
+      "verse": 15,
+      "en": "What then? shall we sin, because we are not under the law, but under grace? God forbid.",
+      "pt": "Pois quê? Havemos de pecar porque não estamos debaixo da lei, mas debaixo da graça? De modo nenhum."
+    },
+    {
+      "verse": 16,
+      "en": "Know ye not, that to whom ye yield yourselves servants to obey, his servants ye are to whom ye obey; whether of sin unto death, or of obedience unto righteousness?",
+      "pt": "Não sabeis que daquele a quem vos apresentais como servos para lhe obedecer, sois servos desse mesmo a quem obedeceis, seja do pecado para a morte, ou da obediência para a justiça?"
+    },
+    {
+      "verse": 17,
+      "en": "But God be thanked, that ye were the servants of sin, but ye have obeyed from the heart that form of doctrine which was delivered you.",
+      "pt": "Mas graças a Deus que, embora tendo sido servos do pecado, obedecestes de coração à forma de doutrina a que fostes entregues;"
+    },
+    {
+      "verse": 18,
+      "en": "Being then made free from sin, ye became the servants of righteousness.",
+      "pt": "e libertos do pecado, fostes feitos servos da justiça."
+    },
+    {
+      "verse": 19,
+      "en": "I speak after the manner of men because of the infirmity of your flesh: for as ye have yielded your members servants to uncleanness and to iniquity unto iniquity; even so now yield your members servants to righteousness unto holiness.",
+      "pt": "Falo como homem, por causa da fraqueza da vossa carne. Pois assim como apresentastes os vossos membros como servos da impureza e da iniqüidade para iniqüidade, assim apresentai agora os vossos membros como servos da justiça para santificação."
+    },
+    {
+      "verse": 20,
+      "en": "For when ye were the servants of sin, ye were free from righteousness.",
+      "pt": "Porque, quando éreis servos do pecado, estáveis livres em relação à justiça."
+    },
+    {
+      "verse": 21,
+      "en": "What fruit had ye then in those things whereof ye are now ashamed? for the end of those things is death.",
+      "pt": "E que fruto tínheis então das coisas de que agora vos envergonhais? pois o fim delas é a morte."
+    },
+    {
+      "verse": 22,
+      "en": "But now being made free from sin, and become servants to God, ye have your fruit unto holiness, and the end everlasting life.",
+      "pt": "Mas agora, libertos do pecado, e feitos servos de Deus, tendes o vosso fruto para santificação, e por fim a vida eterna."
+    },
+    {
+      "verse": 23,
+      "en": "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.",
+      "pt": "Porque o salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna em Cristo Jesus nosso Senhor."
+    }
   ]
 }

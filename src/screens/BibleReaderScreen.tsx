@@ -14,7 +14,7 @@ import { BibleService, Chapter, Verse } from '../services/BibleService';
 import { usePlayerController, Phase, PlaybackMode, EnVoice } from '../services/PlayerController';
 import { AudioService } from '../services/AudioService';
 import { useIap } from '../context/IapContext';
-import { useSettings, REPEAT_OPTIONS, RepeatCount } from '../context/SettingsContext';
+import { useSettings, REPEAT_OPTIONS, RepeatCount, Bookmark } from '../context/SettingsContext';
 
 const SPEED_STEP = 0.25;
 const SPEED_MIN = 0.25;
@@ -45,6 +45,7 @@ export default function BibleReaderScreen() {
     ptSpeed, setPtSpeed: savePtSpeed,
     enVoiceId, setEnVoiceId,
     repeatCount, setRepeatCount,
+    bookmarks, toggleBookmark, isBookmarked,
   } = useSettings();
 
   const books = useMemo(
@@ -70,6 +71,7 @@ export default function BibleReaderScreen() {
 
   const [initialVerse, setInitialVerse] = useState(() => lastPosition?.verseIndex ?? 0);
   const [settingsVisible, setSettingsVisible] = useState(false);
+  const [bookmarksVisible, setBookmarksVisible] = useState(false);
 
   // If the available books list shrinks (e.g. IAP state changes), clamp the index.
   useEffect(() => {
@@ -124,6 +126,25 @@ export default function BibleReaderScreen() {
     saveLastPosition({ bookId: currentBook.id, chapter: selectedChapter, verseIndex });
   }, [saveLastPosition, currentBook.id, selectedChapter]);
 
+  const handleJumpToBookmark = useCallback((bm: Bookmark) => {
+    const bookIdx = books.findIndex(b => b.id === bm.bookId);
+    if (bookIdx < 0) return;
+    const chapterData = BibleService.getChapter(bm.bookId, bm.chapter);
+    if (!chapterData) return;
+    const verseIdx = chapterData.verses.findIndex(v => v.verse === bm.verseNumber);
+    setSelectedBookIdx(bookIdx);
+    setSelectedChapter(bm.chapter);
+    setInitialVerse(verseIdx >= 0 ? verseIdx : 0);
+    setBookmarksVisible(false);
+  }, [books]);
+
+  const availableBookmarks = useMemo(
+    () => bookmarks
+      .filter(b => books.some(book => book.id === b.bookId))
+      .sort((a, b) => b.addedAt - a.addedAt),
+    [bookmarks, books],
+  );
+
   return (
     <View style={styles.container}>
       {/* ── Header ─────────────────────────────────────── */}
@@ -133,7 +154,18 @@ export default function BibleReaderScreen() {
         <View style={styles.headerCircle2} pointerEvents="none" />
 
         <View style={styles.headerTop}>
-          <View style={styles.headerTopSpacer} />
+          <TouchableOpacity
+            style={styles.settingsButton}
+            onPress={() => setBookmarksVisible(true)}
+            activeOpacity={0.7}
+            hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+          >
+            <MaterialCommunityIcons
+              name={availableBookmarks.length > 0 ? 'bookmark-multiple' : 'bookmark-multiple-outline'}
+              size={20}
+              color="#fff"
+            />
+          </TouchableOpacity>
           <View style={styles.headerTitles}>
             <Text style={styles.headerTitle}>BibVoz</Text>
             <Text style={styles.headerSubtitle}>Inglês pela Bíblia</Text>
@@ -142,6 +174,7 @@ export default function BibleReaderScreen() {
             style={styles.settingsButton}
             onPress={() => setSettingsVisible(true)}
             activeOpacity={0.7}
+            hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
           >
             <MaterialCommunityIcons name="cog-outline" size={20} color="#fff" />
           </TouchableOpacity>
@@ -174,6 +207,7 @@ export default function BibleReaderScreen() {
               style={[styles.chapterChip, selectedChapter === ch && styles.chapterChipActive]}
               onPress={() => handleChapterChange(ch)}
               activeOpacity={0.75}
+              hitSlop={{ top: 8, bottom: 8, left: 4, right: 4 }}
             >
               <Text style={[styles.chapterChipText, selectedChapter === ch && styles.chapterChipTextActive]}>
                 {ch}
@@ -196,6 +230,9 @@ export default function BibleReaderScreen() {
         repeatCount={repeatCount}
         initialVerseIndex={initialVerse}
         onVerseChange={handleVerseChange}
+        bookId={currentBook.id}
+        isBookmarked={isBookmarked}
+        toggleBookmark={toggleBookmark}
       />
 
       {/* ── Settings modal ───────────────────────────────── */}
@@ -314,6 +351,75 @@ export default function BibleReaderScreen() {
 
           <View style={styles.modalCloseWrapper}>
             <TouchableOpacity style={styles.modalClose} onPress={() => setSettingsVisible(false)} activeOpacity={0.85}>
+              <Text style={styles.modalCloseText}>Fechar</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+
+      {/* ── Bookmarks modal ──────────────────────────────── */}
+      <Modal
+        visible={bookmarksVisible}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setBookmarksVisible(false)}
+      >
+        <Pressable style={styles.modalOverlay} onPress={() => setBookmarksVisible(false)} />
+        <View style={styles.modalSheet}>
+          <View style={styles.modalHandle} />
+          <Text style={styles.modalTitle}>Favoritos</Text>
+
+          <ScrollView
+            style={styles.modalScroll}
+            contentContainerStyle={styles.modalScrollContent}
+            showsVerticalScrollIndicator={false}
+          >
+            {availableBookmarks.length === 0 ? (
+              <View style={styles.bookmarksEmpty}>
+                <MaterialCommunityIcons name="bookmark-outline" size={40} color={BROWN_LIGHT} />
+                <Text style={styles.bookmarksEmptyTitle}>Nenhum favorito ainda</Text>
+                <Text style={styles.bookmarksEmptyDesc}>
+                  Toque na estrela ao lado de um versículo para salvá-lo aqui.
+                </Text>
+              </View>
+            ) : (
+              availableBookmarks.map(bm => {
+                const ch = BibleService.getChapter(bm.bookId, bm.chapter);
+                const verse = ch?.verses.find(v => v.verse === bm.verseNumber);
+                const bookMeta = books.find(b => b.id === bm.bookId);
+                if (!ch || !verse || !bookMeta) return null;
+                return (
+                  <View key={`${bm.bookId}-${bm.chapter}-${bm.verseNumber}`} style={styles.bookmarkRow}>
+                    <TouchableOpacity
+                      style={styles.bookmarkRowMain}
+                      onPress={() => handleJumpToBookmark(bm)}
+                      activeOpacity={0.7}
+                    >
+                      <View style={styles.bookmarkRef}>
+                        <Text style={styles.bookmarkRefText}>
+                          {bookMeta.namePt} {bm.chapter}:{bm.verseNumber}
+                        </Text>
+                      </View>
+                      <Text style={styles.bookmarkPreview} numberOfLines={2}>
+                        {verse.en}
+                      </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      onPress={() => toggleBookmark(bm.bookId, bm.chapter, bm.verseNumber)}
+                      style={styles.bookmarkRemoveBtn}
+                      hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                      activeOpacity={0.6}
+                    >
+                      <MaterialCommunityIcons name="bookmark-remove" size={22} color={BROWN} />
+                    </TouchableOpacity>
+                  </View>
+                );
+              })
+            )}
+          </ScrollView>
+
+          <View style={styles.modalCloseWrapper}>
+            <TouchableOpacity style={styles.modalClose} onPress={() => setBookmarksVisible(false)} activeOpacity={0.85}>
               <Text style={styles.modalCloseText}>Fechar</Text>
             </TouchableOpacity>
           </View>
@@ -453,6 +559,7 @@ const VoiceOptionRow = ({ label, sublabel, voiceId, selected, onSelect, lang }: 
       onPress={() => AudioService.previewVoice(voiceId, lang)}
       style={styles.voiceTestBtn}
       activeOpacity={0.7}
+      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
     >
       <MaterialCommunityIcons name="play-circle-outline" size={26} color={BROWN_LIGHT} />
     </TouchableOpacity>
@@ -472,11 +579,15 @@ interface ChapterPlayerProps {
   repeatCount: RepeatCount;
   initialVerseIndex: number;
   onVerseChange: (index: number) => void;
+  bookId: string;
+  isBookmarked: (bookId: string, chapter: number, verseNumber: number) => boolean;
+  toggleBookmark: (bookId: string, chapter: number, verseNumber: number) => void;
 }
 
 function ChapterPlayer({
   chapter, enSpeed, ptSpeed, setEnSpeed, setPtSpeed,
   playbackMode, enVoice, repeatCount, initialVerseIndex, onVerseChange,
+  bookId, isBookmarked, toggleBookmark,
 }: ChapterPlayerProps) {
   const verses: Verse[] = chapter.verses;
   const player = usePlayerController(verses, {
@@ -516,6 +627,8 @@ function ChapterPlayer({
             onPress={() => player.jumpTo(idx)}
             enLabel={enLabel}
             onLayout={(y: number) => { verseYPositions.current[idx] = y; }}
+            bookmarked={isBookmarked(bookId, chapter.chapter, v.verse)}
+            onToggleBookmark={() => toggleBookmark(bookId, chapter.chapter, v.verse)}
           />
         ))}
 
@@ -636,7 +749,7 @@ const SpeedRow = ({ label, speed, onDecrease, onIncrease }: SpeedRowProps) => (
         style={[styles.speedBtn, speed <= SPEED_MIN && styles.speedBtnDisabled]}
         disabled={speed <= SPEED_MIN}
         activeOpacity={0.7}
-        hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}
+        hitSlop={{ top: 14, bottom: 14, left: 12, right: 12 }}
       >
         <MaterialCommunityIcons name="minus" size={14} color={speed <= SPEED_MIN ? '#C9B594' : BROWN} />
       </TouchableOpacity>
@@ -646,7 +759,7 @@ const SpeedRow = ({ label, speed, onDecrease, onIncrease }: SpeedRowProps) => (
         style={[styles.speedBtn, speed >= SPEED_MAX && styles.speedBtnDisabled]}
         disabled={speed >= SPEED_MAX}
         activeOpacity={0.7}
-        hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}
+        hitSlop={{ top: 14, bottom: 14, left: 12, right: 12 }}
       >
         <MaterialCommunityIcons name="plus" size={14} color={speed >= SPEED_MAX ? '#C9B594' : BROWN} />
       </TouchableOpacity>
@@ -663,9 +776,11 @@ interface VerseCardProps {
   onPress: () => void;
   enLabel: string;
   onLayout: (y: number) => void;
+  bookmarked: boolean;
+  onToggleBookmark: () => void;
 }
 
-const VerseCard = ({ verse, active, phase, onPress, enLabel, onLayout }: VerseCardProps) => (
+const VerseCard = ({ verse, active, phase, onPress, enLabel, onLayout, bookmarked, onToggleBookmark }: VerseCardProps) => (
   <TouchableOpacity onPress={onPress} activeOpacity={0.85} onLayout={e => onLayout(e.nativeEvent.layout.y)}>
     <View style={[styles.verseCard, active && styles.verseCardActive]}>
       <View style={styles.verseHeader}>
@@ -674,6 +789,7 @@ const VerseCard = ({ verse, active, phase, onPress, enLabel, onLayout }: VerseCa
             {verse.verse}
           </Text>
         </View>
+        <View style={{ flex: 1 }} />
         {active && (
           <View style={styles.phasePill}>
             <MaterialCommunityIcons
@@ -686,6 +802,18 @@ const VerseCard = ({ verse, active, phase, onPress, enLabel, onLayout }: VerseCa
             </Text>
           </View>
         )}
+        <TouchableOpacity
+          onPress={onToggleBookmark}
+          style={styles.bookmarkBtn}
+          hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+          activeOpacity={0.6}
+        >
+          <MaterialCommunityIcons
+            name={bookmarked ? 'star' : 'star-outline'}
+            size={20}
+            color={bookmarked ? '#D4A04A' : BROWN_LIGHT}
+          />
+        </TouchableOpacity>
       </View>
 
       <Text style={[styles.verseEn, active && phase === 'en' && styles.verseEnActive]}>
@@ -769,9 +897,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 6,
-  },
-  headerTopSpacer: {
-    width: 36,
   },
   headerTitles: {
     flex: 1,
@@ -880,8 +1005,14 @@ const styles = StyleSheet.create({
   verseHeader: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     marginBottom: 10,
+    gap: 8,
+  },
+  bookmarkBtn: {
+    width: 28,
+    height: 28,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   verseBadge: {
     minWidth: 28,
@@ -1314,5 +1445,60 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#fff',
     letterSpacing: 0.3,
+  },
+
+  // Bookmarks modal
+  bookmarksEmpty: {
+    alignItems: 'center',
+    paddingVertical: 32,
+    paddingHorizontal: 24,
+  },
+  bookmarksEmptyTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: BROWN_DARK,
+    marginTop: 12,
+  },
+  bookmarksEmptyDesc: {
+    fontSize: 12,
+    color: '#9B7B5E',
+    marginTop: 6,
+    textAlign: 'center',
+    lineHeight: 18,
+  },
+  bookmarkRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: PARCHMENT,
+    borderRadius: 14,
+    borderWidth: 1.5,
+    borderColor: '#D4C4A0',
+    marginBottom: 8,
+    paddingRight: 8,
+  },
+  bookmarkRowMain: {
+    flex: 1,
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+  },
+  bookmarkRef: {
+    marginBottom: 4,
+  },
+  bookmarkRefText: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: BROWN_DARK,
+    letterSpacing: 0.3,
+  },
+  bookmarkPreview: {
+    fontSize: 12,
+    color: '#7A5C3E',
+    lineHeight: 18,
+  },
+  bookmarkRemoveBtn: {
+    width: 36,
+    height: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

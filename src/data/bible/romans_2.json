@@ -2,37 +2,153 @@
   "book": "Romans",
   "bookPt": "Romanos",
   "chapter": 2,
-  "translationEn": "NIV (New International Version)",
-  "translationPt": "NTLH (Sociedade Bíblica do Brasil)",
+  "translationEn": "KJV (Public Domain)",
+  "translationPt": "Almeida (Public Domain)",
   "verses": [
-    { "verse": 1, "en": "You, therefore, have no excuse, you who pass judgment on someone else, for at whatever point you judge another, you are condemning yourself, because you who pass judgment do the same things.", "pt": "Portanto, você não tem desculpa, seja quem for, quando julga o próximo; pois, ao julgar os outros, você condena a si mesmo, já que você, que julga, pratica as mesmas coisas." },
-    { "verse": 2, "en": "Now we know that God's judgment against those who do such things is based on truth.", "pt": "Sabemos que o julgamento de Deus contra os que praticam tais coisas é segundo a verdade." },
-    { "verse": 3, "en": "So when you, a mere human being, pass judgment on them and yet do the same things, do you think you will escape God's judgment?", "pt": "E você, simples ser humano, que condena os que praticam tais coisas e faz o mesmo, pensa que escapará ao julgamento de Deus?" },
-    { "verse": 4, "en": "Or do you show contempt for the riches of his kindness, forbearance and patience, not realizing that God's kindness is intended to lead you to repentance?", "pt": "Ou você despreza as riquezas da bondade, da tolerância e da paciência de Deus, não percebendo que a bondade de Deus quer levá-lo ao arrependimento?" },
-    { "verse": 5, "en": "But because of your stubbornness and your unrepentant heart, you are storing up wrath against yourself for the day of God's wrath, when his righteous judgment will be revealed.", "pt": "Mas, por causa da sua teimosia e do seu coração impenitente, você está acumulando ira contra si mesmo para o dia da ira, quando o justo julgamento de Deus será revelado." },
-    { "verse": 6, "en": "God \"will repay each person according to what they have done.\"", "pt": "Deus \"pagará a cada um de acordo com o que fez\"." },
-    { "verse": 7, "en": "To those who by persistence in doing good seek glory, honor and immortality, he will give eternal life.", "pt": "A vida eterna dará aos que, perseverando nas boas obras, buscam glória, honra e imortalidade." },
-    { "verse": 8, "en": "But for those who are self-seeking and who reject the truth and follow evil, there will be wrath and anger.", "pt": "Mas haverá ira e indignação para os que são egocêntricos e rejeitam a verdade e seguem a injustiça." },
-    { "verse": 9, "en": "There will be trouble and distress for every human being who does evil: first for the Jew, then for the Gentile;", "pt": "Haverá tribulação e angústia para todo ser humano que faz o mal: primeiro para o judeu, depois para o grego;" },
-    { "verse": 10, "en": "but glory, honor and peace for everyone who does good: first for the Jew, then for the Gentile.", "pt": "mas glória, honra e paz para todo aquele que faz o bem: primeiro para o judeu, depois para o grego." },
-    { "verse": 11, "en": "For God does not show favoritism.", "pt": "Pois Deus não faz acepção de pessoas." },
-    { "verse": 12, "en": "All who sin apart from the law will also perish apart from the law, and all who sin under the law will be judged by the law.", "pt": "Todos os que pecaram sem a lei também perecerão sem a lei; e todos os que pecaram debaixo da lei serão julgados por ela." },
-    { "verse": 13, "en": "For it is not those who hear the law who are righteous in God's sight, but it is those who obey the law who will be declared righteous.", "pt": "Pois não são os que ouvem a lei que são justos diante de Deus, mas os que a praticam é que serão declarados justos." },
-    { "verse": 14, "en": "(Indeed, when Gentiles, who do not have the law, do by nature things required by the law, they are a law for themselves, even though they do not have the law.", "pt": "De fato, quando os gentios, que não têm a lei, por instinto fazem o que a lei ordena, eles são uma lei para si mesmos, mesmo não tendo a lei." },
-    { "verse": 15, "en": "They show that the requirements of the law are written on their hearts, their consciences also bearing witness, and their thoughts sometimes accusing them and at other times even defending them.)", "pt": "Eles mostram que os requisitos da lei estão escritos em seus corações, como atesta a própria consciência, com os seus pensamentos ora acusando-os, ora defendendo-os.)" },
-    { "verse": 16, "en": "This will take place on the day when God judges people's secrets through Jesus Christ, as my gospel declares.", "pt": "Isso acontecerá no dia em que Deus julgará os segredos dos homens por meio de Jesus Cristo, como declara o meu evangelho." },
-    { "verse": 17, "en": "Now you, if you call yourself a Jew; if you rely on the law and boast in God;", "pt": "Quanto a você, que se chama judeu e confia na lei e se gloria em Deus;" },
-    { "verse": 18, "en": "if you know his will and approve of what is superior because you are instructed by the law;", "pt": "que conhece a sua vontade e aprova o que é superior, sendo instruído pela lei;" },
-    { "verse": 19, "en": "if you are convinced that you are a guide for the blind, a light for those who are in the dark,", "pt": "que se convenceu de que é um guia para os cegos, uma luz para os que estão nas trevas," },
-    { "verse": 20, "en": "an instructor of the foolish, a teacher of little children, because you have in the law the embodiment of knowledge and truth—", "pt": "um instrutor dos ignorantes, um professor das crianças, porque na lei você tem a forma do conhecimento e da verdade—" },
-    { "verse": 21, "en": "you, then, who teach others, do you not teach yourself? You who preach against stealing, do you steal?", "pt": "você, portanto, que ensina os outros, não se ensina a si mesmo? Você que prega contra o roubo, rouba?" },
-    { "verse": 22, "en": "You who say that people should not commit adultery, do you commit adultery? You who abhor idols, do you rob temples?", "pt": "Você que diz que não se deve cometer adultério, comete adultério? Você que abomina os ídolos, rouba os seus templos?" },
-    { "verse": 23, "en": "You who boast in the law, do you dishonor God by breaking the law?", "pt": "Você que se gloria na lei, desonra a Deus transgredindo a lei?" },
-    { "verse": 24, "en": "As it is written: \"God's name is blasphemed among the Gentiles because of you.\"", "pt": "Como está escrito: \"O nome de Deus é blasfemado entre os gentios por causa de vocês.\"" },
-    { "verse": 25, "en": "Circumcision has value if you observe the law, but if you break the law, you have become as though you had not been circumcised.", "pt": "A circuncisão tem valor se você pratica a lei; mas, se você transgride a lei, a sua circuncisão se torna incircuncisão." },
-    { "verse": 26, "en": "So then, if those who are not circumcised keep the law's requirements, will they not be regarded as though they were circumcised?", "pt": "Se então o incircunciso guardar os preceitos da lei, não será ele considerado como se fosse circuncidado?" },
-    { "verse": 27, "en": "The one who is not circumcised physically and yet obeys the law will condemn you who, even though you have the written code and circumcision, are a lawbreaker.", "pt": "O que não é fisicamente circuncidado, mas observa a lei, condenará você que, apesar de ter o código escrito e a circuncisão, transgride a lei." },
-    { "verse": 28, "en": "A person is not a Jew who is one only outwardly, nor is circumcision merely outward and physical.", "pt": "Pois não é judeu quem é judeu apenas externamente, nem é circuncisão a que é feita apenas externamente, no corpo." },
-    { "verse": 29, "en": "No, a person is a Jew who is one inwardly; and circumcision is circumcision of the heart, by the Spirit, not by the written code. Such a person's praise is not from other people, but from God.", "pt": "Pelo contrário, é judeu quem o é interiormente; e a circuncisão é a do coração, pelo Espírito, e não pela letra. O louvor desse não vem dos homens, mas de Deus." }
+    {
+      "verse": 1,
+      "en": "Therefore thou art inexcusable, O man, whosoever thou art that judgest: for wherein thou judgest another, thou condemnest thyself; for thou that judgest doest the same things.",
+      "pt": "Portanto, és inescusável, ó homem, qualquer que sejas, quando julgas, porque te condenas a ti mesmo naquilo em que julgas a outro; pois tu que julgas, praticas o mesmo."
+    },
+    {
+      "verse": 2,
+      "en": "But we are sure that the judgment of God is according to truth against them which commit such things.",
+      "pt": "E bem sabemos que o juízo de Deus é segundo a verdade, contra os que tais coisas praticam."
+    },
+    {
+      "verse": 3,
+      "en": "And thinkest thou this, O man, that judgest them which do such things, and doest the same, that thou shalt escape the judgment of God?",
+      "pt": "E tu, ó homem, que julgas os que praticam tais coisas, cuidas que, fazendo-as tu, escaparás ao juízo de Deus?"
+    },
+    {
+      "verse": 4,
+      "en": "Or despisest thou the riches of his goodness and forbearance and longsuffering; not knowing that the goodness of God leadeth thee to repentance?",
+      "pt": "Ou desprezas tu as riquezas da sua benignidade, e paciência e longanimidade, ignorando que a benignidade de Deus te conduz ao arrependimento?"
+    },
+    {
+      "verse": 5,
+      "en": "But after thy hardness and impenitent heart treasurest up unto thyself wrath against the day of wrath and revelation of the righteous judgment of God;",
+      "pt": "Mas, segundo a tua dureza e teu coração impenitente, entesouras ira para ti no dia da ira e da revelação do justo juízo de Deus,"
+    },
+    {
+      "verse": 6,
+      "en": "Who will render to every man according to his deeds:",
+      "pt": "que retribuirá a cada um segundo as suas obras;"
+    },
+    {
+      "verse": 7,
+      "en": "To them who by patient continuance in well doing seek for glory and honour and immortality, eternal life:",
+      "pt": "a saber: a vida eterna aos que, com perseverança em favor o bem, procuram glória, e honra e incorrupção;"
+    },
+    {
+      "verse": 8,
+      "en": "But unto them that are contentious, and do not obey the truth, but obey unrighteousness, indignation and wrath,",
+      "pt": "mas ira e indignação aos que são contenciosos, e desobedientes à iniqüidade;"
+    },
+    {
+      "verse": 9,
+      "en": "Tribulation and anguish, upon every soul of man that doeth evil, of the Jew first, and also of the Gentile;",
+      "pt": "tribulação e angústia sobre a alma de todo homem que pratica o mal, primeiramente do judeu, e também do grego;"
+    },
+    {
+      "verse": 10,
+      "en": "But glory, honour, and peace, to every man that worketh good, to the Jew first, and also to the Gentile:",
+      "pt": "glória, porém, e honra e paz a todo aquele que pratica o bem, primeiramente ao judeu, e também ao grego;"
+    },
+    {
+      "verse": 11,
+      "en": "For there is no respect of persons with God.",
+      "pt": "pois para com Deus não há acepção de pessoas."
+    },
+    {
+      "verse": 12,
+      "en": "For as many as have sinned without law shall also perish without law: and as many as have sinned in the law shall be judged by the law;",
+      "pt": "Porque todos os que sem lei pecaram, sem lei também perecerão; e todos os que sob a lei pecaram, pela lei serão julgados."
+    },
+    {
+      "verse": 13,
+      "en": "(For not the hearers of the law are just before God, but the doers of the law shall be justified.",
+      "pt": "Pois não são justos diante de Deus os que só ouvem a lei; mas serão justificados os que praticam a lei"
+    },
+    {
+      "verse": 14,
+      "en": "For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves:",
+      "pt": "(porque, quando os gentios, que não têm lei, fazem por natureza as coisas da lei, eles, embora não tendo lei, para si mesmos são lei."
+    },
+    {
+      "verse": 15,
+      "en": "Which shew the work of the law written in their hearts, their conscience also bearing witness, and their thoughts the mean while accusing or else excusing one another;)",
+      "pt": "pois mostram a obra da lei escrita em seus corações, testificando juntamente a sua consciência e os seus pensamentos, quer acusando-os, quer defendendo-os),"
+    },
+    {
+      "verse": 16,
+      "en": "In the day when God shall judge the secrets of men by Jesus Christ according to my gospel.",
+      "pt": "no dia em que Deus há de julgar os segredos dos homens, por Cristo Jesus, segundo o meu evangelho."
+    },
+    {
+      "verse": 17,
+      "en": "Behold, thou art called a Jew, and restest in the law, and makest thy boast of God,",
+      "pt": "Mas se tu és chamado judeu, e repousas na lei, e te glorias em Deus;"
+    },
+    {
+      "verse": 18,
+      "en": "And knowest his will, and approvest the things that are more excellent, being instructed out of the law;",
+      "pt": "e conheces a sua vontade e aprovas as coisas excelentes, sendo instruído na lei;"
+    },
+    {
+      "verse": 19,
+      "en": "And art confident that thou thyself art a guide of the blind, a light of them which are in darkness,",
+      "pt": "e confias que és guia dos cegos, luz dos que estão em trevas,"
+    },
+    {
+      "verse": 20,
+      "en": "An instructor of the foolish, a teacher of babes, which hast the form of knowledge and of the truth in the law.",
+      "pt": "instruidor dos néscios, mestre de crianças, que tens na lei a forma da ciência e da verdade;"
+    },
+    {
+      "verse": 21,
+      "en": "Thou therefore which teachest another, teachest thou not thyself? thou that preachest a man should not steal, dost thou steal?",
+      "pt": "tu, pois, que ensinas a outrem, não te ensinas a ti mesmo? Tu, que pregas que não se deve furtar, furtas?"
+    },
+    {
+      "verse": 22,
+      "en": "Thou that sayest a man should not commit adultery, dost thou commit adultery? thou that abhorrest idols, dost thou commit sacrilege?",
+      "pt": "Tu, que dizes que não se deve cometer adultério, adultéras? Tu, que abominas os ídolos, roubas os templos?"
+    },
+    {
+      "verse": 23,
+      "en": "Thou that makest thy boast of the law, through breaking the law dishonourest thou God?",
+      "pt": "Tu, que te glorias na lei, desonras a Deus pela transgressão da lei?"
+    },
+    {
+      "verse": 24,
+      "en": "For the name of God is blasphemed among the Gentiles through you, as it is written.",
+      "pt": "Assim pois, por vossa causa, o nome de Deus é blasfemado entre os gentios, como está escrito."
+    },
+    {
+      "verse": 25,
+      "en": "For circumcision verily profiteth, if thou keep the law: but if thou be a breaker of the law, thy circumcision is made uncircumcision.",
+      "pt": "Porque a circuncisão é, na verdade, proveitosa, se guardares a lei; mas se tu és transgressor da lei, a tua circuncisão tem-se tornado em incircuncisão."
+    },
+    {
+      "verse": 26,
+      "en": "Therefore if the uncircumcision keep the righteousness of the law, shall not his uncircumcision be counted for circumcision?",
+      "pt": "Se, pois, a incircuncisão guardar os preceitos da lei, porventura a incircuncisão não será reputada como circuncisão?"
+    },
+    {
+      "verse": 27,
+      "en": "And shall not uncircumcision which is by nature, if it fulfil the law, judge thee, who by the letter and circumcision dost transgress the law?",
+      "pt": "E a incircuncisão que por natureza o é, se cumpre a lei, julgará a ti, que com a letra e a circuncisão és transgressor da lei."
+    },
+    {
+      "verse": 28,
+      "en": "For he is not a Jew, which is one outwardly; neither is that circumcision, which is outward in the flesh:",
+      "pt": "Porque não é judeu o que o é exteriormente, nem é circuncisão a que o é exteriormente na carne."
+    },
+    {
+      "verse": 29,
+      "en": "But he is a Jew, which is one inwardly; and circumcision is that of the heart, in the spirit, and not in the letter; whose praise is not of men, but of God.",
+      "pt": "Mas é judeu aquele que o é interiormente, e circuncisão é a do coração, no espírito, e não na letra; cujo louvor não provém dos homens, mas de Deus."
+    }
   ]
 }
