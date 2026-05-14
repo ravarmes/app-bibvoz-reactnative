@@ -15,7 +15,27 @@
       "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\GitHub\\\\app-bibvoz-reactnative\\\\android\\\\app\\\\src\\\\main\\\\java\\\\br\\\\com\\\\vargascode\\\\bibvoz\")",
       "PowerShell(adb uninstall com.frase.me 2>&1)",
       "PowerShell(Set-Location \"c:\\\\GitHub\\\\app-bibvoz-reactnative\\\\android\"; .\\\\gradlew.bat app:installDebug 2>&1 | Select-String -Pattern \"BUILD|error:|FAILURE|EXCEPTION|Installing|Task :app\" | ForEach-Object { $_.Line })",
-      "PowerShell(adb shell am start -n \"br.com.vargascode.bibvoz/.MainActivity\" 2>&1)"
+      "PowerShell(adb shell am start -n \"br.com.vargascode.bibvoz/.MainActivity\" 2>&1)",
+      "Bash(git rev-list *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(git push *)",
+      "Bash(curl -s \"https://bible-api.com/john+1:1?translation=kjv\")",
+      "Bash(curl -s \"https://bible-api.com/john+1:1?translation=almeida\")",
+      "Bash(curl -s \"https://bible-api.com/proverbs+1?translation=kjv\")",
+      "Bash(node -e \"let d=''; process.stdin.on\\('data',c=>d+=c\\); process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\); console.log\\('verses:', j.verses.length, 'first:', j.verses[0].verse, 'last:', j.verses[j.verses.length-1].verse, 'book_name:', j.verses[0].book_name\\);}\\);\")",
+      "Bash(curl -s \"https://bible-api.com/romans+1?translation=almeida\")",
+      "Bash(node -e \"let d=''; process.stdin.on\\('data',c=>d+=c\\); process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\); console.log\\('verses:', j.verses.length, 'book_name:', j.verses[0].book_name, 'transl:', j.translation_id\\);}\\);\")",
+      "Bash(curl -s \"https://bible-api.com/proverbs+31?translation=almeida\")",
+      "Bash(node -e \"let d=''; process.stdin.on\\('data',c=>d+=c\\); process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\); console.log\\('verses:', j.verses.length, 'first verse:', j.verses[0].verse, 'last verse:', j.verses[j.verses.length-1].verse\\);}\\);\")",
+      "Bash(node scripts/fetch-bible.js john:1)",
+      "Bash(node scripts/fetch-bible.js)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(Select-String -Pattern \"\\\\\"scripts\\\\\"\" -A 10)",
+      "PowerShell(npx react-native run-android 2>&1)",
+      "PowerShell(adb shell am start -n com.bibvoz/.MainActivity 2>&1)",
+      "PowerShell(adb shell am start -n br.com.vargascode.bibvoz/.MainActivity)"
     ]
   }
 }
