@@ -74,6 +74,22 @@
 # AsyncStorage regras
 -keep class com.reactnativecommunity.asyncstorage.** { *; }
 
+# react-native-iap (com.dooboolab.rniap) - Play Billing e IAP module
+-keep class com.dooboolab.rniap.** { *; }
+-keep class com.android.billingclient.** { *; }
+-dontwarn com.android.billingclient.**
+
+# react-native-tts (net.no_mad.tts) - TextToSpeech module
+-keep class net.no_mad.tts.** { *; }
+-dontwarn net.no_mad.tts.**
+
+# react-native-ratings
+-keep class com.reactnativeratings.** { *; }
+
+# Google Play Services Ads (extras)
+-keep class com.google.android.play.core.** { *; }
+-dontwarn com.google.android.play.core.**
+
 # Retrofit
 -keepattributes Signature
 -keepattributes Exceptions
