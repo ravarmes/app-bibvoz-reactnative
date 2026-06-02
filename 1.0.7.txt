@@ -1,0 +1,36 @@
+BibVoz - Versão 1.0.7
+======================
+
+MODIFICAÇÕES DESTA VERSÃO
+--------------------------
+
+1. EXPANSÃO DO NOVO TESTAMENTO
+   - Adicionados 6 novos livros: Mateus (28 caps.), Marcos (16), Lucas (24), Atos (28), Efésios (6) e Apocalipse (22)
+   - Total de 124 novos capítulos, somando 4.466 versículos bíblicos
+   - Cobre agora os 4 Evangelhos, o livro histórico de Atos, a carta de Efésios e o livro de Apocalipse
+   - Textos em domínio público: KJV (inglês) e Almeida Revista e Corrigida (português)
+
+2. SCRIPT DE IMPORTAÇÃO APRIMORADO
+   - fetch-bible.js agora suporta slugs diferentes por tradução (slugEn/slugPt)
+   - Necessário porque os livros Atos, Efésios e Apocalipse exigem slug em português
+     (atos, efésios, apocalipse) na versão Almeida da bible-api.com
+   - Refatoração padroniza o uso de slugs em todos os livros cadastrados
+
+3. CATÁLOGO BÍBLICO EXPANDIDO
+   - BibleService.ts agora registra 10 livros com 198 capítulos no total
+   - A interface listBooks() retorna todos os livros disponíveis para o leitor
+   - getChapter() mantém a mesma assinatura, sem necessidade de mudanças nos componentes consumidores
+   - Imports estáticos individuais preservam o tree-shaking e a tipagem forte
+
+4. METADADOS DE VERSÃO
+   - versionCode atualizado de 6 para 7
+   - versionName atualizado de "1.0.6" para "1.0.7"
+
+RESUMO
+------
+A versão 1.0.7 amplia significativamente o conteúdo bíblico do app, cobrindo agora os quatro
+Evangelhos (Mateus, Marcos, Lucas e João), o livro de Atos dos Apóstolos, a carta aos Efésios
+e o livro de Apocalipse, totalizando 10 livros e 198 capítulos. Todo o conteúdo permanece em
+traduções de domínio público (KJV + Almeida Revista e Corrigida), preservando a regularidade
+de licenciamento da versão 1.0.6. As alterações no script de importação tornam o processo de
+adição de novos livros mais robusto e padronizado.

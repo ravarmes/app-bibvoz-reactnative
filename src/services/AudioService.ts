@@ -113,31 +113,42 @@ export const AudioService = {
   async speak(text: string, lang: Lang): Promise<void> {
     await ensureInit();
 
-    await Tts.setDefaultLanguage(lang);
-    await Tts.setDefaultRate(lang !== 'pt-BR' ? enRate : ptRate, true);
-
-    if (lang === 'pt-BR') {
-      if (ptVoiceId) {
-        try { await Tts.setDefaultVoice(ptVoiceId); } catch {}
-      }
-    } else if (enVoiceId) {
-      try { await Tts.setDefaultVoice(enVoiceId); } catch {}
-    }
+    const voiceId = lang === 'pt-BR' ? ptVoiceId : enVoiceId;
 
     return new Promise<void>(resolve => {
       const utteranceId = `${Date.now()}-${Math.random()}`;
       activeUtteranceId = utteranceId;
       activeFinishHandler = () => resolve();
 
-      Tts.stop().then(() => {
-        // Após o stop, finish/cancel de execuções anteriores podem disparar tarde —
-        // o utteranceId garante que só resolvamos para o pedido vigente.
-        if (activeUtteranceId !== utteranceId) {
-          resolve();
-          return;
-        }
-        Tts.speak(text);
-      });
+      Tts.stop()
+        .catch(() => {})
+        .then(async () => {
+          if (activeUtteranceId !== utteranceId) {
+            resolve();
+            return;
+          }
+          try {
+            await Tts.setDefaultLanguage(lang);
+          } catch (e) {
+            console.warn('[Tts] setDefaultLanguage failed', e);
+          }
+          try {
+            await Tts.setDefaultRate(lang !== 'pt-BR' ? enRate : ptRate, true);
+          } catch (e) {
+            console.warn('[Tts] setDefaultRate failed', e);
+          }
+          if (voiceId) {
+            try {
+              await Tts.setDefaultVoice(voiceId);
+              console.log('[Tts] voice applied:', voiceId, 'lang:', lang);
+            } catch (e) {
+              console.warn('[Tts] setDefaultVoice failed for', voiceId, e);
+            }
+          } else {
+            console.log('[Tts] using default voice (no voiceId set) lang:', lang);
+          }
+          Tts.speak(text);
+        });
     });
   },
 

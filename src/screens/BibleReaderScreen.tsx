@@ -180,7 +180,12 @@ export default function BibleReaderScreen() {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.bookTabs}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.bookTabs}
+          contentContainerStyle={styles.bookTabsContent}
+        >
           {books.map((book, idx) => (
             <TouchableOpacity
               key={book.id}
@@ -188,12 +193,15 @@ export default function BibleReaderScreen() {
               onPress={() => handleBookChange(idx)}
               activeOpacity={0.75}
             >
-              <Text style={[styles.bookTabText, selectedBookIdx === idx && styles.bookTabTextActive]}>
+              <Text
+                style={[styles.bookTabText, selectedBookIdx === idx && styles.bookTabTextActive]}
+                numberOfLines={1}
+              >
                 {book.namePt}
               </Text>
             </TouchableOpacity>
           ))}
-        </View>
+        </ScrollView>
 
         <ScrollView
           horizontal
@@ -923,15 +931,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bookTabs: {
-    flexDirection: 'row',
     marginTop: 14,
+  },
+  bookTabsContent: {
+    flexDirection: 'row',
+    paddingHorizontal: 4,
     gap: 8,
   },
   bookTab: {
-    flex: 1,
     paddingVertical: 8,
+    paddingHorizontal: 14,
     borderRadius: 12,
     alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: 'rgba(255,255,255,0.1)',
   },
   bookTabActive: {
@@ -941,6 +953,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: 'rgba(255,255,255,0.55)',
+    textAlign: 'center',
   },
   bookTabTextActive: {
     color: '#fff',

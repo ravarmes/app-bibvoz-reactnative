@@ -14,10 +14,16 @@ const fs = require('fs');
 const path = require('path');
 
 const BOOKS = {
-  john:      { name: 'John',      namePt: 'João',       chapters: 21 },
-  proverbs:  { name: 'Proverbs',  namePt: 'Provérbios', chapters: 31 },
-  romans:    { name: 'Romans',    namePt: 'Romanos',    chapters: 16 },
-  galatians: { name: 'Galatians', namePt: 'Gálatas',    chapters: 6  },
+  john:       { name: 'John',       namePt: 'João',         slugEn: 'john',       slugPt: 'joão',       chapters: 21 },
+  proverbs:   { name: 'Proverbs',   namePt: 'Provérbios',   slugEn: 'proverbs',   slugPt: 'provérbios', chapters: 31 },
+  romans:     { name: 'Romans',     namePt: 'Romanos',      slugEn: 'romans',     slugPt: 'romanos',    chapters: 16 },
+  galatians:  { name: 'Galatians',  namePt: 'Gálatas',      slugEn: 'galatians',  slugPt: 'gálatas',    chapters: 6  },
+  matthew:    { name: 'Matthew',    namePt: 'Mateus',       slugEn: 'matthew',    slugPt: 'mateus',     chapters: 28 },
+  mark:       { name: 'Mark',       namePt: 'Marcos',       slugEn: 'mark',       slugPt: 'marcos',     chapters: 16 },
+  luke:       { name: 'Luke',       namePt: 'Lucas',        slugEn: 'luke',       slugPt: 'lucas',      chapters: 24 },
+  acts:       { name: 'Acts',       namePt: 'Atos',         slugEn: 'acts',       slugPt: 'atos',       chapters: 28 },
+  ephesians:  { name: 'Ephesians',  namePt: 'Efésios',      slugEn: 'ephesians',  slugPt: 'efésios',    chapters: 6  },
+  revelation: { name: 'Revelation', namePt: 'Apocalipse',   slugEn: 'revelation', slugPt: 'apocalipse', chapters: 22 },
 };
 
 const TRANSLATION_EN_LABEL = 'KJV (Public Domain)';
@@ -70,8 +76,8 @@ function cleanText(s) {
 async function buildChapter(bookSlug, chapter) {
   const meta = BOOKS[bookSlug];
   const [enVerses, ptVerses] = await Promise.all([
-    fetchChapter(bookSlug, chapter, 'kjv'),
-    fetchChapter(bookSlug, chapter, 'almeida'),
+    fetchChapter(meta.slugEn, chapter, 'kjv'),
+    fetchChapter(meta.slugPt, chapter, 'almeida'),
   ]);
 
   const ptByVerse = new Map(ptVerses.map((v) => [v.verse, cleanText(v.text)]));
