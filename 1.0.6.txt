@@ -35,4 +35,4 @@ MODIFICAÇÕES DESTA VERSÃO
 
 RESUMO
 ------
-A versão 1.0.5 traz melhorias diretamente solicitadas pelos testadores: um sistema completo de favoritos para salvar e navegar rapidamente entre versículos marcados, reprodução de áudio mais fluida com pausas naturais entre etapas e versículos, cobertura integral dos 74 capítulos disponíveis com textos em domínio público (KJV e Almeida), além de ajustes de usabilidade com áreas de toque maiores em toda a interface.
+A versão 1.0.6 traz melhorias diretamente solicitadas pelos testadores: um sistema completo de favoritos para salvar e navegar rapidamente entre versículos marcados, reprodução de áudio mais fluida com pausas naturais entre etapas e versículos, cobertura integral dos 74 capítulos disponíveis com textos em domínio público (KJV e Almeida), além de ajustes de usabilidade com áreas de toque maiores em toda a interface.

@@ -1,0 +1,5 @@
+Novidades desta versão (1.0.8):
+
+• Atualização de compatibilidade e segurança para Android 16 (API nível 36).
+• Upgrade da Biblioteca de Faturamento do Google Play (Google Play Billing 8.0.0).
+• Melhorias internas de desempenho e estabilidade.

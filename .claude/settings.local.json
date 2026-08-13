@@ -35,7 +35,16 @@
       "Bash(Select-String -Pattern \"\\\\\"scripts\\\\\"\" -A 10)",
       "PowerShell(npx react-native run-android 2>&1)",
       "PowerShell(adb shell am start -n com.bibvoz/.MainActivity 2>&1)",
-      "PowerShell(adb shell am start -n br.com.vargascode.bibvoz/.MainActivity)"
+      "PowerShell(adb shell am start -n br.com.vargascode.bibvoz/.MainActivity)",
+      "PowerShell(git checkout main)",
+      "PowerShell(git merge feature/revisoes-testadores --no-ff -m \"Merge branch 'feature/revisoes-testadores' into main\")",
+      "PowerShell(git stash)",
+      "PowerShell(git push origin main)",
+      "PowerShell(git stash pop)",
+      "PowerShell(if \\(Test-Path \"$env:USERPROFILE\\\\.gradle\\\\gradle.properties\"\\) { Get-Content \"$env:USERPROFILE\\\\.gradle\\\\gradle.properties\" | Where-Object { $_ -match \"MYAPP\" } } else { Write-Output \"Global gradle.properties não existe\" })",
+      "PowerShell($paths = @\\(\"c:\\\\GitHub\\\\app-bibvoz-reactnative\\\\android\\\\app\\\\build\\\\outputs\\\\bundle\\\\release\\\\app-release.aab\", \"c:\\\\GitHub\\\\app-bibvoz-reactnative\\\\android\\\\app\\\\build\\\\outputs\\\\bundle\\\\playRelease\\\\app-play-release.aab\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Get-Item $p | Select-Object FullName, @{N='SizeMB';E={[math]::Round\\($_.Length/1MB,2\\)}}, LastWriteTime } })",
+      "PowerShell(git add android/app/build.gradle package.json 1.0.5.txt)",
+      "PowerShell(git push origin main 2>&1)"
     ]
   }
 }
