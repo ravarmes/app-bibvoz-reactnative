@@ -1,0 +1,28 @@
+BibVoz - Versão 1.0.8
+======================
+
+MODIFICAÇÕES DESTA VERSÃO
+--------------------------
+
+1. SUPORTE NATIVO A EXIBIÇÃO DE PONTA A PONTA (EDGE-TO-EDGE)
+   - Adoção da API nativa oficial enableEdgeToEdge() no MainActivity.kt (AndroidX Activity 1.9.3)
+   - Garante exibição de ponta a ponta consistente no Android 15 (SDK 35) e versões anteriores
+   - Atende integralmente às diretrizes de conformidade e experiência de usuário da Google Play
+
+2. TRATAMENTO INTEGRAL DE RECUOS DE TELA (SAFE AREA INSETS)
+   - Integração do SafeAreaProvider e SafeAreaView com react-native-safe-area-context na raiz do app
+   - Proteção de layout contra sobreposição da barra de status, entalhes (notches/punch-holes) e barra inferior de gestos
+   - Barra de anúncios fixada e controles de reprodução perfeitamente alinhados às áreas seguras
+
+3. ATUALIZAÇÃO DO AMBIENTE DE BUILD E SDKS ANDROID
+   - Alinhamento para compilação e target SDK 36 (Android 16) com buildTools 35.0.0
+   - Atualização do Google Play Billing SDK (7.1.1) para conformidade com a Google Play Store
+   - Upgrade do ambiente Gradle para versão 8.13 e Kotlin para versão 2.0.21
+
+4. METADADOS DE VERSÃO
+   - versionCode atualizado de 7 para 8
+   - versionName atualizado de "1.0.7" para "1.0.8"
+
+RESUMO
+------
+A versão 1.0.8 traz atualizações essenciais de modernização e conformidade com as diretrizes do Android 15 e Android 16 na Google Play Store. O app agora implementa a API nativa enableEdgeToEdge() e gerenciamento aprimorado de recuos (Safe Area Insets) via react-native-safe-area-context, garantindo que o cabeçalho, os controles de reprodução bíblica e os banners de anúncio respeitem as barras de sistema em qualquer dispositivo. Além disso, foram atualizados o Target SDK para 36, o Play Billing SDK e o ecossistema de compilação Gradle/Kotlin.

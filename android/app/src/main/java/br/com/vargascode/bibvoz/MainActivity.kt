@@ -1,7 +1,7 @@
 package br.com.vargascode.bibvoz
 
 import android.os.Bundle
-import androidx.core.view.WindowCompat
+import androidx.activity.enableEdgeToEdge
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
@@ -10,9 +10,8 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate
 class MainActivity : ReactActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
+    enableEdgeToEdge()
     super.onCreate(savedInstanceState)
-    // Habilita edge-to-edge para compatibilidade com Android 15 e SDK 35
-    WindowCompat.setDecorFitsSystemWindows(window, false)
   }
 
   /**

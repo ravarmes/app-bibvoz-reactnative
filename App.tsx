@@ -9,7 +9,8 @@
  */
 
 import React, { useCallback, useEffect, useState } from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import mobileAds, {
   BannerAd,
   BannerAdSize,
@@ -52,18 +53,20 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#2D1B0E" />
-      <SettingsProvider>
-        <IapProvider>
-          <PaperProvider>
-            <BibleReaderScreen />
-          </PaperProvider>
-          <BottomBanner />
-        </IapProvider>
-      </SettingsProvider>
-      {!splashDone && <SplashScreen onFinish={handleSplashFinish} />}
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container} edges={['top', 'left', 'right', 'bottom']}>
+        <StatusBar barStyle="light-content" backgroundColor="#2D1B0E" translucent />
+        <SettingsProvider>
+          <IapProvider>
+            <PaperProvider>
+              <BibleReaderScreen />
+            </PaperProvider>
+            <BottomBanner />
+          </IapProvider>
+        </SettingsProvider>
+        {!splashDone && <SplashScreen onFinish={handleSplashFinish} />}
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
